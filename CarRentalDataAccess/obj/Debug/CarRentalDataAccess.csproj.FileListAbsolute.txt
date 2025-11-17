@@ -1,0 +1,12 @@
+G:\Car_Rental_System\CarRentalDataAccess\bin\Debug\CarRentalDataAccess.dll
+G:\Car_Rental_System\CarRentalDataAccess\bin\Debug\CarRentalDataAccess.pdb
+G:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.csproj.AssemblyReference.cache
+G:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.csproj.CoreCompileInputs.cache
+G:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.dll
+G:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.pdb
+C:\Car_Rental_System\CarRentalDataAccess\bin\Debug\CarRentalDataAccess.dll
+C:\Car_Rental_System\CarRentalDataAccess\bin\Debug\CarRentalDataAccess.pdb
+C:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.csproj.AssemblyReference.cache
+C:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.csproj.CoreCompileInputs.cache
+C:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.dll
+C:\Car_Rental_System\CarRentalDataAccess\obj\Debug\CarRentalDataAccess.pdb

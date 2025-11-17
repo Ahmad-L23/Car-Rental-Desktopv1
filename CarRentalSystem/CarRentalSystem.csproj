@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE7A115F-BCEA-4344-B10F-2393DD027D45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRentalSystem</RootNamespace>
+    <AssemblyName>CarRentalSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionContracts\frmAddEditAdditionContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionContracts\frmAddEditAdditionContract.Designer.cs">
+      <DependentUpon>frmAddEditAdditionContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionContracts\ucAdditionContracts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdditionContracts\ucAdditionContracts.Designer.cs">
+      <DependentUpon>ucAdditionContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Box\frmAddEditBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Box\frmAddEditBox.Designer.cs">
+      <DependentUpon>frmAddEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Box\frmListBoxs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Box\frmListBoxs.Designer.cs">
+      <DependentUpon>frmListBoxs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch\frmListBranches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch\frmListBranches.Designer.cs">
+      <DependentUpon>frmListBranches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTransfer\frmAddUpdateCarTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTransfer\frmAddUpdateCarTransfer.Designer.cs">
+      <DependentUpon>frmAddUpdateCarTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTransfer\frmCarTransferCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTransfer\frmCarTransferCard.Designer.cs">
+      <DependentUpon>frmCarTransferCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTransfer\frmListCarTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarTransfer\frmListCarTransfer.Designer.cs">
+      <DependentUpon>frmListCarTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarTransfer\ucCarTransferDetails .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarTransfer\ucCarTransferDetails .Designer.cs">
+      <DependentUpon>ucCarTransferDetails .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmAddEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmAddEditCategory.Designer.cs">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmListCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmListCategories.Designer.cs">
+      <DependentUpon>frmListCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Color\frmAddUpdateColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Color\frmAddUpdateColor.Designer.cs">
+      <DependentUpon>frmAddUpdateColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Color\frmListColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Color\frmListColors.Designer.cs">
+      <DependentUpon>frmListColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyInsurance\frmAddEditCompanyInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyInsurance\frmAddEditCompanyInsurance.Designer.cs">
+      <DependentUpon>frmAddEditCompanyInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyInsurance\frmListCompanyInsurances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyInsurance\frmListCompanyInsurances.Designer.cs">
+      <DependentUpon>frmListCompanyInsurances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\company\CompanyCardUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Company\company\CompanyCardUserControl1.Designer.cs">
+      <DependentUpon>CompanyCardUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\company\frmAddNewCompnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\company\frmAddNewCompnay.Designer.cs">
+      <DependentUpon>frmAddNewCompnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\company\frmShowAndEditDeleteCompanies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\company\frmShowAndEditDeleteCompanies.Designer.cs">
+      <DependentUpon>frmShowAndEditDeleteCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coverge\frmAddUpdateCoverge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coverge\frmAddUpdateCoverge.Designer.cs">
+      <DependentUpon>frmAddUpdateCoverge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coverge\frmListCoverges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coverge\frmListCoverges.Designer.cs">
+      <DependentUpon>frmListCoverges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coverge\ucCoverages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Coverge\ucCoverages.Designer.cs">
+      <DependentUpon>ucCoverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\frmAddUpdateCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Currency\frmAddUpdateCurrency.Designer.cs">
+      <DependentUpon>frmAddUpdateCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\frmListCurrencies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Currency\frmListCurrencies.Designer.cs">
+      <DependentUpon>frmListCurrencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ctrlCustomerDetalis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\ctrlCustomerDetalis.Designer.cs">
+      <DependentUpon>ctrlCustomerDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\frmAddEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmAddEditCustomer.Designer.cs">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\frmCustomerDetalis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmCustomerDetalis.Designer.cs">
+      <DependentUpon>frmCustomerDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\frmListCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmListCustomers.Designer.cs">
+      <DependentUpon>frmListCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\frmShowCustomerTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmShowCustomerTypes.Designer.cs">
+      <DependentUpon>frmShowCustomerTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmAddEditDamageMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmAddEditDamageMaintenance.Designer.cs">
+      <DependentUpon>frmAddEditDamageMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmDamageMainCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmDamageMainCard.Designer.cs">
+      <DependentUpon>frmDamageMainCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmListDamageMaintenacne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamagesMaintenance\frmListDamageMaintenacne.Designer.cs">
+      <DependentUpon>frmListDamageMaintenacne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamagesMaintenance\ucDamageMaintenanceCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DamagesMaintenance\ucDamageMaintenanceCard.Designer.cs">
+      <DependentUpon>ucDamageMaintenanceCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\frmAddUpdateDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\frmAddUpdateDocument.Designer.cs">
+      <DependentUpon>frmAddUpdateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmAddEditEmployeeUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmAddEditEmployeeUsage.Designer.cs">
+      <DependentUpon>frmAddEditEmployeeUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmEmployeeUsageCardInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmEmployeeUsageCardInfo.Designer.cs">
+      <DependentUpon>frmEmployeeUsageCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmListEmployeeUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUsage\frmListEmployeeUsage.Designer.cs">
+      <DependentUpon>frmListEmployeeUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUsage\ucEmployeeusageDetalis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUsage\ucEmployeeusageDetalis.Designer.cs">
+      <DependentUpon>ucEmployeeusageDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\frmAddEditGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\frmAddEditGroup.Designer.cs">
+      <DependentUpon>frmAddEditGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\frmListgroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\frmListgroups.Designer.cs">
+      <DependentUpon>frmListgroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceType\frmAddUpdateInsuranceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsuranceType\frmAddUpdateInsuranceType.Designer.cs">
+      <DependentUpon>frmAddUpdateInsuranceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsuranceType\frmListInsuranceTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsuranceType\frmListInsuranceTypes.Designer.cs">
+      <DependentUpon>frmListInsuranceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\frmAddEditLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\frmAddEditLocation.Designer.cs">
+      <DependentUpon>frmAddEditLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\frmListLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\frmListLocations.Designer.cs">
+      <DependentUpon>frmListLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintecanceTypes\frmAddUpdateMaintenanceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintecanceTypes\frmAddUpdateMaintenanceType.Designer.cs">
+      <DependentUpon>frmAddUpdateMaintenanceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintecanceTypes\ucMaintenanceTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MaintecanceTypes\ucMaintenanceTypes.Designer.cs">
+      <DependentUpon>ucMaintenanceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mediator\frmAddUpdateMeditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mediator\frmAddUpdateMeditor.Designer.cs">
+      <DependentUpon>frmAddUpdateMeditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mediator\frmMediatorDetalis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mediator\frmMediatorDetalis.Designer.cs">
+      <DependentUpon>frmMediatorDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mediator\frmMediatorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mediator\frmMediatorList.Designer.cs">
+      <DependentUpon>frmMediatorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nationlity\frmListAllNationlites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nationlity\frmListAllNationlites.Designer.cs">
+      <DependentUpon>frmListAllNationlites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMethod\frmAddUpdatePaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMethod\frmAddUpdatePaymentMethod.Designer.cs">
+      <DependentUpon>frmAddUpdatePaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMethod\ucPaymentMethods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentMethod\ucPaymentMethods.Designer.cs">
+      <DependentUpon>ucPaymentMethods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RentalAddition\frmAddUpdateRenatlAddition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalAddition\frmAddUpdateRenatlAddition.Designer.cs">
+      <DependentUpon>frmAddUpdateRenatlAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalAddition\frmListRentalAdditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalAddition\frmListRentalAdditions.Designer.cs">
+      <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequiredInsurance\frmAddUpdateRequiredInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequiredInsurance\frmAddUpdateRequiredInsurance.Designer.cs">
+      <DependentUpon>frmAddUpdateRequiredInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequiredInsurance\ucRequiredInsurances .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RequiredInsurance\ucRequiredInsurances .Designer.cs">
+      <DependentUpon>ucRequiredInsurances .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\frmAddEditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\frmAddEditRole.Designer.cs">
+      <DependentUpon>frmAddEditRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Role\frmListRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\frmListRoles.Designer.cs">
+      <DependentUpon>frmListRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\Windows\Forms\DataVisualization.cs" />
+    <Compile Include="Target_Clients\frmAddUpdateTargetClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Target_Clients\frmAddUpdateTargetClient.Designer.cs">
+      <DependentUpon>frmAddUpdateTargetClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Target_Clients\frmListTargetClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Target_Clients\frmListTargetClients.Designer.cs">
+      <DependentUpon>frmListTargetClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Target_Clients\ucTargetClients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Target_Clients\ucTargetClients.Designer.cs">
+      <DependentUpon>ucTargetClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ctrlPersonInfoCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ctrlPersonInfoCard.Designer.cs">
+      <DependentUpon>ctrlPersonInfoCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAddEditUser.Designer.cs">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmListUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\frmAddUpdateVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\frmAddUpdateVehicle.Designer.cs">
+      <DependentUpon>frmAddUpdateVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\frmListCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\frmListCar.Designer.cs">
+      <DependentUpon>frmListCar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdditionContracts\frmAddEditAdditionContract.resx">
+      <DependentUpon>frmAddEditAdditionContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionContracts\ucAdditionContracts.resx">
+      <DependentUpon>ucAdditionContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Box\frmAddEditBox.resx">
+      <DependentUpon>frmAddEditBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Box\frmListBoxs.resx">
+      <DependentUpon>frmListBoxs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch\frmListBranches.resx">
+      <DependentUpon>frmListBranches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTransfer\frmAddUpdateCarTransfer.resx">
+      <DependentUpon>frmAddUpdateCarTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTransfer\frmCarTransferCard.resx">
+      <DependentUpon>frmCarTransferCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTransfer\frmListCarTransfer.resx">
+      <DependentUpon>frmListCarTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarTransfer\ucCarTransferDetails .resx">
+      <DependentUpon>ucCarTransferDetails .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmAddEditCategory.resx">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmListCategories.resx">
+      <DependentUpon>frmListCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Color\frmAddUpdateColor.resx">
+      <DependentUpon>frmAddUpdateColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Color\frmListColors.resx">
+      <DependentUpon>frmListColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyInsurance\frmAddEditCompanyInsurance.resx">
+      <DependentUpon>frmAddEditCompanyInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyInsurance\frmListCompanyInsurances.resx">
+      <DependentUpon>frmListCompanyInsurances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\company\CompanyCardUserControl1.resx">
+      <DependentUpon>CompanyCardUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\company\frmAddNewCompnay.resx">
+      <DependentUpon>frmAddNewCompnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\company\frmShowAndEditDeleteCompanies.resx">
+      <DependentUpon>frmShowAndEditDeleteCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coverge\frmAddUpdateCoverge.resx">
+      <DependentUpon>frmAddUpdateCoverge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coverge\frmListCoverges.resx">
+      <DependentUpon>frmListCoverges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coverge\ucCoverages.resx">
+      <DependentUpon>ucCoverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Currency\frmAddUpdateCurrency.resx">
+      <DependentUpon>frmAddUpdateCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Currency\frmListCurrencies.resx">
+      <DependentUpon>frmListCurrencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ctrlCustomerDetalis.resx">
+      <DependentUpon>ctrlCustomerDetalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmAddEditCustomer.resx">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmCustomerDetalis.resx">
+      <DependentUpon>frmCustomerDetalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmListCustomers.resx">
+      <DependentUpon>frmListCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmShowCustomerTypes.resx">
+      <DependentUpon>frmShowCustomerTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagesMaintenance\frmAddEditDamageMaintenance.resx">
+      <DependentUpon>frmAddEditDamageMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagesMaintenance\frmDamageMainCard.resx">
+      <DependentUpon>frmDamageMainCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagesMaintenance\frmListDamageMaintenacne.resx">
+      <DependentUpon>frmListDamageMaintenacne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagesMaintenance\ucDamageMaintenanceCard.resx">
+      <DependentUpon>ucDamageMaintenanceCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\frmAddUpdateDocument.resx">
+      <DependentUpon>frmAddUpdateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUsage\frmAddEditEmployeeUsage.resx">
+      <DependentUpon>frmAddEditEmployeeUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUsage\frmEmployeeUsageCardInfo.resx">
+      <DependentUpon>frmEmployeeUsageCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUsage\frmListEmployeeUsage.resx">
+      <DependentUpon>frmListEmployeeUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUsage\ucEmployeeusageDetalis.resx">
+      <DependentUpon>ucEmployeeusageDetalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group\frmAddEditGroup.resx">
+      <DependentUpon>frmAddEditGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group\frmListgroups.resx">
+      <DependentUpon>frmListgroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsuranceType\frmAddUpdateInsuranceType.resx">
+      <DependentUpon>frmAddUpdateInsuranceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsuranceType\frmListInsuranceTypes.resx">
+      <DependentUpon>frmListInsuranceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\frmAddEditLocation.resx">
+      <DependentUpon>frmAddEditLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\frmListLocations.resx">
+      <DependentUpon>frmListLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintecanceTypes\frmAddUpdateMaintenanceType.resx">
+      <DependentUpon>frmAddUpdateMaintenanceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintecanceTypes\ucMaintenanceTypes.resx">
+      <DependentUpon>ucMaintenanceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mediator\frmAddUpdateMeditor.resx">
+      <DependentUpon>frmAddUpdateMeditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mediator\frmMediatorDetalis.resx">
+      <DependentUpon>frmMediatorDetalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mediator\frmMediatorList.resx">
+      <DependentUpon>frmMediatorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nationlity\frmListAllNationlites.resx">
+      <DependentUpon>frmListAllNationlites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMethod\frmAddUpdatePaymentMethod.resx">
+      <DependentUpon>frmAddUpdatePaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMethod\ucPaymentMethods.resx">
+      <DependentUpon>ucPaymentMethods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalAddition\frmAddUpdateRenatlAddition.resx">
+      <DependentUpon>frmAddUpdateRenatlAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalAddition\frmListRentalAdditions.resx">
+      <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\frmAddEditRole.resx">
+      <DependentUpon>frmAddEditRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Role\frmListRoles.resx">
+      <DependentUpon>frmListRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target_Clients\frmAddUpdateTargetClient.resx">
+      <DependentUpon>frmAddUpdateTargetClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target_Clients\frmListTargetClients.resx">
+      <DependentUpon>frmListTargetClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target_Clients\ucTargetClients.resx">
+      <DependentUpon>ucTargetClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ctrlPersonInfoCard.resx">
+      <DependentUpon>ctrlPersonInfoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddEditUser.resx">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\frmAddUpdateVehicle.resx">
+      <DependentUpon>frmAddUpdateVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\frmListCar.resx">
+      <DependentUpon>frmListCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarRentalBusiness\CarRentalBusiness.csproj">
+      <Project>{ff9b6d04-5f3e-4ed7-9941-324a388f3f77}</Project>
+      <Name>CarRentalBusiness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detalis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mediator_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewCategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewColor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComanyInsurance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Covergae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Currency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenacne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-insurance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mediator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-insurance1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenacne1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Currency1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Covergae1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComanyInsurance1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewColor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewCategory1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\racing-car.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RentalAdditon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeUsage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
