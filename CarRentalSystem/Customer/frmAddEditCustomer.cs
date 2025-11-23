@@ -24,6 +24,10 @@ namespace CarRentalSystem.Customer
         public frmAddEditCustomer(int? customerId = null)
         {
             InitializeComponent();
+            cmbIdTypeEn.Items.Clear();
+            cmbIdTypeEn.Items.AddRange(new string[] { "Personal Id", "Passport" });
+            cmbIdTypeAr.Items.Clear();
+            cmbIdTypeAr.Items.AddRange(new string[] { "بطاقة شخصية", "جواز سفر" });
 
             _customerId = customerId;
 
@@ -47,7 +51,7 @@ namespace CarRentalSystem.Customer
                 lblTitle.Text = "Add New Customer";
             }
 
-            
+
             // Also make combo boxes editable for text input (important)
             cmbCompany.DropDownStyle = ComboBoxStyle.DropDown;
             cmbNationality.DropDownStyle = ComboBoxStyle.DropDown;
@@ -104,7 +108,6 @@ namespace CarRentalSystem.Customer
             txtNotesAr.Text = customer.NotesAr;
             chkBlacklist.Checked = customer.Blacklist;
 
-            // Set ComboBoxes selections by IDs
             if (customer.Company != null)
                 cmbCompany.SelectedValue = customer.Company.ID;
             else
@@ -119,9 +122,25 @@ namespace CarRentalSystem.Customer
                 cmbMediator.SelectedValue = customer.Mediator.id;
             else
                 cmbMediator.SelectedIndex = -1;
+
+            // NEW fields mapping:
+            cmbIdTypeEn.SelectedItem = string.IsNullOrEmpty(customer.IdTypeEn) ? null : customer.IdTypeEn;
+            cmbIdTypeAr.SelectedItem = string.IsNullOrEmpty(customer.IdTypeAr) ? null : customer.IdTypeAr;
+            txtIdNubmer.Text = customer.IdNumber;
+            txtIdentityNubmer.Text = customer.IdentityNumber;
+            txtIdentityPlaceOfIssueEn.Text = customer.IdentityPlaceOfIssueEn;
+            txtIdentityPlaceOfIssueAr.Text = customer.IdentityPlaceOfIssueAr;
+            txtLicenseNubmer.Text = customer.LicenseNumber;
+            LicenseCategroyEn.Text = customer.LicenseCategoryEn;
+            LicenseCategroyAr.Text = customer.LicenseCategoryAr;
+            txtPlaceOfIssueEn.Text = customer.LicensePlaceOfIssueEn;
+            dplicenseIssueDate.Value = customer.LicenseIssueDate ?? DateTime.Now;
+            dpLicenseExpiryDate.Value = customer.LicenseExpiryDate ?? DateTime.Now;
+            txtLicensePlaceOfIssueAr.Text = customer.LicensePlaceOfIssueAr;
+
         }
 
-                
+
 
         private void frmAddEditCustomer_Load(object sender, EventArgs e)
         {
@@ -242,7 +261,6 @@ namespace CarRentalSystem.Customer
         {
             if (this.ValidateChildren())
             {
-                
                 string customerType = cmbCustomerType.SelectedItem?.ToString() ?? "";
                 string customerNameEn = txtCustomerNameEn.Text.Trim();
                 string customerNameAr = txtCustomerNameAr.Text.Trim();
@@ -266,10 +284,8 @@ namespace CarRentalSystem.Customer
                 if (mediatorId == null || (int)mediatorId == 0)
                     mediatorId = null;
 
-
                 if (_customerId.HasValue)
                 {
-                    // update existing
                     _customer = ClsCustomer.FindById(_customerId.Value);
                     if (_customer == null)
                     {
@@ -294,6 +310,21 @@ namespace CarRentalSystem.Customer
                 _customer.NotesAr = notesAr;
                 _customer.Blacklist = blacklist;
 
+                // NEW fields set here:
+                _customer.IdTypeEn = cmbIdTypeEn.SelectedItem?.ToString() ?? "";
+                _customer.IdTypeAr = cmbIdTypeAr.SelectedItem?.ToString() ?? "";
+                _customer.IdNumber = txtIdNubmer.Text.Trim();
+                _customer.IdentityNumber = txtIdentityNubmer.Text.Trim();
+                _customer.IdentityPlaceOfIssueEn = txtIdentityPlaceOfIssueEn.Text.Trim();
+                _customer.IdentityPlaceOfIssueAr = txtIdentityPlaceOfIssueAr.Text.Trim();
+                _customer.LicenseNumber = txtLicenseNubmer.Text.Trim();
+                _customer.LicenseCategoryEn = LicenseCategroyEn.Text.Trim();
+                _customer.LicenseCategoryAr = LicenseCategroyAr.Text.Trim();
+                _customer.LicensePlaceOfIssueEn = txtPlaceOfIssueEn.Text.Trim();
+                _customer.LicenseIssueDate = dplicenseIssueDate.Value;
+                _customer.LicenseExpiryDate = dpLicenseExpiryDate.Value;
+                _customer.LicensePlaceOfIssueAr = txtLicensePlaceOfIssueAr.Text.Trim();
+
                 // Set related entities minimally (only IDs)
                 _customer.Company = companyId.HasValue ? new ClsCompany { ID = companyId.Value } : null;
                 _customer.Nationality = nationalityId.HasValue ? new ClsNationlity { Id = nationalityId.Value } : null;
@@ -306,23 +337,15 @@ namespace CarRentalSystem.Customer
                     MessageBox.Show("Customer saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     int savedId = (int)(_customerId ?? _customer.CustomerId);  // customer.ID should be set on Save() if new
                     CustomerSaved?.Invoke(savedId);
-                    if (!_customerId.HasValue) // New customer
-                    {
-                        using (var frmDoc = new CarRentalSystem.Document.frmAddUpdateDocument(savedId))
-                        {
-                            frmDoc.ShowDialog();
-                        }
-                    }
                 }
                 else
                 {
                     MessageBox.Show("Failed to save customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
             else
             {
-                MessageBox.Show("Some fields are requried pleas fill them");
+                MessageBox.Show("Some fields are required, please fill them.");
             }
         }
 
@@ -347,7 +370,7 @@ namespace CarRentalSystem.Customer
 
         private void cmbNationality_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-         
+
             if (cmbNationality.SelectedIndex == -1)
             {
                 // Show error
@@ -359,7 +382,7 @@ namespace CarRentalSystem.Customer
                 // Clear error if something is selected
                 errorProvider1.SetError(cmbNationality, "");
             }
-        
+
         }
 
         private void cmbCustomerType_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -393,3 +416,5 @@ namespace CarRentalSystem.Customer
         }
     }
 }
+
+

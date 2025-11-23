@@ -33,16 +33,19 @@
             // 
             // ucDamageMaintenanceCard1
             // 
+            this.ucDamageMaintenanceCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ucDamageMaintenanceCard1.Location = new System.Drawing.Point(12, 12);
             this.ucDamageMaintenanceCard1.Name = "ucDamageMaintenanceCard1";
-            this.ucDamageMaintenanceCard1.Size = new System.Drawing.Size(360, 373);
+            this.ucDamageMaintenanceCard1.Size = new System.Drawing.Size(459, 373);
             this.ucDamageMaintenanceCard1.TabIndex = 0;
             // 
             // frmDamageMainCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 402);
+            this.ClientSize = new System.Drawing.Size(472, 402);
             this.Controls.Add(this.ucDamageMaintenanceCard1);
             this.Name = "frmDamageMainCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

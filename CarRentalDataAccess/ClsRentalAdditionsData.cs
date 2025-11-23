@@ -14,13 +14,14 @@ namespace CarRentalDataAccess
             int paymentMethodId,
             decimal price,
             string rentalNote,
-            bool isActive)
+            bool isActive,
+            bool isTaxIncluded)
         {
             string query = @"
                 INSERT INTO RentalAdditions
-                (RentalName, PaymentMethodID, Price, RentalNote, IsActive)
+                (RentalName, PaymentMethodID, Price, RentalNote, IsActive, IsTaxIncluded)
                 VALUES
-                (@RentalName, @PaymentMethodID, @Price, @RentalNote, @IsActive);
+                (@RentalName, @PaymentMethodID, @Price, @RentalNote, @IsActive, @IsTaxIncluded);
                 SELECT CAST(scope_identity() AS int);";
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -31,6 +32,7 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@Price", price);
                 cmd.Parameters.AddWithValue("@RentalNote", string.IsNullOrEmpty(rentalNote) ? (object)DBNull.Value : rentalNote);
                 cmd.Parameters.AddWithValue("@IsActive", isActive);
+                cmd.Parameters.AddWithValue("@IsTaxIncluded", isTaxIncluded);
 
                 connection.Open();
                 object result = cmd.ExecuteScalar();
@@ -47,7 +49,8 @@ namespace CarRentalDataAccess
             int paymentMethodId,
             decimal price,
             string rentalNote,
-            bool isActive)
+            bool isActive,
+            bool isTaxIncluded)
         {
             string query = @"
                 UPDATE RentalAdditions SET
@@ -55,7 +58,8 @@ namespace CarRentalDataAccess
                     PaymentMethodID = @PaymentMethodID,
                     Price = @Price,
                     RentalNote = @RentalNote,
-                    IsActive = @IsActive
+                    IsActive = @IsActive,
+                    IsTaxIncluded = @IsTaxIncluded
                 WHERE RentalAdditionID = @RentalAdditionID";
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -67,6 +71,7 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@Price", price);
                 cmd.Parameters.AddWithValue("@RentalNote", string.IsNullOrEmpty(rentalNote) ? (object)DBNull.Value : rentalNote);
                 cmd.Parameters.AddWithValue("@IsActive", isActive);
+                cmd.Parameters.AddWithValue("@IsTaxIncluded", isTaxIncluded);
 
                 connection.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -108,7 +113,15 @@ namespace CarRentalDataAccess
         public static DataTable GetAllRentalAdditions()
         {
             string query = @"
-                SELECT ra.RentalAdditionID, ra.RentalName, ra.PaymentMethodID, pm.MethodName, ra.Price, ra.RentalNote, ra.IsActive
+                SELECT 
+                    ra.RentalAdditionID, 
+                    ra.RentalName, 
+                    ra.PaymentMethodID, 
+                    pm.MethodName, 
+                    ra.Price, 
+                    ra.RentalNote, 
+                    ra.IsActive,
+                    ra.IsTaxIncluded
                 FROM RentalAdditions ra
                 INNER JOIN PaymentMethods pm ON ra.PaymentMethodID = pm.Id";
 
@@ -128,7 +141,8 @@ namespace CarRentalDataAccess
             ref int paymentMethodId,
             ref decimal price,
             ref string rentalNote,
-            ref bool isActive)
+            ref bool isActive,
+            ref bool isTaxIncluded)
         {
             string query = "SELECT * FROM RentalAdditions WHERE RentalAdditionID = @RentalAdditionID";
 
@@ -148,6 +162,7 @@ namespace CarRentalDataAccess
                         price = Convert.ToDecimal(reader["Price"]);
                         rentalNote = reader["RentalNote"] == DBNull.Value ? null : reader["RentalNote"].ToString();
                         isActive = Convert.ToBoolean(reader["IsActive"]);
+                        isTaxIncluded = Convert.ToBoolean(reader["IsTaxIncluded"]);
                         return true;
                     }
                 }

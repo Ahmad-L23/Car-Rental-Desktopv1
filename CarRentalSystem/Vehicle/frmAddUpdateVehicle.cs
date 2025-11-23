@@ -129,6 +129,7 @@ namespace CarRentalSystem.Car
             txtUsedFor.Text = car.UsedFor;
             numDamagesNumber.Value = (decimal)car.DamagesNumber;
             txtDescription.Text = car.Description;
+            txtFuelExit.Text = car.FuelExit;
 
             // Load image if exists
             if (!string.IsNullOrEmpty(car.CarImage))
@@ -179,6 +180,7 @@ namespace CarRentalSystem.Car
             string UsedFor = txtUsedFor.Text.Trim();
             int DamagesNubmer = (int)numDamagesNumber.Value;
             string Descripton = txtDescription.Text.Trim();
+            string FuelExit = txtFuelExit.Text.Trim();
             int NubmerOfLoads = (int)numNumberOfLoads.Value;
             string NumberOfResgistation = txtNumberOfRegistration.Text.Trim();
 
@@ -267,6 +269,7 @@ namespace CarRentalSystem.Car
             car.UsedFor = UsedFor;
             car.DamagesNumber = DamagesNubmer;
             car.Description = Descripton;
+            car.FuelExit = FuelExit;
             car.NumberOfRegistration = NumberOfResgistation;
             car.NumberOfLoads = NubmerOfLoads;
 

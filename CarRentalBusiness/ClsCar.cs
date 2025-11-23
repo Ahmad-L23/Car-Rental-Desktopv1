@@ -1,4 +1,5 @@
 ﻿using CarRentalDataAccess;
+using Microsoft.SqlServer.Server;
 using System;
 using System.ComponentModel.Design;
 using System.Data;
@@ -48,6 +49,7 @@ namespace CarRentalBusiness
         public string UsedFor { get; set; }
         public int? DamagesNumber { get; set; }
         public string Description { get; set; }
+        public string FuelExit {  get; set; }
 
         public ClsCar()
         {
@@ -82,6 +84,7 @@ namespace CarRentalBusiness
             UsedFor = "";
             DamagesNumber = null;
             Description = "";
+            FuelExit = "";
 
             mode = enMode.AddNew;
         }
@@ -117,7 +120,8 @@ namespace CarRentalBusiness
             bool isAvailable,
             string usedFor,
             int? damagesNumber,
-            string description)
+            string description,
+            string FuelExit)
         {
             CarID = carId;
             CarNameEn = carNameEn;
@@ -156,9 +160,49 @@ namespace CarRentalBusiness
             UsedFor = usedFor;
             DamagesNumber = damagesNumber;
             Description = description;
+            this.FuelExit = FuelExit;
 
             mode = carId.HasValue ? enMode.Update : enMode.AddNew;
         }
+
+
+
+        public ClsCar(
+            string plateNumber,
+            string chassisNumber,
+            string carNameEn,
+            int groupId,
+            int year,
+            decimal engineSize,
+            bool isAvailable)
+        {
+            PlateNumber = plateNumber ?? "";
+            ChassisNumber = chassisNumber ?? "";
+            CarNameEn = carNameEn ?? "";
+            GroupId = groupId;
+            Year = year;
+            EngineSize = engineSize;
+            IsAvailable = isAvailable;
+
+            if (groupId > 0)  // validate groupId is positive
+            {
+                var group = ClsGroup.FindById(groupId);
+                if (group != null)
+                {
+                    Group = group;
+                }
+                else
+                {
+                    Group = null; 
+                }
+            }
+            else
+            {
+                Group = null;
+            }
+        }
+
+
 
         public bool Save()
         {
@@ -196,7 +240,8 @@ namespace CarRentalBusiness
                         IsAvailable,
                         UsedFor,
                         DamagesNumber,
-                        Description);
+                        Description,
+                        FuelExit);
 
                     if (newId != -1)
                     {
@@ -240,7 +285,8 @@ namespace CarRentalBusiness
                         IsAvailable,
                         UsedFor,
                         DamagesNumber,
-                        Description);
+                        Description,
+                        FuelExit);
                     break;
             }
 
@@ -284,6 +330,7 @@ namespace CarRentalBusiness
             string usedFor = "";
             int? damagesNumber = null;
             string description = "";
+            string FuelExit = "";
 
             bool found = ClsCarData.GetCarInfoById(
                 carId,
@@ -316,7 +363,8 @@ namespace CarRentalBusiness
                 ref isAvailable,
                 ref usedFor,
                 ref damagesNumber,
-                ref description);
+                ref description,
+                ref FuelExit);
 
             if (!found)
                 return null;
@@ -352,7 +400,8 @@ namespace CarRentalBusiness
                 isAvailable,
                 usedFor,
                 damagesNumber,
-                description);
+                description,
+                FuelExit);
         }
 
         public static DataTable GetAllCars()
@@ -364,9 +413,41 @@ namespace CarRentalBusiness
         {
            return ClsCarData.GetAllCarsWithColorName();
         }
-        public static DataTable SearchCarsByPlateNumber(string plateNumber)
+        public static ClsCar FindCarSummaryByPlateNumber(string plateNumber)
         {
-            return ClsCarData.SearchCarsByPlateNumber(plateNumber);
+            string chassisNumber = "";
+            string carNameEn = "";
+            int groupId = 0;
+            int year = 0;
+            decimal engineSize = 0;
+            bool isAvailable = false;
+
+            bool found = ClsCarData.GetCarByPlateNumber(
+                plateNumber,
+                ref chassisNumber,
+                ref carNameEn,
+                ref groupId,
+                ref year,
+                ref engineSize,
+                ref isAvailable);
+
+            if (!found)
+                return null;
+
+            return new ClsCar(
+                plateNumber,
+                chassisNumber,
+                carNameEn,
+                groupId,
+                year,
+                engineSize,
+                isAvailable);
         }
+
+        public static DataTable GetAllCarsIdsAndPlateNubmers()
+        {
+            return ClsCarData.GetAllCarsIdAndPlateNumber();
+        }
+
     }
 }

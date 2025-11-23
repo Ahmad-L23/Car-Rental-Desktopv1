@@ -351,6 +351,7 @@
             this.queryToolStripMenuItem1.Name = "queryToolStripMenuItem1";
             this.queryToolStripMenuItem1.Size = new System.Drawing.Size(159, 26);
             this.queryToolStripMenuItem1.Text = "Query";
+            this.queryToolStripMenuItem1.Click += new System.EventHandler(this.queryToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem13
             // 

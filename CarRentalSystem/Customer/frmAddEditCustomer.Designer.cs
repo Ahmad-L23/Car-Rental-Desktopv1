@@ -11,6 +11,7 @@
             base.Dispose(disposing);
         }
 
+
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -45,6 +46,32 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.LicenseCategroyAr = new System.Windows.Forms.TextBox();
+            this.txtLicensePlaceOfIssueAr = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPlaceOfIssueEn = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.LicenseCategroyEn = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dplicenseIssueDate = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lable = new System.Windows.Forms.Label();
+            this.dpLicenseExpiryDate = new System.Windows.Forms.DateTimePicker();
+            this.txtLicenseNubmer = new System.Windows.Forms.TextBox();
+            this.txtIdNubmer = new System.Windows.Forms.TextBox();
+            this.txtIdentityPlaceOfIssueAr = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIdentityPlaceOfIssueEn = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtIdentityNubmer = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbIdTypeEn = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cmbIdTypeAr = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -388,7 +415,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(684, 74);
+            this.panel1.Size = new System.Drawing.Size(1323, 74);
             this.panel1.TabIndex = 28;
             // 
             // lblTitle
@@ -406,11 +433,270 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // LicenseCategroyAr
+            // 
+            this.LicenseCategroyAr.Location = new System.Drawing.Point(894, 410);
+            this.LicenseCategroyAr.Name = "LicenseCategroyAr";
+            this.LicenseCategroyAr.Size = new System.Drawing.Size(200, 20);
+            this.LicenseCategroyAr.TabIndex = 63;
+            // 
+            // txtLicensePlaceOfIssueAr
+            // 
+            this.txtLicensePlaceOfIssueAr.Location = new System.Drawing.Point(894, 530);
+            this.txtLicensePlaceOfIssueAr.Name = "txtLicensePlaceOfIssueAr";
+            this.txtLicensePlaceOfIssueAr.Size = new System.Drawing.Size(200, 20);
+            this.txtLicensePlaceOfIssueAr.TabIndex = 67;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(729, 533);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 14);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "License Place of Issue (AR):";
+            // 
+            // txtPlaceOfIssueEn
+            // 
+            this.txtPlaceOfIssueEn.Location = new System.Drawing.Point(894, 440);
+            this.txtPlaceOfIssueEn.Name = "txtPlaceOfIssueEn";
+            this.txtPlaceOfIssueEn.Size = new System.Drawing.Size(200, 20);
+            this.txtPlaceOfIssueEn.TabIndex = 65;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(730, 443);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 14);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "License Place of Issue (EN):";
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl10.Location = new System.Drawing.Point(730, 413);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(133, 14);
+            this.lbl10.TabIndex = 62;
+            this.lbl10.Text = "License Category (AR):";
+            // 
+            // LicenseCategroyEn
+            // 
+            this.LicenseCategroyEn.Location = new System.Drawing.Point(894, 380);
+            this.LicenseCategroyEn.Name = "LicenseCategroyEn";
+            this.LicenseCategroyEn.Size = new System.Drawing.Size(200, 20);
+            this.LicenseCategroyEn.TabIndex = 61;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(730, 470);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 14);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "License Issue Date:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(730, 353);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 14);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "License Number:";
+            // 
+            // dplicenseIssueDate
+            // 
+            this.dplicenseIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dplicenseIssueDate.Location = new System.Drawing.Point(894, 470);
+            this.dplicenseIssueDate.Name = "dplicenseIssueDate";
+            this.dplicenseIssueDate.Size = new System.Drawing.Size(200, 20);
+            this.dplicenseIssueDate.TabIndex = 69;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(730, 506);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(117, 14);
+            this.label14.TabIndex = 70;
+            this.label14.Text = "License Expiry Date:";
+            // 
+            // lable
+            // 
+            this.lable.AutoSize = true;
+            this.lable.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable.Location = new System.Drawing.Point(730, 383);
+            this.lable.Name = "lable";
+            this.lable.Size = new System.Drawing.Size(133, 14);
+            this.lable.TabIndex = 60;
+            this.lable.Text = "License Category (EN):";
+            // 
+            // dpLicenseExpiryDate
+            // 
+            this.dpLicenseExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpLicenseExpiryDate.Location = new System.Drawing.Point(894, 500);
+            this.dpLicenseExpiryDate.Name = "dpLicenseExpiryDate";
+            this.dpLicenseExpiryDate.Size = new System.Drawing.Size(200, 20);
+            this.dpLicenseExpiryDate.TabIndex = 71;
+            // 
+            // txtLicenseNubmer
+            // 
+            this.txtLicenseNubmer.Location = new System.Drawing.Point(894, 350);
+            this.txtLicenseNubmer.Name = "txtLicenseNubmer";
+            this.txtLicenseNubmer.Size = new System.Drawing.Size(200, 20);
+            this.txtLicenseNubmer.TabIndex = 59;
+            // 
+            // txtIdNubmer
+            // 
+            this.txtIdNubmer.Location = new System.Drawing.Point(914, 166);
+            this.txtIdNubmer.Name = "txtIdNubmer";
+            this.txtIdNubmer.Size = new System.Drawing.Size(200, 20);
+            this.txtIdNubmer.TabIndex = 77;
+            // 
+            // txtIdentityPlaceOfIssueAr
+            // 
+            this.txtIdentityPlaceOfIssueAr.Location = new System.Drawing.Point(914, 261);
+            this.txtIdentityPlaceOfIssueAr.Name = "txtIdentityPlaceOfIssueAr";
+            this.txtIdentityPlaceOfIssueAr.Size = new System.Drawing.Size(200, 20);
+            this.txtIdentityPlaceOfIssueAr.TabIndex = 83;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(749, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 14);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "Identity Place of Issue (AR):";
+            // 
+            // txtIdentityPlaceOfIssueEn
+            // 
+            this.txtIdentityPlaceOfIssueEn.Location = new System.Drawing.Point(914, 231);
+            this.txtIdentityPlaceOfIssueEn.Name = "txtIdentityPlaceOfIssueEn";
+            this.txtIdentityPlaceOfIssueEn.Size = new System.Drawing.Size(200, 20);
+            this.txtIdentityPlaceOfIssueEn.TabIndex = 81;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(749, 234);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(162, 14);
+            this.label16.TabIndex = 80;
+            this.label16.Text = "Identity Place of Issue (EN):";
+            // 
+            // txtIdentityNubmer
+            // 
+            this.txtIdentityNubmer.Location = new System.Drawing.Point(914, 196);
+            this.txtIdentityNubmer.Name = "txtIdentityNubmer";
+            this.txtIdentityNubmer.Size = new System.Drawing.Size(200, 20);
+            this.txtIdentityNubmer.TabIndex = 79;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(750, 108);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 14);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "ID Type (EN):";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(750, 198);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 14);
+            this.label18.TabIndex = 78;
+            this.label18.Text = "Identity Number:";
+            // 
+            // cmbIdTypeEn
+            // 
+            this.cmbIdTypeEn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdTypeEn.FormattingEnabled = true;
+            this.cmbIdTypeEn.Items.AddRange(new object[] {
+            "Personal Id",
+            "Passport"});
+            this.cmbIdTypeEn.Location = new System.Drawing.Point(914, 106);
+            this.cmbIdTypeEn.Name = "cmbIdTypeEn";
+            this.cmbIdTypeEn.Size = new System.Drawing.Size(200, 21);
+            this.cmbIdTypeEn.TabIndex = 73;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(750, 168);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 14);
+            this.label19.TabIndex = 76;
+            this.label19.Text = "ID Number:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(750, 138);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 14);
+            this.label20.TabIndex = 74;
+            this.label20.Text = "ID Type (AR):";
+            // 
+            // cmbIdTypeAr
+            // 
+            this.cmbIdTypeAr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIdTypeAr.FormattingEnabled = true;
+            this.cmbIdTypeAr.Items.AddRange(new object[] {
+            "بطاقة شخصية",
+            "جواز سفر"});
+            this.cmbIdTypeAr.Location = new System.Drawing.Point(914, 136);
+            this.cmbIdTypeAr.Name = "cmbIdTypeAr";
+            this.cmbIdTypeAr.Size = new System.Drawing.Size(200, 21);
+            this.cmbIdTypeAr.TabIndex = 75;
+            // 
             // frmAddEditCustomer
             // 
             this.AcceptButton = this.btnSave;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(684, 538);
+            this.ClientSize = new System.Drawing.Size(1323, 612);
+            this.Controls.Add(this.txtIdNubmer);
+            this.Controls.Add(this.txtIdentityPlaceOfIssueAr);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtIdentityPlaceOfIssueEn);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtIdentityNubmer);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.cmbIdTypeEn);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.cmbIdTypeAr);
+            this.Controls.Add(this.LicenseCategroyAr);
+            this.Controls.Add(this.txtLicensePlaceOfIssueAr);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtPlaceOfIssueEn);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbl10);
+            this.Controls.Add(this.LicenseCategroyEn);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.dplicenseIssueDate);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lable);
+            this.Controls.Add(this.dpLicenseExpiryDate);
+            this.Controls.Add(this.txtLicenseNubmer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmAddEditCustomer";
@@ -423,6 +709,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -457,5 +744,31 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox LicenseCategroyAr;
+        private System.Windows.Forms.TextBox txtLicensePlaceOfIssueAr;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPlaceOfIssueEn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.TextBox LicenseCategroyEn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dplicenseIssueDate;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lable;
+        private System.Windows.Forms.DateTimePicker dpLicenseExpiryDate;
+        private System.Windows.Forms.TextBox txtLicenseNubmer;
+        private System.Windows.Forms.TextBox txtIdNubmer;
+        private System.Windows.Forms.TextBox txtIdentityPlaceOfIssueAr;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdentityPlaceOfIssueEn;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtIdentityNubmer;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbIdTypeEn;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cmbIdTypeAr;
     }
 }

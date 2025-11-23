@@ -86,4 +86,4 @@ namespace CarRentalBusiness
             return ClsPaymentMethodData.GetAllPaymentMethods();
         }
     }
-}
+}// load them and show their names and values their names

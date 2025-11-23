@@ -1,4 +1,6 @@
-﻿using CarRentalSystem.AdditionContracts;
+﻿
+using CarRentalSystem.AdditionContracts;
+using CarRentalSystem.Agreement;
 using CarRentalSystem.Box;
 using CarRentalSystem.Branch;
 using CarRentalSystem.Car;
@@ -11,7 +13,6 @@ using CarRentalSystem.Currency;
 using CarRentalSystem.Customer;
 using CarRentalSystem.DamageMaintenance;
 using CarRentalSystem.DamagesMaintenance;
-using CarRentalSystem.Document;
 using CarRentalSystem.EmployeeUsage;
 using CarRentalSystem.EmployeeUsageForms;
 using CarRentalSystem.Group;
@@ -21,6 +22,7 @@ using CarRentalSystem.maintenance;
 using CarRentalSystem.mediator;
 using CarRentalSystem.Nationlity;
 using CarRentalSystem.PaymentMethod;
+using CarRentalSystem.Quires;
 using CarRentalSystem.RentalAddition;
 using CarRentalSystem.RequiredInsurance;
 using CarRentalSystem.Role;
@@ -28,6 +30,7 @@ using CarRentalSystem.Setting;
 using CarRentalSystem.Target_Clients;
 using CarRentalSystem.Users;
 using CarRentalSystem.Vehicle;
+using CurtainDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +49,7 @@ namespace CarRentalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm()); 
+            Application.Run(new frmAddUpdateAgreement()); 
         }
     }
 }

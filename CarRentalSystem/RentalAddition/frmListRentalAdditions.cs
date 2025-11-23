@@ -89,6 +89,17 @@ namespace CarRentalSystem.RentalAddition
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader
             };
             dgvRentalAddition.Columns.Add(colIsActive);
+
+            // IncludeTax column
+            var colIncludeTax = new DataGridViewCheckBoxColumn
+            {
+                Name = "IncludeTax",
+                HeaderText = "Include Tax",
+                DataPropertyName = "IncludeTax",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader
+            };
+            dgvRentalAddition.Columns.Add(colIncludeTax);
+
         }
 
         private void LoadRentalAdditions()
@@ -107,13 +118,23 @@ namespace CarRentalSystem.RentalAddition
                     decimal price = Convert.ToDecimal(row["Price"]);
                     string rentalNote = row["RentalNote"]?.ToString();
                     bool isActive = Convert.ToBoolean(row["IsActive"]);
+                    bool includeTax = Convert.ToBoolean(row["IncludeTax"]);   // NEW
 
-                    dgvRentalAddition.Rows.Add(id, rentalName, paymentMethodId, price, rentalNote, isActive);
+                    dgvRentalAddition.Rows.Add(
+                        id,
+                        rentalName,
+                        paymentMethodId,
+                        price,
+                        rentalNote,
+                        isActive,
+                        includeTax
+                    );
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while loading rental additions: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while loading rental additions: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

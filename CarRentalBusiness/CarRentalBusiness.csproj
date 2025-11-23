@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ClsAdditionContract.cs" />
+    <Compile Include="ClsAgreement.cs" />
     <Compile Include="ClsBox.cs" />
     <Compile Include="ClsBranch.cs" />
     <Compile Include="ClsCar.cs" />

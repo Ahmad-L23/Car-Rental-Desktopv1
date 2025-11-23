@@ -3,28 +3,15 @@
   "WorkspaceRootPath": "C:\\Car_Rental_System\\CarRentalSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\company\\company\\frmaddnewcompnay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:company\\company\\frmaddnewcompnay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\agreement\\frmaddupdateagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:agreement\\frmaddupdateagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\uccartransferdetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\uccartransferdetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\agreement\\frmaddupdateagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:agreement\\frmaddupdateagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\uccartransferdetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\uccartransferdetails .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmaddupdatecartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmaddupdatecartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmaddupdatecartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmaddupdatecartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmcartransfercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmcartransfercard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,88 +22,63 @@
       "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\agreement\\frmaddupdateagreement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:agreement\\frmaddupdateagreement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmlistcartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmlistcartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsagreementrequiredinsurancedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmlistcartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmlistcartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsagreementrentaladditiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmemployeeusagecardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmemployeeusagecardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsagreementadditioncontractdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\uccartransferdetails .designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\uccartransferdetails .designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsagreementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\ucemployeeusagedetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\ucemployeeusagedetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\ucemployeeusagedetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\ucemployeeusagedetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clscartransferdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\company\\company\\companycardusercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:company\\company\\companycardusercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\category\\frmaddeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:category\\frmaddeditcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\category\\frmlistcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:category\\frmlistcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\category\\frmlistcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:category\\frmlistcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmlistemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmlistemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmlistemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmlistemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\cartransfer\\frmaddupdatecartransfer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:cartransfer\\frmaddupdatecartransfer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:customer\\frmaddeditcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clspaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsemployeeusagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsrentaladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsrequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsrequiredinsurancedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsbranchdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clscardata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -125,325 +87,145 @@
       "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clscustomerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmlistdamagemaintenacne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmlistdamagemaintenacne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsadditioncontractsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\ucemployeeusagedetalis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\ucemployeeusagedetalis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmemployeeusagecardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmemployeeusagecardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmdamagemaincard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmdamagemaincard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmdamagemaincard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmdamagemaincard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\ucdamagemaintenancecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\ucdamagemaintenancecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\ucdamagemaintenancecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\ucdamagemaintenancecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\color\\frmlistcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:color\\frmlistcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\employeeusage\\frmaddeditemployeeusage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmaddeditemployeeusage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\companyinsurance\\frmaddeditcompanyinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:companyinsurance\\frmaddeditcompanyinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\companyinsurance\\frmaddeditcompanyinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:companyinsurance\\frmaddeditcompanyinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsfueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsboxdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clslocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsnationlity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\customer\\frmlistcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:customer\\frmlistcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\customer\\frmshowcustomertypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:customer\\frmshowcustomertypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|c:\\car_rental_system\\carrentalsystem\\rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\nationlity\\frmlistallnationlites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:nationlity\\frmlistallnationlites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmmediatorlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:mediator\\frmmediatorlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmmediatordetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:mediator\\frmmediatordetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmaddupdatemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:mediator\\frmaddupdatemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\location\\frmlistlocations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:location\\frmlistlocations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\insurancetype\\frmlistinsurancetypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:insurancetype\\frmlistinsurancetypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\group\\frmlistgroups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:group\\frmlistgroups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\customer\\frmcustomerdetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:customer\\frmcustomerdetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\currency\\frmlistcurrencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:currency\\frmlistcurrencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\coverge\\frmlistcoverges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:coverge\\frmlistcoverges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\coverge\\frmaddupdatecoverge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:coverge\\frmaddupdatecoverge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\companyinsurance\\frmlistcompanyinsurances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:companyinsurance\\frmlistcompanyinsurances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\company\\company\\frmshowandeditdeletecompanies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:company\\company\\frmshowandeditdeletecompanies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\company\\company\\frmaddnewcompnay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:company\\company\\frmaddnewcompnay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\branch\\frmlistbranches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:branch\\frmlistbranches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\box\\frmaddeditbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:box\\frmaddeditbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\box\\frmlistboxs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:box\\frmlistboxs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\additioncontracts\\ucadditioncontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:additioncontracts\\ucadditioncontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\additioncontracts\\frmaddeditadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:additioncontracts\\frmaddeditadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\users\\frmlistusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:users\\frmlistusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:users\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\target_clients\\uctargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:target_clients\\uctargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\target_clients\\uctargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:target_clients\\uctargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:vehicle\\frmaddupdatevehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\target_clients\\frmlisttargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:target_clients\\frmlisttargetclients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\target_clients\\frmaddupdatetargetclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:target_clients\\frmaddupdatetargetclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\role\\frmlistroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:role\\frmlistroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\role\\frmaddeditrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:role\\frmaddeditrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\paymentmethod\\frmaddupdatepaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:paymentmethod\\frmaddupdatepaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\maintecancetypes\\frmaddupdatemaintenancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:maintecancetypes\\frmaddupdatemaintenancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\location\\frmaddeditlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:location\\frmaddeditlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\insurancetype\\frmaddupdateinsurancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:insurancetype\\frmaddupdateinsurancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\insurancetype\\frmaddupdateinsurancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:insurancetype\\frmaddupdateinsurancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clslocationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscartransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clscartransferdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:color\\frmaddupdatecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsrentaladditionsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\role\\frmaddeditrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:role\\frmaddeditrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\group\\frmaddeditgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:group\\frmaddeditgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\document\\frmaddupdatedocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:document\\frmaddupdatedocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\currency\\frmaddupdatecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:currency\\frmaddupdatecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:setting\\frmsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\company\\company\\companycardusercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:company\\company\\companycardusercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\quires\\frmquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:quires\\frmquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\quires\\frmquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:quires\\frmquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\system\\windows\\forms\\datavisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:system\\windows\\forms\\datavisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsagreementadditiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\frmagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:frmagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\frmagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:frmagreement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsinsurancetypedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\additioncontracts\\frmaddeditadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:additioncontracts\\frmaddeditadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:requiredinsurance\\frmaddupdaterequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\branch\\frmlistbranches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:branch\\frmlistbranches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\location\\frmaddeditlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:location\\frmaddeditlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmaddeditdamagemaintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmaddupdaterenatladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:rentaladdition\\frmlistrentaladditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\frmagreement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:frmagreement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\vehicle\\ucshowvehicledetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:vehicle\\ucshowvehicledetalis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clstargetclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsrequiredinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsrentaladdition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clspaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsmediator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsmaintenancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsinsurancetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscoverage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscompanyinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clscar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF9B6D04-5F3E-4ED7-9941-324A388F3F77}|..\\CarRentalBusiness\\CarRentalBusiness.csproj|c:\\car_rental_system\\carrentalbusiness\\clsadditioncontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsadditioncontractsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmlistdamagemaintenacne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmlistdamagemaintenacne.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmlistdamagemaintenacne.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmlistdamagemaintenacne.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8786D2-FCE7-471E-829D-B2B4F364576A}|..\\CarRentalDataAccess\\CarRentalDataAccess.csproj|c:\\car_rental_system\\carrentaldataaccess\\clsdamagesmaintenancedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\ucdamagemaintenancecard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\ucdamagemaintenancecard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\damagesmaintenance\\frmaddeditdamagemaintenance.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:damagesmaintenance\\frmaddeditdamagemaintenance.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|C:\\Car_Rental_System\\CarRentalSystem\\employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE7A115F-BCEA-4344-B10F-2393DD027D45}|CarRentalSystem.csproj|solutionrelative:employeeusage\\frmaddeditemployeeusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -458,1430 +240,764 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAddNewCompnay.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmAddNewCompnay.cs",
-              "RelativeDocumentMoniker": "Company\\company\\frmAddNewCompnay.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmAddNewCompnay.cs",
-              "RelativeToolTip": "Company\\company\\frmAddNewCompnay.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAmwKkAAAAAAAAAAAAAAA==",
+              "Title": "frmAddUpdateAgreement.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.cs",
+              "RelativeDocumentMoniker": "Agreement\\frmAddUpdateAgreement.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.cs",
+              "RelativeToolTip": "Agreement\\frmAddUpdateAgreement.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswFUAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T13:39:46.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmCarTransferCard.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmCarTransferCard.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmCarTransferCard.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmCarTransferCard.cs [Design]",
-              "RelativeToolTip": "CarTransfer\\frmCarTransferCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T13:21:27.685Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmListCarTransfer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmListCarTransfer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmListCarTransfer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmListCarTransfer.cs",
-              "RelativeToolTip": "CarTransfer\\frmListCarTransfer.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAvwPoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T12:47:28.237Z",
+              "WhenOpened": "2025-11-23T07:45:17.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "ClsAgreementRentalAdditionData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementRentalAdditionData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAgreementRentalAdditionData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementRentalAdditionData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAgreementRentalAdditionData.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAIwGwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T06:59:21.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClsAgreementRequiredInsuranceData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementRequiredInsuranceData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAgreementRequiredInsuranceData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementRequiredInsuranceData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAgreementRequiredInsuranceData.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAvwGwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T07:01:43.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddUpdateAgreement.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.cs",
+              "RelativeDocumentMoniker": "Agreement\\frmAddUpdateAgreement.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.cs [Design]",
+              "RelativeToolTip": "Agreement\\frmAddUpdateAgreement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T07:19:05.576Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmAddUpdateAgreement.Designer.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.Designer.cs",
+              "RelativeDocumentMoniker": "Agreement\\frmAddUpdateAgreement.Designer.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Agreement\\frmAddUpdateAgreement.Designer.cs",
+              "RelativeToolTip": "Agreement\\frmAddUpdateAgreement.Designer.cs",
+              "ViewState": "AgIAAHkDAAAAAAAAAAAmwJMDAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T09:05:14.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwDMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:42:48.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsAgreement.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAgreement.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsAgreement.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAgreement.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsAgreement.cs",
+              "ViewState": "AgIAAIQBAAAAAAAAAAAiwKEBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:18:22.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\MainForm.cs [Design]",
               "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:16:37.836Z",
+              "WhenOpened": "2025-11-18T12:33:00.174Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClsAgreementData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAgreementData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAgreementData.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAvwDUAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:16:49.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAvwNYAAAAdAAAAAAAAAA==",
+              "Title": "ClsAgreementAdditionContractData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementAdditionContractData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAgreementAdditionContractData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementAdditionContractData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAgreementAdditionContractData.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwF8AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:17:18.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ucCarTransferDetails .cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .cs",
-              "RelativeDocumentMoniker": "CarTransfer\\ucCarTransferDetails .cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .cs [Design]",
-              "RelativeToolTip": "CarTransfer\\ucCarTransferDetails .cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T13:17:36.21Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ucCarTransferDetails .cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .cs",
-              "RelativeDocumentMoniker": "CarTransfer\\ucCarTransferDetails .cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .cs",
-              "RelativeToolTip": "CarTransfer\\ucCarTransferDetails .cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T13:17:47.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmAddUpdateCarTransfer.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.cs [Design]",
-              "RelativeToolTip": "CarTransfer\\frmAddUpdateCarTransfer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T12:13:10.8Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAddUpdateCarTransfer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "RelativeToolTip": "CarTransfer\\frmAddUpdateCarTransfer.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowEEAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T12:13:55.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmEmployeeUsageCardInfo.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmEmployeeUsageCardInfo.cs [Design]",
-              "RelativeToolTip": "EmployeeUsage\\frmEmployeeUsageCardInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T10:08:18.166Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAIAwwDAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:37:23.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmListCarTransfer.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmListCarTransfer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmListCarTransfer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmListCarTransfer.cs [Design]",
-              "RelativeToolTip": "CarTransfer\\frmListCarTransfer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T12:44:58.707Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ucCarTransferDetails .Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .Designer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\ucCarTransferDetails .Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\ucCarTransferDetails .Designer.cs",
-              "RelativeToolTip": "CarTransfer\\ucCarTransferDetails .Designer.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAqwBoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T13:17:39.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CompanyCardUserControl1.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\CompanyCardUserControl1.cs",
-              "RelativeDocumentMoniker": "Company\\company\\CompanyCardUserControl1.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\CompanyCardUserControl1.cs",
-              "RelativeToolTip": "Company\\company\\CompanyCardUserControl1.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwBcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T08:47:00.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ClsCarTransferData.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarTransferData.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsCarTransferData.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarTransferData.cs",
-              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsCarTransferData.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAiwIsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T11:34:35.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ClsCarTransfer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCarTransfer.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCarTransfer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCarTransfer.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCarTransfer.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAcwLQAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T11:35:52.428Z",
+              "WhenOpened": "2025-11-23T06:56:39.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ucEmployeeusageDetalis.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.cs [Design]",
-              "RelativeToolTip": "EmployeeUsage\\ucEmployeeusageDetalis.cs [Design]",
+              "Title": "ClsAdditionContract.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAdditionContract.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsAdditionContract.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAdditionContract.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsAdditionContract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T09:33:56.831Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ucEmployeeusageDetalis.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "RelativeToolTip": "EmployeeUsage\\ucEmployeeusageDetalis.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAkwMcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T09:34:42.325Z",
+              "WhenOpened": "2025-11-20T08:08:56.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "frmAddEditCategory.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmAddEditCategory.cs",
-              "RelativeDocumentMoniker": "Category\\frmAddEditCategory.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmAddEditCategory.cs [Design]",
-              "RelativeToolTip": "Category\\frmAddEditCategory.cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "ClsPaymentMethod.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsPaymentMethod.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsPaymentMethod.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsPaymentMethod.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsPaymentMethod.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAYwFgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:52:23.338Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "frmAddEditEmployeeUsage.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs [Design]",
-              "RelativeToolTip": "EmployeeUsage\\frmAddEditEmployeeUsage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:49:54.312Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "frmListCategories.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmListCategories.cs",
-              "RelativeDocumentMoniker": "Category\\frmListCategories.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmListCategories.cs",
-              "RelativeToolTip": "Category\\frmListCategories.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAiwMMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:06:58.794Z",
+              "WhenOpened": "2025-11-23T09:49:56.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "frmListCategories.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmListCategories.cs",
-              "RelativeDocumentMoniker": "Category\\frmListCategories.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Category\\frmListCategories.cs [Design]",
-              "RelativeToolTip": "Category\\frmListCategories.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:05:23.408Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "frmAddEditEmployeeUsage.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "RelativeToolTip": "EmployeeUsage\\frmAddEditEmployeeUsage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:51:36.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "frmListEmployeeUsage.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmListEmployeeUsage.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmListEmployeeUsage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmListEmployeeUsage.cs [Design]",
-              "RelativeToolTip": "EmployeeUsage\\frmListEmployeeUsage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T08:42:01.373Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "frmListEmployeeUsage.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmListEmployeeUsage.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmListEmployeeUsage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmListEmployeeUsage.cs",
-              "RelativeToolTip": "EmployeeUsage\\frmListEmployeeUsage.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAvwBQBAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T08:43:37.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ClsEmployeeUsageData.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsEmployeeUsageData.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsEmployeeUsageData.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsEmployeeUsageData.cs",
-              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsEmployeeUsageData.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAiwNEAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:39:59.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ClsCustomer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCustomer.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCustomer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCustomer.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCustomer.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAswNwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T07:42:41.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "frmAddUpdateCarTransfer.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.Designer.cs",
-              "RelativeDocumentMoniker": "CarTransfer\\frmAddUpdateCarTransfer.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CarTransfer\\frmAddUpdateCarTransfer.Designer.cs",
-              "RelativeToolTip": "CarTransfer\\frmAddUpdateCarTransfer.Designer.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T12:16:47.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 11,
               "Title": "frmAddEditCustomer.cs [Design]",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmAddEditCustomer.cs",
               "RelativeDocumentMoniker": "Customer\\frmAddEditCustomer.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmAddEditCustomer.cs [Design]",
               "RelativeToolTip": "Customer\\frmAddEditCustomer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:17:57.965Z",
+              "WhenOpened": "2025-11-23T10:59:11.542Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 10,
               "Title": "frmAddEditCustomer.cs",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmAddEditCustomer.cs",
               "RelativeDocumentMoniker": "Customer\\frmAddEditCustomer.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmAddEditCustomer.cs",
               "RelativeToolTip": "Customer\\frmAddEditCustomer.cs",
-              "ViewState": "AgIAAF0BAAAAAAAAAAAUwIsBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUBAAAAAAAAAADwv0wBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:17:59.336Z",
+              "WhenOpened": "2025-11-23T10:59:13.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ClsCategory.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCategory.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCategory.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCategory.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCategory.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwC0AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "ClsRequiredInsurance.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRequiredInsurance.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsRequiredInsurance.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRequiredInsurance.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsRequiredInsurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:13.448Z",
+              "WhenOpened": "2025-11-23T09:39:01.521Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "frmListDamageMaintenacne.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.cs [Design]",
-              "RelativeToolTip": "DamagesMaintenance\\frmListDamageMaintenacne.cs [Design]",
+              "DocumentIndex": 16,
+              "Title": "ClsRequiredInsuranceData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsRequiredInsuranceData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsRequiredInsuranceData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsRequiredInsuranceData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsRequiredInsuranceData.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAmwGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:05:07.43Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ClsCustomerData.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCustomerData.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsCustomerData.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCustomerData.cs",
-              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsCustomerData.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAUwAMBAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T07:23:52.767Z",
+              "WhenOpened": "2025-11-19T11:53:01.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ucEmployeeusageDetalis.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.Designer.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\ucEmployeeusageDetalis.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\ucEmployeeusageDetalis.Designer.cs",
-              "RelativeToolTip": "EmployeeUsage\\ucEmployeeusageDetalis.Designer.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAqwBwAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "ClsBranch.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBranch.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsBranch.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBranch.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsBranch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T10:02:10.314Z",
+              "WhenOpened": "2025-11-20T13:39:02.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "frmDamageMainCard.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmDamageMainCard.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmDamageMainCard.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmDamageMainCard.cs",
-              "RelativeToolTip": "DamagesMaintenance\\frmDamageMainCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "ClsRentalAddition.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRentalAddition.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsRentalAddition.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRentalAddition.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsRentalAddition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:44:47.77Z",
+              "WhenOpened": "2025-11-19T07:34:17.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "frmDamageMainCard.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmDamageMainCard.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmDamageMainCard.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmDamageMainCard.cs [Design]",
-              "RelativeToolTip": "DamagesMaintenance\\frmDamageMainCard.cs [Design]",
+              "DocumentIndex": 19,
+              "Title": "frmAddUpdateVehicle.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\frmAddUpdateVehicle.cs",
+              "RelativeDocumentMoniker": "Vehicle\\frmAddUpdateVehicle.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\frmAddUpdateVehicle.cs",
+              "RelativeToolTip": "Vehicle\\frmAddUpdateVehicle.cs",
+              "ViewState": "AgIAABUBAAAAAAAAAAAcwA8BAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:43:32.351Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "frmEmployeeUsageCardInfo.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "RelativeToolTip": "EmployeeUsage\\frmEmployeeUsageCardInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T10:11:12.07Z",
+              "WhenOpened": "2025-11-23T09:22:30.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ucDamageMaintenanceCard.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.cs [Design]",
-              "RelativeToolTip": "DamagesMaintenance\\ucDamageMaintenanceCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:16:43.537Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ClsEmployeeUsage.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsEmployeeUsage.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsEmployeeUsage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsEmployeeUsage.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsEmployeeUsage.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAcwPcAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:45:07.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ucDamageMaintenanceCard.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "RelativeToolTip": "DamagesMaintenance\\ucDamageMaintenanceCard.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAswKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:17:10.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "frmListColors.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmListColors.cs",
-              "RelativeDocumentMoniker": "Color\\frmListColors.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmListColors.cs [Design]",
-              "RelativeToolTip": "Color\\frmListColors.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:52:46.56Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "frmAddUpdateColor.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs",
-              "RelativeDocumentMoniker": "Color\\frmAddUpdateColor.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs [Design]",
-              "RelativeToolTip": "Color\\frmAddUpdateColor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:52:57.032Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ClsLocation.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsLocation.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsLocation.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsLocation.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsLocation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:47:56.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "frmAddEditEmployeeUsage.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.Designer.cs",
-              "RelativeDocumentMoniker": "EmployeeUsage\\frmAddEditEmployeeUsage.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.Designer.cs",
-              "RelativeToolTip": "EmployeeUsage\\frmAddEditEmployeeUsage.Designer.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAwwJEBAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:49:56.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ClsNationlity.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsNationlity.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsNationlity.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsNationlity.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsNationlity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:30.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "frmAddEditCompanyInsurance.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "RelativeDocumentMoniker": "CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "RelativeToolTip": "CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAcwLsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T06:47:53.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ClsFuelType.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsFuelType.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsFuelType.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsFuelType.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsFuelType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:47:35.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ClsDamageMaintenance.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsDamageMaintenance.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsDamageMaintenance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsDamageMaintenance.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsDamageMaintenance.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAACMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T07:55:34.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "frmAddEditCompanyInsurance.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "RelativeDocumentMoniker": "CompanyInsurance\\frmAddEditCompanyInsurance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmAddEditCompanyInsurance.cs [Design]",
-              "RelativeToolTip": "CompanyInsurance\\frmAddEditCompanyInsurance.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:19.421Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "frmAddEditDamageMaintenance.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "RelativeToolTip": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAmwI0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:20:51.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "frmListCustomers.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmListCustomers.cs",
-              "RelativeDocumentMoniker": "Customer\\frmListCustomers.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmListCustomers.cs [Design]",
-              "RelativeToolTip": "Customer\\frmListCustomers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:54:08.111Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "frmAddEditDamageMaintenance.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs [Design]",
-              "RelativeToolTip": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:20:38.143Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "frmShowCustomerTypes.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmShowCustomerTypes.cs",
-              "RelativeDocumentMoniker": "Customer\\frmShowCustomerTypes.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmShowCustomerTypes.cs [Design]",
-              "RelativeToolTip": "Customer\\frmShowCustomerTypes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:54:11.647Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "frmMediatorDetalis.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmMediatorDetalis.cs",
-              "RelativeDocumentMoniker": "mediator\\frmMediatorDetalis.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmMediatorDetalis.cs [Design]",
-              "RelativeToolTip": "mediator\\frmMediatorDetalis.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:54.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "frmListInsuranceTypes.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmListInsuranceTypes.cs",
-              "RelativeDocumentMoniker": "InsuranceType\\frmListInsuranceTypes.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmListInsuranceTypes.cs [Design]",
-              "RelativeToolTip": "InsuranceType\\frmListInsuranceTypes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:18.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "frmListRentalAdditions.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs",
-              "RelativeDocumentMoniker": "RentalAddition\\frmListRentalAdditions.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs [Design]",
-              "RelativeToolTip": "RentalAddition\\frmListRentalAdditions.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:20.278Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "frmListAllNationlites.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Nationlity\\frmListAllNationlites.cs",
-              "RelativeDocumentMoniker": "Nationlity\\frmListAllNationlites.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Nationlity\\frmListAllNationlites.cs [Design]",
-              "RelativeToolTip": "Nationlity\\frmListAllNationlites.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:01.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "frmMediatorList.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmMediatorList.cs",
-              "RelativeDocumentMoniker": "mediator\\frmMediatorList.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmMediatorList.cs [Design]",
-              "RelativeToolTip": "mediator\\frmMediatorList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:57.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "frmAddUpdateMeditor.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmAddUpdateMeditor.cs",
-              "RelativeDocumentMoniker": "mediator\\frmAddUpdateMeditor.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\mediator\\frmAddUpdateMeditor.cs [Design]",
-              "RelativeToolTip": "mediator\\frmAddUpdateMeditor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:50.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "frmListLocations.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmListLocations.cs",
-              "RelativeDocumentMoniker": "Location\\frmListLocations.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmListLocations.cs [Design]",
-              "RelativeToolTip": "Location\\frmListLocations.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:33.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "frmListgroups.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Group\\frmListgroups.cs",
-              "RelativeDocumentMoniker": "Group\\frmListgroups.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Group\\frmListgroups.cs [Design]",
-              "RelativeToolTip": "Group\\frmListgroups.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:05.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "frmCustomerDetalis.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmCustomerDetalis.cs",
-              "RelativeDocumentMoniker": "Customer\\frmCustomerDetalis.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Customer\\frmCustomerDetalis.cs [Design]",
-              "RelativeToolTip": "Customer\\frmCustomerDetalis.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:54:02.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "frmListCurrencies.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Currency\\frmListCurrencies.cs",
-              "RelativeDocumentMoniker": "Currency\\frmListCurrencies.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Currency\\frmListCurrencies.cs [Design]",
-              "RelativeToolTip": "Currency\\frmListCurrencies.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:51.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "frmListCoverges.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Coverge\\frmListCoverges.cs",
-              "RelativeDocumentMoniker": "Coverge\\frmListCoverges.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Coverge\\frmListCoverges.cs [Design]",
-              "RelativeToolTip": "Coverge\\frmListCoverges.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:38.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "frmAddUpdateCoverge.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Coverge\\frmAddUpdateCoverge.cs",
-              "RelativeDocumentMoniker": "Coverge\\frmAddUpdateCoverge.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Coverge\\frmAddUpdateCoverge.cs [Design]",
-              "RelativeToolTip": "Coverge\\frmAddUpdateCoverge.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:28.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "frmListCompanyInsurances.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmListCompanyInsurances.cs",
-              "RelativeDocumentMoniker": "CompanyInsurance\\frmListCompanyInsurances.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\CompanyInsurance\\frmListCompanyInsurances.cs [Design]",
-              "RelativeToolTip": "CompanyInsurance\\frmListCompanyInsurances.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:22.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "frmShowAndEditDeleteCompanies.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmShowAndEditDeleteCompanies.cs",
-              "RelativeDocumentMoniker": "Company\\company\\frmShowAndEditDeleteCompanies.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmShowAndEditDeleteCompanies.cs [Design]",
-              "RelativeToolTip": "Company\\company\\frmShowAndEditDeleteCompanies.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:12.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "frmAddNewCompnay.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmAddNewCompnay.cs",
-              "RelativeDocumentMoniker": "Company\\company\\frmAddNewCompnay.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\frmAddNewCompnay.cs [Design]",
-              "RelativeToolTip": "Company\\company\\frmAddNewCompnay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:05.552Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "frmListBranches.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Branch\\frmListBranches.cs",
-              "RelativeDocumentMoniker": "Branch\\frmListBranches.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Branch\\frmListBranches.cs [Design]",
-              "RelativeToolTip": "Branch\\frmListBranches.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:51:49.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "frmAddEditBox.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Box\\frmAddEditBox.cs",
-              "RelativeDocumentMoniker": "Box\\frmAddEditBox.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Box\\frmAddEditBox.cs [Design]",
-              "RelativeToolTip": "Box\\frmAddEditBox.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:51:28.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "frmListBoxs.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Box\\frmListBoxs.cs",
-              "RelativeDocumentMoniker": "Box\\frmListBoxs.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Box\\frmListBoxs.cs [Design]",
-              "RelativeToolTip": "Box\\frmListBoxs.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:51:39.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "frmSettings.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs",
-              "RelativeDocumentMoniker": "Setting\\frmSettings.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs [Design]",
-              "RelativeToolTip": "Setting\\frmSettings.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:44.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "frmAddUpdateTargetClient.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\frmAddUpdateTargetClient.cs",
-              "RelativeDocumentMoniker": "Target_Clients\\frmAddUpdateTargetClient.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\frmAddUpdateTargetClient.cs [Design]",
-              "RelativeToolTip": "Target_Clients\\frmAddUpdateTargetClient.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:53.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "frmAddEditUser.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Users\\frmAddEditUser.cs",
-              "RelativeDocumentMoniker": "Users\\frmAddEditUser.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Users\\frmAddEditUser.cs [Design]",
-              "RelativeToolTip": "Users\\frmAddEditUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:20:25.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "frmListUsers.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Users\\frmListUsers.cs",
-              "RelativeDocumentMoniker": "Users\\frmListUsers.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Users\\frmListUsers.cs [Design]",
-              "RelativeToolTip": "Users\\frmListUsers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:20:38.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "ucAdditionContracts.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\ucAdditionContracts.cs",
-              "RelativeDocumentMoniker": "AdditionContracts\\ucAdditionContracts.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\ucAdditionContracts.cs [Design]",
-              "RelativeToolTip": "AdditionContracts\\ucAdditionContracts.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:22:24.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "frmListTargetClients.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\frmListTargetClients.cs",
-              "RelativeDocumentMoniker": "Target_Clients\\frmListTargetClients.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\frmListTargetClients.cs [Design]",
-              "RelativeToolTip": "Target_Clients\\frmListTargetClients.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:55.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 20,
               "Title": "frmAddUpdateVehicle.cs [Design]",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\frmAddUpdateVehicle.cs",
               "RelativeDocumentMoniker": "Vehicle\\frmAddUpdateVehicle.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\frmAddUpdateVehicle.cs [Design]",
               "RelativeToolTip": "Vehicle\\frmAddUpdateVehicle.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:58:05.169Z"
+              "WhenOpened": "2025-11-18T12:01:40.732Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "frmAddEditAdditionContract.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\frmAddEditAdditionContract.cs",
-              "RelativeDocumentMoniker": "AdditionContracts\\frmAddEditAdditionContract.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\frmAddEditAdditionContract.cs [Design]",
-              "RelativeToolTip": "AdditionContracts\\frmAddEditAdditionContract.cs [Design]",
+              "DocumentIndex": 21,
+              "Title": "ClsCar.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCar.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCar.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCar.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCar.cs",
+              "ViewState": "AgIAAJ0BAAAAAAAAAAAkwJMBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:51:03.572Z"
+              "WhenOpened": "2025-11-18T13:38:21.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "ucTargetClients.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\ucTargetClients.cs",
-              "RelativeDocumentMoniker": "Target_Clients\\ucTargetClients.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\ucTargetClients.cs",
-              "RelativeToolTip": "Target_Clients\\ucTargetClients.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "ClsCarData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsCarData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsCarData.cs",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAuwHkBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:01:37.119Z"
+              "WhenOpened": "2025-11-23T08:56:24.673Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "frmListRoles.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmListRoles.cs",
-              "RelativeDocumentMoniker": "Role\\frmListRoles.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmListRoles.cs [Design]",
-              "RelativeToolTip": "Role\\frmListRoles.cs [Design]",
+              "DocumentIndex": 18,
+              "Title": "ClsBranchData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsBranchData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsBranchData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsBranchData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsBranchData.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAmwGEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:38.858Z"
+              "WhenOpened": "2025-11-20T13:38:48.171Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "ucTargetClients.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\ucTargetClients.cs",
-              "RelativeDocumentMoniker": "Target_Clients\\ucTargetClients.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Target_Clients\\ucTargetClients.cs [Design]",
-              "RelativeToolTip": "Target_Clients\\ucTargetClients.cs [Design]",
+              "DocumentIndex": 23,
+              "Title": "ClsCustomer.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCustomer.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCustomer.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCustomer.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCustomer.cs",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAQwAoBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T13:01:35.626Z"
+              "WhenOpened": "2025-11-18T12:58:34.807Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
-              "Title": "frmAddEditRole.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmAddEditRole.cs",
-              "RelativeDocumentMoniker": "Role\\frmAddEditRole.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmAddEditRole.cs [Design]",
-              "RelativeToolTip": "Role\\frmAddEditRole.cs [Design]",
+              "DocumentIndex": 24,
+              "Title": "ClsCustomerData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCustomerData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsCustomerData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCustomerData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsCustomerData.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAAwKwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:36.092Z"
+              "WhenOpened": "2025-11-18T12:58:20.175Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "frmAddUpdateRequiredInsurance.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
-              "RelativeDocumentMoniker": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs [Design]",
-              "RelativeToolTip": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs [Design]",
+              "DocumentIndex": 32,
+              "Title": "ClsCarTransferData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarTransferData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsCarTransferData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsCarTransferData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsCarTransferData.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAADwv+8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:27.855Z"
+              "WhenOpened": "2025-11-20T13:07:36.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 25,
+              "Title": "ClsAdditionContractsData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAqwHsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:22:04.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ClsCarTransfer.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCarTransfer.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCarTransfer.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCarTransfer.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCarTransfer.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAYwLgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:07:54.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ClsLocationData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsLocationData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsLocationData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsLocationData.cs*",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsLocationData.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:24:59.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClsBoxData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsBoxData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsBoxData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsBoxData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsBoxData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:38:45.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "frmAddUpdateInsuranceType.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs",
+              "RelativeDocumentMoniker": "InsuranceType\\frmAddUpdateInsuranceType.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs [Design]*",
+              "RelativeToolTip": "InsuranceType\\frmAddUpdateInsuranceType.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:39:36.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ClsLocation.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsLocation.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsLocation.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsLocation.cs",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsLocation.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwE4AAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:59:35.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "frmAddUpdateInsuranceType.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs",
+              "RelativeDocumentMoniker": "InsuranceType\\frmAddUpdateInsuranceType.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs*",
+              "RelativeToolTip": "InsuranceType\\frmAddUpdateInsuranceType.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T13:39:37.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "frmAddUpdateColor.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs",
+              "RelativeDocumentMoniker": "Color\\frmAddUpdateColor.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs",
+              "RelativeToolTip": "Color\\frmAddUpdateColor.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCkAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:52:16.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "frmAddUpdateColor.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs",
+              "RelativeDocumentMoniker": "Color\\frmAddUpdateColor.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Color\\frmAddUpdateColor.cs [Design]",
+              "RelativeToolTip": "Color\\frmAddUpdateColor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:52:15.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ClsEmployeeUsage.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsEmployeeUsage.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsEmployeeUsage.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsEmployeeUsage.cs*",
+              "RelativeToolTip": "..\\CarRentalBusiness\\ClsEmployeeUsage.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwEAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:30:07.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "frmAddUpdateRenatlAddition.cs [Design]",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmAddUpdateRenatlAddition.cs",
               "RelativeDocumentMoniker": "RentalAddition\\frmAddUpdateRenatlAddition.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmAddUpdateRenatlAddition.cs [Design]",
               "RelativeToolTip": "RentalAddition\\frmAddUpdateRenatlAddition.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:17.465Z"
+              "WhenOpened": "2025-11-19T07:22:43.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
-              "Title": "frmAddUpdatePaymentMethod.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\PaymentMethod\\frmAddUpdatePaymentMethod.cs",
-              "RelativeDocumentMoniker": "PaymentMethod\\frmAddUpdatePaymentMethod.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\PaymentMethod\\frmAddUpdatePaymentMethod.cs [Design]",
-              "RelativeToolTip": "PaymentMethod\\frmAddUpdatePaymentMethod.cs [Design]",
+              "DocumentIndex": 38,
+              "Title": "frmAddEditRole.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmAddEditRole.cs",
+              "RelativeDocumentMoniker": "Role\\frmAddEditRole.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Role\\frmAddEditRole.cs [Design]",
+              "RelativeToolTip": "Role\\frmAddEditRole.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:57:06.924Z"
+              "WhenOpened": "2025-11-20T12:24:55.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
-              "Title": "frmAddUpdateMaintenanceType.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\MaintecanceTypes\\frmAddUpdateMaintenanceType.cs",
-              "RelativeDocumentMoniker": "MaintecanceTypes\\frmAddUpdateMaintenanceType.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\MaintecanceTypes\\frmAddUpdateMaintenanceType.cs [Design]",
-              "RelativeToolTip": "MaintecanceTypes\\frmAddUpdateMaintenanceType.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:42.909Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 87,
-              "Title": "frmAddEditLocation.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmAddEditLocation.cs",
-              "RelativeDocumentMoniker": "Location\\frmAddEditLocation.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmAddEditLocation.cs [Design]",
-              "RelativeToolTip": "Location\\frmAddEditLocation.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:26.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 88,
-              "Title": "frmAddUpdateInsuranceType.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs",
-              "RelativeDocumentMoniker": "InsuranceType\\frmAddUpdateInsuranceType.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\InsuranceType\\frmAddUpdateInsuranceType.cs [Design]",
-              "RelativeToolTip": "InsuranceType\\frmAddUpdateInsuranceType.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:56:13.96Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 39,
               "Title": "frmAddEditGroup.cs [Design]",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Group\\frmAddEditGroup.cs",
               "RelativeDocumentMoniker": "Group\\frmAddEditGroup.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Group\\frmAddEditGroup.cs [Design]",
               "RelativeToolTip": "Group\\frmAddEditGroup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:55:58.576Z"
+              "WhenOpened": "2025-11-20T12:24:51.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
-              "Title": "frmAddUpdateDocument.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Document\\frmAddUpdateDocument.cs",
-              "RelativeDocumentMoniker": "Document\\frmAddUpdateDocument.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Document\\frmAddUpdateDocument.cs [Design]",
-              "RelativeToolTip": "Document\\frmAddUpdateDocument.cs [Design]",
+              "DocumentIndex": 40,
+              "Title": "frmSettings.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs",
+              "RelativeDocumentMoniker": "Setting\\frmSettings.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs",
+              "RelativeToolTip": "Setting\\frmSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:55:52.451Z"
+              "WhenOpened": "2025-11-20T11:47:24.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
-              "Title": "frmAddUpdateCurrency.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Currency\\frmAddUpdateCurrency.cs",
-              "RelativeDocumentMoniker": "Currency\\frmAddUpdateCurrency.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Currency\\frmAddUpdateCurrency.cs [Design]",
-              "RelativeToolTip": "Currency\\frmAddUpdateCurrency.cs [Design]",
+              "DocumentIndex": 42,
+              "Title": "frmQuery.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Quires\\frmQuery.cs",
+              "RelativeDocumentMoniker": "Quires\\frmQuery.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Quires\\frmQuery.cs*",
+              "RelativeToolTip": "Quires\\frmQuery.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:48.086Z"
+              "WhenOpened": "2025-11-20T11:39:03.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
-              "Title": "CompanyCardUserControl1.cs [Design]",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\CompanyCardUserControl1.cs",
-              "RelativeDocumentMoniker": "Company\\company\\CompanyCardUserControl1.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Company\\company\\CompanyCardUserControl1.cs [Design]",
-              "RelativeToolTip": "Company\\company\\CompanyCardUserControl1.cs [Design]",
+              "DocumentIndex": 43,
+              "Title": "frmQuery.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Quires\\frmQuery.cs",
+              "RelativeDocumentMoniker": "Quires\\frmQuery.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Quires\\frmQuery.cs [Design]*",
+              "RelativeToolTip": "Quires\\frmQuery.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:53:04.476Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-20T11:39:02.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 44,
+              "Title": "DataVisualization.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\System\\Windows\\Forms\\DataVisualization.cs",
+              "RelativeDocumentMoniker": "System\\Windows\\Forms\\DataVisualization.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\System\\Windows\\Forms\\DataVisualization.cs",
+              "RelativeToolTip": "System\\Windows\\Forms\\DataVisualization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T11:46:54.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ClsRentalAdditionsData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsRentalAdditionsData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsRentalAdditionsData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsRentalAdditionsData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsRentalAdditionsData.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAADwv70AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:33:32.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ClsAgreementAdditionData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementAdditionData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAgreementAdditionData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAgreementAdditionData.cs*",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAgreementAdditionData.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:42:50.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "frmSettings.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs",
+              "RelativeDocumentMoniker": "Setting\\frmSettings.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Setting\\frmSettings.cs [Design]",
+              "RelativeToolTip": "Setting\\frmSettings.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:37:25.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "frmAgreement.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.cs",
+              "RelativeDocumentMoniker": "frmAgreement.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.cs [Design]*",
+              "RelativeToolTip": "frmAgreement.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:42:20.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "frmAddUpdateRequiredInsurance.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "RelativeDocumentMoniker": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs [Design]",
+              "RelativeToolTip": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:37:33.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "frmAddUpdateRequiredInsurance.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "RelativeDocumentMoniker": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "RelativeToolTip": "RequiredInsurance\\frmAddUpdateRequiredInsurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:37:39.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "frmAgreement.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.cs",
+              "RelativeDocumentMoniker": "frmAgreement.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.cs*",
+              "RelativeToolTip": "frmAgreement.cs*",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAswPkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:42:39.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ClsInsuranceTypeData.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsInsuranceTypeData.cs",
+              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsInsuranceTypeData.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsInsuranceTypeData.cs",
+              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsInsuranceTypeData.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T13:48:13.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "frmListBranches.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Branch\\frmListBranches.cs",
+              "RelativeDocumentMoniker": "Branch\\frmListBranches.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Branch\\frmListBranches.cs [Design]",
+              "RelativeToolTip": "Branch\\frmListBranches.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T10:15:36.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "frmAddEditAdditionContract.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\frmAddEditAdditionContract.cs",
+              "RelativeDocumentMoniker": "AdditionContracts\\frmAddEditAdditionContract.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\AdditionContracts\\frmAddEditAdditionContract.cs [Design]",
+              "RelativeToolTip": "AdditionContracts\\frmAddEditAdditionContract.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T06:36:36.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "frmAddUpdateRenatlAddition.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmAddUpdateRenatlAddition.cs",
+              "RelativeDocumentMoniker": "RentalAddition\\frmAddUpdateRenatlAddition.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmAddUpdateRenatlAddition.cs",
+              "RelativeToolTip": "RentalAddition\\frmAddUpdateRenatlAddition.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwCMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:34:47.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "frmListRentalAdditions.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs",
+              "RelativeDocumentMoniker": "RentalAddition\\frmListRentalAdditions.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs [Design]",
+              "RelativeToolTip": "RentalAddition\\frmListRentalAdditions.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:37:23.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "frmListRentalAdditions.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs",
+              "RelativeDocumentMoniker": "RentalAddition\\frmListRentalAdditions.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\RentalAddition\\frmListRentalAdditions.cs",
+              "RelativeToolTip": "RentalAddition\\frmListRentalAdditions.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAqwIkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T07:37:25.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "frmAddEditDamageMaintenance.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
+              "RelativeDocumentMoniker": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.cs [Design]",
+              "RelativeToolTip": "DamagesMaintenance\\frmAddEditDamageMaintenance.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:13:35.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "frmAddEditLocation.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmAddEditLocation.cs",
+              "RelativeDocumentMoniker": "Location\\frmAddEditLocation.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Location\\frmAddEditLocation.cs [Design]",
+              "RelativeToolTip": "Location\\frmAddEditLocation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:49:03.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-18T13:43:23.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
               "Title": "ClsUser.cs",
               "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsUser.cs",
               "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsUser.cs",
               "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsUser.cs",
               "RelativeToolTip": "..\\CarRentalBusiness\\ClsUser.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMIAAAAAAAAAAADwv+8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:49:06.962Z"
+              "WhenOpened": "2025-11-18T12:56:00.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
-              "Title": "ClsRole.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRole.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsRole.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRole.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 59,
+              "Title": "frmAgreement.Designer.cs",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.Designer.cs",
+              "RelativeDocumentMoniker": "frmAgreement.Designer.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\frmAgreement.Designer.cs",
+              "RelativeToolTip": "frmAgreement.Designer.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAqwNMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:51.233Z"
+              "WhenOpened": "2025-11-18T12:43:16.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
-              "Title": "ClsTargetClient.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsTargetClient.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsTargetClient.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsTargetClient.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsTargetClient.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 60,
+              "Title": "ucShowVehicleDetalis.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\ucShowVehicleDetalis.cs",
+              "RelativeDocumentMoniker": "Vehicle\\ucShowVehicleDetalis.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\Vehicle\\ucShowVehicleDetalis.cs [Design]",
+              "RelativeToolTip": "Vehicle\\ucShowVehicleDetalis.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:55.554Z"
+              "WhenOpened": "2025-11-18T13:51:08.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
-              "Title": "ClsRequiredInsurance.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRequiredInsurance.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsRequiredInsurance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRequiredInsurance.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsRequiredInsurance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 62,
+              "Title": "frmAddEditEmployeeUsage.cs [Design]",
+              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs",
+              "RelativeDocumentMoniker": "EmployeeUsage\\frmAddEditEmployeeUsage.cs",
+              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\EmployeeUsage\\frmAddEditEmployeeUsage.cs [Design]",
+              "RelativeToolTip": "EmployeeUsage\\frmAddEditEmployeeUsage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:46.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 97,
-              "Title": "ClsRentalAddition.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRentalAddition.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsRentalAddition.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsRentalAddition.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsRentalAddition.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:40.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 98,
-              "Title": "ClsPaymentMethod.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsPaymentMethod.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsPaymentMethod.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsPaymentMethod.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsPaymentMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:36.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 99,
-              "Title": "ClsMediator.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsMediator.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsMediator.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsMediator.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsMediator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:48:27.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 101,
-              "Title": "ClsInsuranceType.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsInsuranceType.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsInsuranceType.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsInsuranceType.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsInsuranceType.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:47:49.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 102,
-              "Title": "ClsGroup.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsGroup.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsGroup.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsGroup.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:47:41.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 103,
-              "Title": "ClsDocument.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsDocument.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsDocument.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsDocument.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsDocument.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowFgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:47:13.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 104,
-              "Title": "ClsCurrency.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCurrency.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCurrency.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCurrency.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCurrency.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:50.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 105,
-              "Title": "ClsCoverage.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCoverage.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCoverage.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCoverage.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCoverage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:44.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 106,
-              "Title": "ClsCompanyInsurance.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCompanyInsurance.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCompanyInsurance.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCompanyInsurance.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCompanyInsurance.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:25.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 107,
-              "Title": "ClsCompany.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCompany.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCompany.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCompany.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCompany.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:21.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 100,
-              "Title": "ClsMaintenanceType.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsMaintenanceType.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsMaintenanceType.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsMaintenanceType.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsMaintenanceType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:08:55.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 108,
-              "Title": "ClsColor.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsColor.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsColor.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsColor.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsColor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:45:18.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 109,
-              "Title": "ClsCar.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCar.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsCar.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsCar.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsCar.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:44:41.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 110,
-              "Title": "ClsBranch.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBranch.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsBranch.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBranch.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsBranch.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:44:33.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 111,
-              "Title": "ClsBox.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBox.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsBox.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsBox.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsBox.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:44:08.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 112,
-              "Title": "ClsAdditionContract.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAdditionContract.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalBusiness\\ClsAdditionContract.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalBusiness\\ClsAdditionContract.cs",
-              "RelativeToolTip": "..\\CarRentalBusiness\\ClsAdditionContract.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:44:02.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 113,
-              "Title": "ClsAdditionContractsData.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
-              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsAdditionContractsData.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:43:45.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 115,
-              "Title": "frmListDamageMaintenacne.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.Designer.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmListDamageMaintenacne.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.Designer.cs",
-              "RelativeToolTip": "DamagesMaintenance\\frmListDamageMaintenacne.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:46:36.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 114,
-              "Title": "frmListDamageMaintenacne.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "RelativeToolTip": "DamagesMaintenance\\frmListDamageMaintenacne.cs",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAowNkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T09:07:17.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 117,
-              "Title": "ucDamageMaintenanceCard.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.Designer.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\ucDamageMaintenanceCard.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\ucDamageMaintenanceCard.Designer.cs",
-              "RelativeToolTip": "DamagesMaintenance\\ucDamageMaintenanceCard.Designer.cs",
-              "ViewState": "AgIAACYBAAAAAAAAAAAewD4BAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T11:16:48.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 116,
-              "Title": "ClsDamagesMaintenanceData.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsDamagesMaintenanceData.cs",
-              "RelativeDocumentMoniker": "..\\CarRentalDataAccess\\ClsDamagesMaintenanceData.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalDataAccess\\ClsDamagesMaintenanceData.cs",
-              "RelativeToolTip": "..\\CarRentalDataAccess\\ClsDamagesMaintenanceData.cs",
-              "ViewState": "AgIAAOgAAAAAAAAAAAAowAkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T07:23:51.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 118,
-              "Title": "frmAddEditDamageMaintenance.Designer.cs",
-              "DocumentMoniker": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.Designer.cs",
-              "RelativeDocumentMoniker": "DamagesMaintenance\\frmAddEditDamageMaintenance.Designer.cs",
-              "ToolTip": "C:\\Car_Rental_System\\CarRentalSystem\\DamagesMaintenance\\frmAddEditDamageMaintenance.Designer.cs",
-              "RelativeToolTip": "DamagesMaintenance\\frmAddEditDamageMaintenance.Designer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAMwB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T08:20:41.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T12:00:19.179Z"
             }
           ]
         }

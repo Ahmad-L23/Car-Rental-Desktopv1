@@ -48,6 +48,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkIsTaxIncluded = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +155,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(111, 251);
+            this.btnSave.Location = new System.Drawing.Point(111, 290);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(77, 24);
             this.btnSave.TabIndex = 10;
@@ -164,7 +165,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(249, 251);
+            this.btnCancel.Location = new System.Drawing.Point(249, 290);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(77, 24);
             this.btnCancel.TabIndex = 11;
@@ -175,11 +176,24 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // chkIsTaxIncluded
+            // 
+            this.chkIsTaxIncluded.AutoSize = true;
+            this.chkIsTaxIncluded.Checked = true;
+            this.chkIsTaxIncluded.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkIsTaxIncluded.Location = new System.Drawing.Point(112, 252);
+            this.chkIsTaxIncluded.Name = "chkIsTaxIncluded";
+            this.chkIsTaxIncluded.Size = new System.Drawing.Size(82, 17);
+            this.chkIsTaxIncluded.TabIndex = 12;
+            this.chkIsTaxIncluded.Text = "Include Tax";
+            this.chkIsTaxIncluded.UseVisualStyleBackColor = true;
+            // 
             // frmAddUpdateRentalAddition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 295);
+            this.ClientSize = new System.Drawing.Size(360, 338);
+            this.Controls.Add(this.chkIsTaxIncluded);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblRentalName);
             this.Controls.Add(this.txtRentalName);
@@ -206,5 +220,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.CheckBox chkIsTaxIncluded;
     }
 }

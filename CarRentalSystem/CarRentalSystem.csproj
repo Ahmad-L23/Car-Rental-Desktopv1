@@ -58,6 +58,12 @@
     <Compile Include="AdditionContracts\ucAdditionContracts.Designer.cs">
       <DependentUpon>ucAdditionContracts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agreement\frmAddUpdateAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agreement\frmAddUpdateAgreement.Designer.cs">
+      <DependentUpon>frmAddUpdateAgreement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Box\frmAddEditBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,12 +244,6 @@
     <Compile Include="DamagesMaintenance\ucDamageMaintenanceCard.Designer.cs">
       <DependentUpon>ucDamageMaintenanceCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document\frmAddUpdateDocument.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Document\frmAddUpdateDocument.Designer.cs">
-      <DependentUpon>frmAddUpdateDocument.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmployeeUsage\frmAddEditEmployeeUsage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +267,12 @@
     </Compile>
     <Compile Include="EmployeeUsage\ucEmployeeusageDetalis.Designer.cs">
       <DependentUpon>ucEmployeeusageDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgreement.Designer.cs">
+      <DependentUpon>frmAgreement.cs</DependentUpon>
     </Compile>
     <Compile Include="Group\frmAddEditGroup.cs">
       <SubType>Form</SubType>
@@ -365,6 +371,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Quires\frmQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quires\frmQuery.Designer.cs">
+      <DependentUpon>frmQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="RentalAddition\frmAddUpdateRenatlAddition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,11 +468,20 @@
     <Compile Include="Vehicle\frmListCar.Designer.cs">
       <DependentUpon>frmListCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle\ucShowVehicleDetalis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vehicle\ucShowVehicleDetalis.Designer.cs">
+      <DependentUpon>ucShowVehicleDetalis.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdditionContracts\frmAddEditAdditionContract.resx">
       <DependentUpon>frmAddEditAdditionContract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdditionContracts\ucAdditionContracts.resx">
       <DependentUpon>ucAdditionContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agreement\frmAddUpdateAgreement.resx">
+      <DependentUpon>frmAddUpdateAgreement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Box\frmAddEditBox.resx">
       <DependentUpon>frmAddEditBox.cs</DependentUpon>
@@ -552,9 +573,6 @@
     <EmbeddedResource Include="DamagesMaintenance\ucDamageMaintenanceCard.resx">
       <DependentUpon>ucDamageMaintenanceCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Document\frmAddUpdateDocument.resx">
-      <DependentUpon>frmAddUpdateDocument.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUsage\frmAddEditEmployeeUsage.resx">
       <DependentUpon>frmAddEditEmployeeUsage.cs</DependentUpon>
     </EmbeddedResource>
@@ -566,6 +584,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUsage\ucEmployeeusageDetalis.resx">
       <DependentUpon>ucEmployeeusageDetalis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgreement.resx">
+      <DependentUpon>frmAgreement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Group\frmAddEditGroup.resx">
       <DependentUpon>frmAddEditGroup.cs</DependentUpon>
@@ -617,6 +638,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Quires\frmQuery.resx">
+      <DependentUpon>frmQuery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RentalAddition\frmAddUpdateRenatlAddition.resx">
       <DependentUpon>frmAddUpdateRenatlAddition.cs</DependentUpon>
     </EmbeddedResource>
@@ -655,6 +679,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\frmListCar.resx">
       <DependentUpon>frmListCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\ucShowVehicleDetalis.resx">
+      <DependentUpon>ucShowVehicleDetalis.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -777,5 +804,6 @@
   <ItemGroup>
     <None Include="Resources\EmployeeUsage.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

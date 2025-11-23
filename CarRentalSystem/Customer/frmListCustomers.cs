@@ -1,7 +1,7 @@
 ﻿using CarRentalBusiness;
 using System;
-using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CarRentalSystem.Customer
@@ -14,7 +14,6 @@ namespace CarRentalSystem.Customer
 
             // Load customers on form load
             this.Load += FrmListCustomers_Load;
-
         }
 
         private void FrmListCustomers_Load(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace CarRentalSystem.Customer
             {
                 DataTable dt = ClsCustomer.GetCustomersDataTable();
 
-                // Add computed "BlacklistStatus" column to display friendly blacklist status
+                // Add computed "BlacklistStatus" column to display friendly blacklist status if missing
                 if (!dt.Columns.Contains("BlacklistStatus"))
                     dt.Columns.Add("BlacklistStatus", typeof(string));
 
@@ -44,51 +43,70 @@ namespace CarRentalSystem.Customer
                 dgvListCustomers.DataSource = dt;
 
                 // Hide technical columns
-                if (dgvListCustomers.Columns.Contains("customer_id"))
-                    dgvListCustomers.Columns["customer_id"].Visible = false;
-                if (dgvListCustomers.Columns.Contains("company_id"))
-                    dgvListCustomers.Columns["company_id"].Visible = false;
-                if (dgvListCustomers.Columns.Contains("nationality_id"))
-                    dgvListCustomers.Columns["nationality_id"].Visible = false;
-                if (dgvListCustomers.Columns.Contains("mediator_id"))
-                    dgvListCustomers.Columns["mediator_id"].Visible = false;
-
-                // Rename headers for readability
-                if (dgvListCustomers.Columns.Contains("customer_type"))
-                    dgvListCustomers.Columns["customer_type"].HeaderText = "Customer Type";
-                if (dgvListCustomers.Columns.Contains("customer_name_en"))
-                    dgvListCustomers.Columns["customer_name_en"].HeaderText = "Name (English)";
-                if (dgvListCustomers.Columns.Contains("customer_name_ar"))
-                    dgvListCustomers.Columns["customer_name_ar"].HeaderText = "Name (Arabic)";
-                if (dgvListCustomers.Columns.Contains("phone_number"))
-                    dgvListCustomers.Columns["phone_number"].HeaderText = "Phone Number";
-                if (dgvListCustomers.Columns.Contains("email"))
-                    dgvListCustomers.Columns["email"].HeaderText = "Email";
-                if (dgvListCustomers.Columns.Contains("address_en"))
-                    dgvListCustomers.Columns["address_en"].HeaderText = "Address (English)";
-                if (dgvListCustomers.Columns.Contains("address_ar"))
-                    dgvListCustomers.Columns["address_ar"].HeaderText = "Address (Arabic)";
-                if (dgvListCustomers.Columns.Contains("notes_en"))
-                    dgvListCustomers.Columns["notes_en"].HeaderText = "Notes (English)";
-                if (dgvListCustomers.Columns.Contains("notes_ar"))
-                    dgvListCustomers.Columns["notes_ar"].HeaderText = "Notes (Arabic)";
-
-                // Style and format BlacklistStatus column
-                if (dgvListCustomers.Columns.Contains("BlacklistStatus"))
+                string[] hiddenColumns = { "customer_id", "company_id", "nationality_id", "mediator_id" };
+                foreach (var col in hiddenColumns)
                 {
-                    dgvListCustomers.Columns["BlacklistStatus"].HeaderText = "Blacklist Status";
-                    dgvListCustomers.Columns["BlacklistStatus"].Width = 100;
-                    dgvListCustomers.Columns["BlacklistStatus"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvListCustomers.Columns["BlacklistStatus"].DefaultCellStyle.ForeColor = System.Drawing.Color.Red;
-                    dgvListCustomers.Columns["BlacklistStatus"].ReadOnly = true;
+                    if (dgvListCustomers.Columns.Contains(col))
+                        dgvListCustomers.Columns[col].Visible = false;
                 }
 
-                if (dgvListCustomers.Columns.Contains("created_at"))
-                    dgvListCustomers.Columns["created_at"].HeaderText = "Created At";
-                if (dgvListCustomers.Columns.Contains("updated_at"))
-                    dgvListCustomers.Columns["updated_at"].HeaderText = "Updated At";
+                // Rename headers for readability
+                var headers = new (string column, string header)[]
+                {
+                    ("customer_type", "Customer Type"),
+                    ("customer_name_en", "Name (English)"),
+                    ("customer_name_ar", "Name (Arabic)"),
+                    ("phone_number", "Phone Number"),
+                    ("email", "Email"),
+                    ("address_en", "Address (English)"),
+                    ("address_ar", "Address (Arabic)"),
+                    ("notes_en", "Notes (English)"),
+                    ("notes_ar", "Notes (Arabic)"),
+                    ("id_type_en", "ID Type (English)"),
+                    ("id_type_ar", "ID Type (Arabic)"),
+                    ("id_number", "ID Number"),
+                    ("identity_number", "Identity Number"),
+                    ("identity_place_of_issue_en", "ID Place of Issue (English)"),
+                    ("identity_place_of_issue_ar", "ID Place of Issue (Arabic)"),
+                    ("license_number", "License Number"),
+                    ("license_category_en", "License Category (English)"),
+                    ("license_category_ar", "License Category (Arabic)"),
+                    ("license_place_of_issue_en", "License Place of Issue (English)"),
+                    ("license_place_of_issue_ar", "License Place of Issue (Arabic)"),
+                    ("license_issue_date", "License Issue Date"),
+                    ("license_expiry_date", "License Expiry Date"),
+                    ("created_at", "Created At"),
+                    ("updated_at", "Updated At"),
+                };
 
-                // Auto resize all columns for better appearance
+                foreach (var (column, header) in headers)
+                {
+                    if (dgvListCustomers.Columns.Contains(column))
+                    {
+                        dgvListCustomers.Columns[column].HeaderText = header;
+
+                        // Format dates nicely
+                        if (column == "license_issue_date" || column == "license_expiry_date" ||
+                            column == "created_at" || column == "updated_at")
+                        {
+                            dgvListCustomers.Columns[column].DefaultCellStyle.Format = "yyyy-MM-dd";
+                        }
+                    }
+                }
+
+                // Style and format BlacklistStatus column with color coding
+                if (dgvListCustomers.Columns.Contains("BlacklistStatus"))
+                {
+                    var col = dgvListCustomers.Columns["BlacklistStatus"];
+                    col.HeaderText = "Blacklist Status";
+                    col.Width = 110;
+                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.ReadOnly = true;
+                    dgvListCustomers.CellFormatting -= DgvListCustomers_CellFormatting; // remove if already attached
+                    dgvListCustomers.CellFormatting += DgvListCustomers_CellFormatting;
+                }
+
+                // Auto resize columns
                 dgvListCustomers.AutoResizeColumns();
 
                 // Update total count label
@@ -101,6 +119,24 @@ namespace CarRentalSystem.Customer
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to load customers: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DgvListCustomers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvListCustomers.Columns[e.ColumnIndex].Name == "BlacklistStatus" && e.Value != null)
+            {
+                string status = e.Value.ToString().ToLowerInvariant();
+                if (status == "blacklisted")
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                    e.CellStyle.Font = new Font(dgvListCustomers.Font, FontStyle.Bold);
+                }
+                else if (status == "active")
+                {
+                    e.CellStyle.ForeColor = Color.Green;
+                    e.CellStyle.Font = new Font(dgvListCustomers.Font, FontStyle.Regular);
+                }
             }
         }
 
@@ -133,7 +169,6 @@ namespace CarRentalSystem.Customer
                     LoadCustomers();
                 }
             }
-            LoadCustomers();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,12 +179,13 @@ namespace CarRentalSystem.Customer
                 MessageBox.Show("Please select a customer to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             dgvListCustomers.CurrentCell = null;
             dgvListCustomers.ClearSelection();
+
             var confirm = MessageBox.Show("Are you sure you want to delete this customer?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirm == DialogResult.Yes)
             {
-               
                 bool deleted = ClsCustomer.DeleteCustomer(customerId.Value);
                 if (deleted)
                 {
@@ -157,10 +193,8 @@ namespace CarRentalSystem.Customer
                 }
                 else
                 {
-                    MessageBox.Show("Failed to delete the customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Failed to delete the customer because there is a document related to this customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                return;
             }
         }
 
@@ -174,17 +208,20 @@ namespace CarRentalSystem.Customer
             }
 
             // Open the customer details form with the selected ID
-            frmCustomerDetalis frmDetails = new frmCustomerDetalis(customerId.Value);
-            frmDetails.ShowDialog();
+            using (var frmDetails = new frmCustomerDetalis(customerId.Value))
+            {
+                frmDetails.ShowDialog();
+            }
             LoadCustomers();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAddEditCustomer frmadd = new frmAddEditCustomer();
-            frmadd.ShowDialog();
+            using (var frmAdd = new frmAddEditCustomer())
+            {
+                frmAdd.ShowDialog();
+            }
             LoadCustomers();
         }
-
     }
 }

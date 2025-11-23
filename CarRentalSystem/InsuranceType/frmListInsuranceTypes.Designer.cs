@@ -131,6 +131,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAdd.BackgroundImage = global::CarRentalSystem.Properties.Resources.medical_insurance;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(459, 85);

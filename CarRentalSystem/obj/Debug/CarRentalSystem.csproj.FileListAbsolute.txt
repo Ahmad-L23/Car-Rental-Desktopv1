@@ -63,7 +63,6 @@ C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Customer.frmAddEd
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Customer.frmCustomerDetalis.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Customer.frmListCustomers.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Customer.frmShowCustomerTypes.resources
-C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Document.frmAddUpdateDocument.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Group.frmAddEditGroup.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Group.frmListgroups.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Location.frmAddEditLocation.resources
@@ -120,3 +119,7 @@ C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.frmLi
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.frmCarTransferCard.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.exe.config
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.ucCarTransferDetails.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Vehicle.ucShowVehicleDetalis.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Quires.frmQuery.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CurtainDemo.frmAgreement.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Agreement.frmAddUpdateAgreement.resources

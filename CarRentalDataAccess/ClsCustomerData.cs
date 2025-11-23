@@ -22,18 +22,48 @@ namespace CarRentalDataAccess
             bool blacklist,
             int? companyId,
             int? nationalityId,
-            int? mediatorId)
+            int? mediatorId,
+
+            // New fields added here:
+            string idTypeEn,
+            string idTypeAr,
+            string idNumber,
+            string identityNumber,
+            string identityPlaceOfIssueEn,
+            string identityPlaceOfIssueAr,
+            string licenseNumber,
+            string licenseCategoryEn,
+            string licenseCategoryAr,
+            string licensePlaceOfIssueEn,
+            DateTime? licenseIssueDate,
+            DateTime? licenseExpiryDate,
+            string licensePlaceOfIssueAr)
         {
             string query = @"
                 INSERT INTO Customers
-                (customer_type, customer_name_en, customer_name_ar, phone_number, email, address_en, address_ar, notes_en, notes_ar, blacklist, company_id, nationality_id, mediator_id, created_at, updated_at)
+                (
+                    customer_type, customer_name_en, customer_name_ar, phone_number, email, address_en, address_ar,
+                    notes_en, notes_ar, blacklist, company_id, nationality_id, mediator_id,
+                    id_type_en, id_type_ar, id_number, identity_number, identity_place_of_issue_en, identity_place_of_issue_ar,
+                    license_number, license_category_en, license_category_ar, license_place_of_issue_en, license_issue_date,
+                    license_expiry_date, license_place_of_issue_ar,
+                    created_at, updated_at
+                )
                 VALUES
-                (@CustomerType, @CustomerNameEn, @CustomerNameAr, @PhoneNumber, @Email, @AddressEn, @AddressAr, @NotesEn, @NotesAr, @Blacklist, @CompanyId, @NationalityId, @MediatorId, GETDATE(), GETDATE());
+                (
+                    @CustomerType, @CustomerNameEn, @CustomerNameAr, @PhoneNumber, @Email, @AddressEn, @AddressAr,
+                    @NotesEn, @NotesAr, @Blacklist, @CompanyId, @NationalityId, @MediatorId,
+                    @IdTypeEn, @IdTypeAr, @IdNumber, @IdentityNumber, @IdentityPlaceOfIssueEn, @IdentityPlaceOfIssueAr,
+                    @LicenseNumber, @LicenseCategoryEn, @LicenseCategoryAr, @LicensePlaceOfIssueEn, @LicenseIssueDate,
+                    @LicenseExpiryDate, @LicensePlaceOfIssueAr,
+                    GETDATE(), GETDATE()
+                );
                 SELECT CAST(scope_identity() AS int);";
 
             using (SqlConnection connection = new SqlConnection(conn))
             using (SqlCommand cmd = new SqlCommand(query, connection))
             {
+                // existing params
                 cmd.Parameters.AddWithValue("@CustomerType", customerType);
                 cmd.Parameters.AddWithValue("@CustomerNameEn", customerNameEn);
                 cmd.Parameters.AddWithValue("@CustomerNameAr", customerNameAr);
@@ -47,6 +77,21 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@CompanyId", (object)companyId ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@NationalityId", (object)nationalityId ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@MediatorId", (object)mediatorId ?? DBNull.Value);
+
+                // new params
+                cmd.Parameters.AddWithValue("@IdTypeEn", (object)idTypeEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdTypeAr", (object)idTypeAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdNumber", (object)idNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityNumber", (object)identityNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityPlaceOfIssueEn", (object)identityPlaceOfIssueEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityPlaceOfIssueAr", (object)identityPlaceOfIssueAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseNumber", (object)licenseNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseCategoryEn", (object)licenseCategoryEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseCategoryAr", (object)licenseCategoryAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicensePlaceOfIssueEn", (object)licensePlaceOfIssueEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseIssueDate", (object)licenseIssueDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseExpiryDate", (object)licenseExpiryDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicensePlaceOfIssueAr", (object)licensePlaceOfIssueAr ?? DBNull.Value);
 
                 connection.Open();
                 object result = cmd.ExecuteScalar();
@@ -71,7 +116,22 @@ namespace CarRentalDataAccess
             bool blacklist,
             int? companyId,
             int? nationalityId,
-            int? mediatorId)
+            int? mediatorId,
+
+            // New fields added here:
+            string idTypeEn,
+            string idTypeAr,
+            string idNumber,
+            string identityNumber,
+            string identityPlaceOfIssueEn,
+            string identityPlaceOfIssueAr,
+            string licenseNumber,
+            string licenseCategoryEn,
+            string licenseCategoryAr,
+            string licensePlaceOfIssueEn,
+            DateTime? licenseIssueDate,
+            DateTime? licenseExpiryDate,
+            string licensePlaceOfIssueAr)
         {
             string query = @"
                 UPDATE Customers SET
@@ -88,6 +148,22 @@ namespace CarRentalDataAccess
                     company_id = @CompanyId,
                     nationality_id = @NationalityId,
                     mediator_id = @MediatorId,
+
+                    id_type_en = @IdTypeEn,
+                    id_type_ar = @IdTypeAr,
+                    id_number = @IdNumber,
+                    identity_number = @IdentityNumber,
+                    identity_place_of_issue_en = @IdentityPlaceOfIssueEn,
+                    identity_place_of_issue_ar = @IdentityPlaceOfIssueAr,
+
+                    license_number = @LicenseNumber,
+                    license_category_en = @LicenseCategoryEn,
+                    license_category_ar = @LicenseCategoryAr,
+                    license_place_of_issue_en = @LicensePlaceOfIssueEn,
+                    license_issue_date = @LicenseIssueDate,
+                    license_expiry_date = @LicenseExpiryDate,
+                    license_place_of_issue_ar = @LicensePlaceOfIssueAr,
+
                     updated_at = GETDATE()
                 WHERE customer_id = @CustomerId";
 
@@ -109,6 +185,20 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@NationalityId", (object)nationalityId ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@MediatorId", (object)mediatorId ?? DBNull.Value);
 
+                cmd.Parameters.AddWithValue("@IdTypeEn", (object)idTypeEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdTypeAr", (object)idTypeAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdNumber", (object)idNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityNumber", (object)identityNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityPlaceOfIssueEn", (object)identityPlaceOfIssueEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@IdentityPlaceOfIssueAr", (object)identityPlaceOfIssueAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseNumber", (object)licenseNumber ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseCategoryEn", (object)licenseCategoryEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseCategoryAr", (object)licenseCategoryAr ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicensePlaceOfIssueEn", (object)licensePlaceOfIssueEn ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseIssueDate", (object)licenseIssueDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicenseExpiryDate", (object)licenseExpiryDate ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@LicensePlaceOfIssueAr", (object)licensePlaceOfIssueAr ?? DBNull.Value);
+
                 connection.Open();
                 int rows = cmd.ExecuteNonQuery();
                 return rows > 0;
@@ -117,16 +207,24 @@ namespace CarRentalDataAccess
 
         public static bool DeleteCustomer(int customerId)
         {
-            string query = "DELETE FROM Customers WHERE customer_id = @CustomerId";
-
-            using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+            try
             {
-                cmd.Parameters.AddWithValue("@CustomerId", customerId);
+                string query = "DELETE FROM Customers WHERE customer_id = @CustomerId";
 
-                connection.Open();
-                int rows = cmd.ExecuteNonQuery();
-                return rows > 0;
+                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@CustomerId", customerId);
+
+                    connection.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+
+            catch (Exception)
+            {
+                return false;
             }
         }
 
@@ -174,7 +272,22 @@ namespace CarRentalDataAccess
             ref bool blacklist,
             ref int? companyId,
             ref int? nationalityId,
-            ref int? mediatorId)
+            ref int? mediatorId,
+
+            // New fields added here as ref params
+            ref string idTypeEn,
+            ref string idTypeAr,
+            ref string idNumber,
+            ref string identityNumber,
+            ref string identityPlaceOfIssueEn,
+            ref string identityPlaceOfIssueAr,
+            ref string licenseNumber,
+            ref string licenseCategoryEn,
+            ref string licenseCategoryAr,
+            ref string licensePlaceOfIssueEn,
+            ref DateTime? licenseIssueDate,
+            ref DateTime? licenseExpiryDate,
+            ref string licensePlaceOfIssueAr)
         {
             string query = "SELECT * FROM Customers WHERE customer_id = @CustomerId";
 
@@ -203,6 +316,24 @@ namespace CarRentalDataAccess
                         companyId = reader["company_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["company_id"]);
                         nationalityId = reader["nationality_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["nationality_id"]);
                         mediatorId = reader["mediator_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["mediator_id"]);
+
+                        // New fields assigned here:
+                        idTypeEn = reader["id_type_en"]?.ToString();
+                        idTypeAr = reader["id_type_ar"]?.ToString();
+                        idNumber = reader["id_number"]?.ToString();
+                        identityNumber = reader["identity_number"]?.ToString();
+                        identityPlaceOfIssueEn = reader["identity_place_of_issue_en"]?.ToString();
+                        identityPlaceOfIssueAr = reader["identity_place_of_issue_ar"]?.ToString();
+
+                        licenseNumber = reader["license_number"]?.ToString();
+                        licenseCategoryEn = reader["license_category_en"]?.ToString();
+                        licenseCategoryAr = reader["license_category_ar"]?.ToString();
+                        licensePlaceOfIssueEn = reader["license_place_of_issue_en"]?.ToString();
+
+                        licenseIssueDate = reader["license_issue_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["license_issue_date"]);
+                        licenseExpiryDate = reader["license_expiry_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["license_expiry_date"]);
+
+                        licensePlaceOfIssueAr = reader["license_place_of_issue_ar"]?.ToString();
 
                         return true;
                     }
@@ -266,5 +397,91 @@ namespace CarRentalDataAccess
             return dt;
         }
 
+        public static bool GetCustomerInfoByName(
+            string customerNameEn,
+            string customerNameAr,
+            ref int? customerId,
+            ref string customerType,
+            ref string phoneNumber,
+            ref string email,
+            ref string addressEn,
+            ref string addressAr,
+            ref string notesEn,
+            ref string notesAr,
+            ref bool blacklist,
+            ref int? companyId,
+            ref int? nationalityId,
+            ref int? mediatorId,
+
+            // New fields added here as ref params
+            ref string idTypeEn,
+            ref string idTypeAr,
+            ref string idNumber,
+            ref string identityNumber,
+            ref string identityPlaceOfIssueEn,
+            ref string identityPlaceOfIssueAr,
+            ref string licenseNumber,
+            ref string licenseCategoryEn,
+            ref string licenseCategoryAr,
+            ref string licensePlaceOfIssueEn,
+            ref DateTime? licenseIssueDate,
+            ref DateTime? licenseExpiryDate,
+            ref string licensePlaceOfIssueAr)
+        {
+            string query = @"
+                SELECT * FROM Customers 
+                WHERE (customer_name_en = @NameEn OR customer_name_ar = @NameAr)";
+
+            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@NameEn", customerNameEn ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@NameAr", customerNameAr ?? (object)DBNull.Value);
+
+                connection.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        customerId = Convert.ToInt32(reader["customer_id"]);
+                        customerType = reader["customer_type"]?.ToString();
+                        phoneNumber = reader["phone_number"]?.ToString();
+                        email = reader["email"]?.ToString();
+                        addressEn = reader["address_en"]?.ToString();
+                        addressAr = reader["address_ar"]?.ToString();
+                        notesEn = reader["notes_en"]?.ToString();
+                        notesAr = reader["notes_ar"]?.ToString();
+                        blacklist = Convert.ToBoolean(reader["blacklist"]);
+
+                        companyId = reader["company_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["company_id"]);
+                        nationalityId = reader["nationality_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["nationality_id"]);
+                        mediatorId = reader["mediator_id"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["mediator_id"]);
+
+                        // New fields assigned here:
+                        idTypeEn = reader["id_type_en"]?.ToString();
+                        idTypeAr = reader["id_type_ar"]?.ToString();
+                        idNumber = reader["id_number"]?.ToString();
+                        identityNumber = reader["identity_number"]?.ToString();
+                        identityPlaceOfIssueEn = reader["identity_place_of_issue_en"]?.ToString();
+                        identityPlaceOfIssueAr = reader["identity_place_of_issue_ar"]?.ToString();
+
+                        licenseNumber = reader["license_number"]?.ToString();
+                        licenseCategoryEn = reader["license_category_en"]?.ToString();
+                        licenseCategoryAr = reader["license_category_ar"]?.ToString();
+                        licensePlaceOfIssueEn = reader["license_place_of_issue_en"]?.ToString();
+
+                        licenseIssueDate = reader["license_issue_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["license_issue_date"]);
+                        licenseExpiryDate = reader["license_expiry_date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["license_expiry_date"]);
+
+                        licensePlaceOfIssueAr = reader["license_place_of_issue_ar"]?.ToString();
+
+                        return true;                                                                                                                                                                                                                                                                      
+                    }
+                }
+            }
+            return false;
+        }
     }
 }
+

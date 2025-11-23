@@ -212,6 +212,7 @@
             this.btnAddCmpInsur.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddCmpInsur.BackgroundImage = global::CarRentalSystem.Properties.Resources.ComanyInsurance;
             this.btnAddCmpInsur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddCmpInsur.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCmpInsur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCmpInsur.ForeColor = System.Drawing.Color.White;
             this.btnAddCmpInsur.Location = new System.Drawing.Point(546, 91);

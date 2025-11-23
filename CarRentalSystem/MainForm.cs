@@ -13,6 +13,7 @@ using CarRentalSystem.InsuranceType;
 using CarRentalSystem.Location;
 using CarRentalSystem.mediator;
 using CarRentalSystem.Nationlity;
+using CarRentalSystem.Quires;
 using CarRentalSystem.RentalAddition;
 using CarRentalSystem.Role;
 using CarRentalSystem.Setting;
@@ -212,6 +213,12 @@ namespace CarRentalSystem
         private void carTransferToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListCarTransfer frm = new frmListCarTransfer();
+            frm.ShowDialog();
+        }
+
+        private void queryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmQuery frm = new frmQuery();
             frm.ShowDialog();
         }
     }

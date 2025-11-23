@@ -158,6 +158,8 @@ namespace CarRentalSystem.Car
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFuelExit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numInitialCounter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumberOfRiders)).BeginInit();
@@ -787,6 +789,8 @@ namespace CarRentalSystem.Car
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.txtFuelExit);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbColor);
             this.groupBox1.Controls.Add(this.lblCarNameEn);
             this.groupBox1.Controls.Add(this.numYear);
@@ -883,6 +887,22 @@ namespace CarRentalSystem.Car
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Specifications";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(368, 313);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Fuel Exit";
+            // 
+            // txtFuelExit
+            // 
+            this.txtFuelExit.Location = new System.Drawing.Point(439, 310);
+            this.txtFuelExit.Name = "txtFuelExit";
+            this.txtFuelExit.Size = new System.Drawing.Size(200, 20);
+            this.txtFuelExit.TabIndex = 63;
+            // 
             // frmAddUpdateVehicle
             // 
             this.AutoScroll = true;
@@ -931,5 +951,7 @@ namespace CarRentalSystem.Car
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cmbColor;
+        private System.Windows.Forms.TextBox txtFuelExit;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -79,6 +79,8 @@ namespace CarRentalDataAccess
             }
         }
 
+
+
         public static bool DeleteInsuranceType(int insuranceTypeId)
         {
             string query = "DELETE FROM InsuranceTypes WHERE InsuranceTypeID = @InsuranceTypeID";

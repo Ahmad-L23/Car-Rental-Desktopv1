@@ -13,8 +13,9 @@ namespace CarRentalSystem.RentalAddition
         public frmAddUpdateRentalAddition(int? rentalAdditionId = null)
         {
             InitializeComponent();
-            _rentalAdditionId = rentalAdditionId;                                                                             
+            _rentalAdditionId = rentalAdditionId;
         }
+
         private void frmAddUpdateRentalAddition_Load_1(object sender, EventArgs e)
         {
             LoadPaymentMethods();
@@ -31,7 +32,8 @@ namespace CarRentalSystem.RentalAddition
                 this.Text = "Add New Rental Addition";
                 lblTitle.Text = "Add New Rental Addition";
                 btnSave.Text = "Save";
-                chkIsActive.Checked = true; // Default to active
+                chkIsActive.Checked = true;
+                chkIsTaxIncluded.Checked = false; // default
             }
         }
 
@@ -39,7 +41,7 @@ namespace CarRentalSystem.RentalAddition
         {
             DataTable dtPaymentMethods = ClsPaymentMethod.GetAllPaymentMethods();
 
-            cbPaymentMethod.DisplayMember = "MethodName";  
+            cbPaymentMethod.DisplayMember = "MethodName";
             cbPaymentMethod.ValueMember = "Id";
             cbPaymentMethod.DataSource = dtPaymentMethods;
             cbPaymentMethod.SelectedIndex = -1;
@@ -61,6 +63,7 @@ namespace CarRentalSystem.RentalAddition
             numPrice.Value = _rentalAddition.Price;
             txtRentalNote.Text = _rentalAddition.RentalNote;
             chkIsActive.Checked = _rentalAddition.IsActive;
+            chkIsTaxIncluded.Checked = _rentalAddition.IsTaxIncluded;   // NEW
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -86,6 +89,7 @@ namespace CarRentalSystem.RentalAddition
             _rentalAddition.Price = numPrice.Value;
             _rentalAddition.RentalNote = txtRentalNote.Text.Trim();
             _rentalAddition.IsActive = chkIsActive.Checked;
+            _rentalAddition.IsTaxIncluded = chkIsTaxIncluded.Checked;  // NEW
 
             bool success = _rentalAddition.Save();
 

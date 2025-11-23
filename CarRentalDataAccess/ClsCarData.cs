@@ -38,19 +38,20 @@ namespace CarRentalDataAccess
             bool isAvailable,
             string usedFor,
             int? damagesNumber,
-            string description)
+            string description,
+            string FuelExit)
         {
             string query = @"
                 INSERT INTO vehicles
                 (CarNameEn, CarNameAr, Year, colorID, CategoryId, GroupId, BranchId, FuelTypeID, CarImage, InitialCounter, NumberOfRiders,
                  NumberOfLoads, LicenseDate, ExpiryLicenseDate, NumberOfRegistration, CarNumber, EngineSize, ChassisNumber, CurrentCounter,
                  NumberOfSeats, EngineNumber, PlateNumber, NumberOfDoors, GasolineType, CarPrice, LicenseType, IsAvailable, UsedFor,
-                 DamagesNumber, Description)
+                 DamagesNumber, Description, FuelExit)
                 VALUES
                 (@CarNameEn, @CarNameAr, @Year, @colorID, @CategoryId, @GroupId, @BranchId, @FuelTypeID, @CarImage, @InitialCounter, @NumberOfRiders,
                  @NumberOfLoads, @LicenseDate, @ExpiryLicenseDate, @NumberOfRegistration, @CarNumber, @EngineSize, @ChassisNumber, @CurrentCounter,
                  @NumberOfSeats, @EngineNumber, @PlateNumber, @NumberOfDoors, @GasolineType, @CarPrice, @LicenseType, @IsAvailable, @UsedFor,
-                 @DamagesNumber, @Description);
+                 @DamagesNumber, @Description, @FuelExit);
                 SELECT CAST(scope_identity() AS int);";
 
             System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(conn);
@@ -78,6 +79,7 @@ namespace CarRentalDataAccess
             cmd.Parameters.AddWithValue("@NumberOfSeats", numberOfSeats);
             cmd.Parameters.AddWithValue("@EngineNumber", engineNumber);
             cmd.Parameters.AddWithValue("@PlateNumber", plateNumber);
+            cmd.Parameters.AddWithValue("@FuelExit", FuelExit);
             cmd.Parameters.AddWithValue("@NumberOfDoors", numberOfDoors);
             cmd.Parameters.AddWithValue("@GasolineType", gasolineType);
             cmd.Parameters.AddWithValue("@CarPrice", carPrice);
@@ -126,7 +128,8 @@ namespace CarRentalDataAccess
             bool isAvailable,
             string usedFor,
             int? damagesNumber,
-            string description)
+            string description,
+            string FuelExit)
         {
             string query = @"
                 UPDATE vehicles SET
@@ -159,7 +162,8 @@ namespace CarRentalDataAccess
                     IsAvailable = @IsAvailable,
                     UsedFor = @UsedFor,
                     DamagesNumber = @DamagesNumber,
-                    Description = @Description
+                    Description = @Description,
+                    FuelExit = @FuelExit
                 WHERE CarID = @CarID";
 
             System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(conn);
@@ -194,6 +198,7 @@ namespace CarRentalDataAccess
             cmd.Parameters.AddWithValue("@LicenseType", licenseType);
             cmd.Parameters.AddWithValue("@IsAvailable", isAvailable);
             cmd.Parameters.AddWithValue("@UsedFor", usedFor);
+            cmd.Parameters.AddWithValue("@FuelExit", FuelExit);
             cmd.Parameters.AddWithValue("@DamagesNumber", (object)damagesNumber ?? System.DBNull.Value);
             cmd.Parameters.AddWithValue("@Description", (object)description ?? System.DBNull.Value);
 
@@ -263,7 +268,8 @@ namespace CarRentalDataAccess
             v.IsAvailable,
             v.UsedFor,
             v.DamagesNumber,
-            v.Description
+            v.Description,  
+            v.FuelExit
         FROM vehicles v
         LEFT JOIN Colors c ON v.ColorId = c.Id;";
 
@@ -276,6 +282,25 @@ namespace CarRentalDataAccess
                 return dt;
             }
         }
+
+        public static DataTable GetAllCarsIdAndPlateNumber()
+        {
+            string query = @"
+        SELECT 
+            CarID,
+            PlateNumber
+        FROM vehicles;";
+
+            using (System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(conn))
+            using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, connection))
+            using (System.Data.SqlClient.SqlDataAdapter adapter = new System.Data.SqlClient.SqlDataAdapter(cmd))
+            {
+                System.Data.DataTable dt = new System.Data.DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
+
 
 
         public static bool GetCarInfoById(
@@ -309,7 +334,8 @@ namespace CarRentalDataAccess
             ref bool isAvailable,
             ref string usedFor,
             ref int? damagesNumber,
-            ref string description)
+            ref string description,
+            ref string FuelExit)
         {
             string query = "SELECT * FROM vehicles WHERE CarID = @CarID";
 
@@ -349,6 +375,7 @@ namespace CarRentalDataAccess
                 licenseType = reader["LicenseType"].ToString();
                 isAvailable = Convert.ToBoolean(reader["IsAvailable"]);
                 usedFor = reader["UsedFor"].ToString();
+                usedFor = reader["FuelExit"].ToString();
                 damagesNumber = reader["DamagesNumber"] == System.DBNull.Value ? (int?)null : Convert.ToInt32(reader["DamagesNumber"]);
                 description = reader["Description"] == System.DBNull.Value ? null : reader["Description"].ToString();
 
@@ -357,18 +384,56 @@ namespace CarRentalDataAccess
             return false;
         }
 
-        public static System.Data.DataTable SearchCarsByPlateNumber(string plateNumber)
-        {
-            string query = "SELECT * FROM vehicles WHERE PlateNumber LIKE @PlateNumber";
+        public static bool GetCarByPlateNumber(
+                string plateNumber,
+                ref string chassisNumber,
+                ref string carNameEn,
+                ref int groupId,
+                ref int year,
+                ref decimal engineSize,
+                ref bool isAvailable)
+                    {
+                        string query = @"
+                    SELECT TOP 1
+                        ChassisNumber,
+                        CarNameEn,
+                        GroupId,
+                        Year,
+                        EngineSize,
+                        IsAvailable
+                    FROM vehicles
+                    WHERE PlateNumber LIKE @PlateNumber
+                    ORDER BY PlateNumber
+                ";
 
-            System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(conn);
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@PlateNumber", "%" + plateNumber + "%");
+            using (var connection = new System.Data.SqlClient.SqlConnection(conn))
+            using (var cmd = new System.Data.SqlClient.SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@PlateNumber", "%" + plateNumber + "%");
 
-            System.Data.SqlClient.SqlDataAdapter adapter = new System.Data.SqlClient.SqlDataAdapter(cmd);
-            System.Data.DataTable dt = new System.Data.DataTable();
-            adapter.Fill(dt);
-            return dt;
+                connection.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+  
+                        chassisNumber = reader["ChassisNumber"]?.ToString() ?? "";
+                        carNameEn = reader["CarNameEn"]?.ToString() ?? "";
+                        groupId = reader["GroupId"] != DBNull.Value ? Convert.ToInt32(reader["GroupId"]) : 0;
+                        year = reader["Year"] != DBNull.Value ? Convert.ToInt32(reader["Year"]) : 0;
+                        engineSize = reader["EngineSize"] != DBNull.Value ? Convert.ToDecimal(reader["EngineSize"]) : 0;
+                        isAvailable = reader["IsAvailable"] != DBNull.Value && Convert.ToBoolean(reader["IsAvailable"]);
+
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
+
+     
+
+
     }
 }

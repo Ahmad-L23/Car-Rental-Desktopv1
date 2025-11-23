@@ -157,6 +157,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnRefresh.BackgroundImage = global::CarRentalSystem.Properties.Resources.Location;
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;

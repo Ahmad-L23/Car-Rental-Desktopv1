@@ -89,19 +89,19 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.cmsRentalAdditon.Name = "cmsRentalAdditon";
-            this.cmsRentalAdditon.Size = new System.Drawing.Size(181, 70);
+            this.cmsRentalAdditon.Size = new System.Drawing.Size(108, 48);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click_1);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click_1);
             // 
@@ -131,11 +131,12 @@
             this.btnAddRenAdd.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddRenAdd.BackgroundImage = global::CarRentalSystem.Properties.Resources.RentalAdditon;
             this.btnAddRenAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddRenAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRenAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRenAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAddRenAdd.Location = new System.Drawing.Point(440, 90);
+            this.btnAddRenAdd.Location = new System.Drawing.Point(433, 89);
             this.btnAddRenAdd.Name = "btnAddRenAdd";
-            this.btnAddRenAdd.Size = new System.Drawing.Size(43, 30);
+            this.btnAddRenAdd.Size = new System.Drawing.Size(50, 31);
             this.btnAddRenAdd.TabIndex = 4;
             this.btnAddRenAdd.UseVisualStyleBackColor = false;
             this.btnAddRenAdd.Click += new System.EventHandler(this.btnAddRenAdd_Click);

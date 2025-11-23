@@ -170,6 +170,9 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lblEmpName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblDesc);
@@ -196,7 +199,7 @@ namespace CarRentalSystem.DamagesMaintenance
             this.groupBox1.Controls.Add(this.lblTotalAmount);
             this.groupBox1.Location = new System.Drawing.Point(3, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 280);
+            this.groupBox1.Size = new System.Drawing.Size(441, 280);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Damages Info";
@@ -222,7 +225,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(264, 183);
+            this.lblDesc.Location = new System.Drawing.Point(239, 183);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(25, 13);
             this.lblDesc.TabIndex = 60;
@@ -320,7 +323,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 340);
+            this.button2.Location = new System.Drawing.Point(31, 340);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(65, 28);
             this.button2.TabIndex = 51;
@@ -330,7 +333,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(83, 340);
+            this.button1.Location = new System.Drawing.Point(102, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 28);
             this.button1.TabIndex = 52;
@@ -340,7 +343,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(215, 340);
+            this.button3.Location = new System.Drawing.Point(234, 340);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(61, 28);
             this.button3.TabIndex = 53;
@@ -350,7 +353,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(282, 340);
+            this.button4.Location = new System.Drawing.Point(301, 340);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(61, 28);
             this.button4.TabIndex = 54;
@@ -361,7 +364,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // lblRecordCounte
             // 
             this.lblRecordCounte.AutoSize = true;
-            this.lblRecordCounte.Location = new System.Drawing.Point(157, 348);
+            this.lblRecordCounte.Location = new System.Drawing.Point(176, 348);
             this.lblRecordCounte.Name = "lblRecordCounte";
             this.lblRecordCounte.Size = new System.Drawing.Size(35, 13);
             this.lblRecordCounte.TabIndex = 55;
@@ -369,7 +372,7 @@ namespace CarRentalSystem.DamagesMaintenance
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(268, 17);
+            this.button5.Location = new System.Drawing.Point(362, 8);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 30);
             this.button5.TabIndex = 56;
@@ -389,7 +392,7 @@ namespace CarRentalSystem.DamagesMaintenance
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ucDamageMaintenanceCard";
-            this.Size = new System.Drawing.Size(350, 395);
+            this.Size = new System.Drawing.Size(447, 395);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

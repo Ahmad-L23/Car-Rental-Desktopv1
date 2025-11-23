@@ -16,6 +16,7 @@ namespace CarRentalBusiness
         public decimal Price { get; set; }
         public string RentalNote { get; set; }
         public bool IsActive { get; set; }
+        public bool IsTaxIncluded { get; set; }   // NEW FIELD
 
         public ClsRentalAddition()
         {
@@ -25,6 +26,7 @@ namespace CarRentalBusiness
             Price = 0m;
             RentalNote = "";
             IsActive = true;
+            IsTaxIncluded = false;  // default
             mode = enMode.AddNew;
         }
 
@@ -34,7 +36,8 @@ namespace CarRentalBusiness
             int paymentMethodId,
             decimal price,
             string rentalNote,
-            bool isActive)
+            bool isActive,
+            bool isTaxIncluded)
         {
             RentalAdditionID = rentalAdditionId;
             RentalName = rentalName;
@@ -42,6 +45,7 @@ namespace CarRentalBusiness
             Price = price;
             RentalNote = rentalNote;
             IsActive = isActive;
+            IsTaxIncluded = isTaxIncluded;
             mode = enMode.Update;
         }
 
@@ -67,12 +71,13 @@ namespace CarRentalBusiness
                 PaymentMethodID,
                 Price,
                 RentalNote,
-                IsActive);
+                IsActive,
+                IsTaxIncluded);
 
             if (id != -1)
             {
                 RentalAdditionID = id;
-                mode = enMode.Update; 
+                mode = enMode.Update;
                 return true;
             }
             return false;
@@ -89,7 +94,8 @@ namespace CarRentalBusiness
                 PaymentMethodID,
                 Price,
                 RentalNote,
-                IsActive);
+                IsActive,
+                IsTaxIncluded);
 
             return result;
         }
@@ -106,6 +112,7 @@ namespace CarRentalBusiness
             decimal price = 0m;
             string rentalNote = "";
             bool isActive = true;
+            bool isTaxIncluded = false;
 
             bool found = ClsRentalAdditionsData.GetRentalAdditionInfoById(
                 rentalAdditionId,
@@ -113,7 +120,8 @@ namespace CarRentalBusiness
                 ref paymentMethodId,
                 ref price,
                 ref rentalNote,
-                ref isActive);
+                ref isActive,
+                ref isTaxIncluded);
 
             if (!found)
                 return null;
@@ -124,7 +132,8 @@ namespace CarRentalBusiness
                 paymentMethodId,
                 price,
                 rentalNote,
-                isActive);
+                isActive,
+                isTaxIncluded);
         }
 
         public static DataTable GetRentalAdditionsDataTable()

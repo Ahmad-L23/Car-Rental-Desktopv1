@@ -24,6 +24,21 @@ namespace CarRentalBusiness
         public bool Blacklist { get; set; }
         public string BlacklistStatus { get; set; }
 
+        // New fields added here:
+        public string IdTypeEn { get; set; }
+        public string IdTypeAr { get; set; }
+        public string IdNumber { get; set; }
+        public string IdentityNumber { get; set; }
+        public string IdentityPlaceOfIssueEn { get; set; }
+        public string IdentityPlaceOfIssueAr { get; set; }
+        public string LicenseNumber { get; set; }
+        public string LicenseCategoryEn { get; set; }
+        public string LicenseCategoryAr { get; set; }
+        public string LicensePlaceOfIssueEn { get; set; }
+        public DateTime? LicenseIssueDate { get; set; }
+        public DateTime? LicenseExpiryDate { get; set; }
+        public string LicensePlaceOfIssueAr { get; set; }
+
         // Composition: Related entities
         public ClsCompany Company { get; set; }        // Null if no company
         public ClsNationlity Nationality { get; set; } // Null if no nationality
@@ -43,6 +58,22 @@ namespace CarRentalBusiness
             NotesAr = "";
             Blacklist = false;
             BlacklistStatus = "Active";
+
+            // New fields default
+            IdTypeEn = "";
+            IdTypeAr = "";
+            IdNumber = "";
+            IdentityNumber = "";
+            IdentityPlaceOfIssueEn = "";
+            IdentityPlaceOfIssueAr = "";
+            LicenseNumber = "";
+            LicenseCategoryEn = "";
+            LicenseCategoryAr = "";
+            LicensePlaceOfIssueEn = "";
+            LicenseIssueDate = null;
+            LicenseExpiryDate = null;
+            LicensePlaceOfIssueAr = "";
+
             Company = null;
             Nationality = null;
             Mediator = null;
@@ -64,6 +95,22 @@ namespace CarRentalBusiness
             int? companyId,
             int? nationalityId,
             int? mediatorId,
+
+            // New params
+            string idTypeEn,
+            string idTypeAr,
+            string idNumber,
+            string identityNumber,
+            string identityPlaceOfIssueEn,
+            string identityPlaceOfIssueAr,
+            string licenseNumber,
+            string licenseCategoryEn,
+            string licenseCategoryAr,
+            string licensePlaceOfIssueEn,
+            DateTime? licenseIssueDate,
+            DateTime? licenseExpiryDate,
+            string licensePlaceOfIssueAr,
+
             string blacklistStatus = null)
         {
             CustomerId = customerId;
@@ -78,9 +125,24 @@ namespace CarRentalBusiness
             NotesAr = notesAr;
             Blacklist = blacklist;
             BlacklistStatus = blacklistStatus ?? (blacklist ? "Blacklisted" : "Active");
+
+            // Assign new fields
+            IdTypeEn = idTypeEn;
+            IdTypeAr = idTypeAr;
+            IdNumber = idNumber;
+            IdentityNumber = identityNumber;
+            IdentityPlaceOfIssueEn = identityPlaceOfIssueEn;
+            IdentityPlaceOfIssueAr = identityPlaceOfIssueAr;
+            LicenseNumber = licenseNumber;
+            LicenseCategoryEn = licenseCategoryEn;
+            LicenseCategoryAr = licenseCategoryAr;
+            LicensePlaceOfIssueEn = licensePlaceOfIssueEn;
+            LicenseIssueDate = licenseIssueDate;
+            LicenseExpiryDate = licenseExpiryDate;
+            LicensePlaceOfIssueAr = licensePlaceOfIssueAr;
+
             mode = enMode.Update;
 
-            // Load related entities if their IDs are present
             Company = (companyId.HasValue && companyId.Value > 0)
                 ? ClsCompany.FindById(companyId.Value)
                 : null;
@@ -119,7 +181,7 @@ namespace CarRentalBusiness
 
         private bool AddNewCustomer()
         {
-            int id = ClsCustomerData.AddNewCustomer(
+            int newId = ClsCustomerData.AddNewCustomer(
                 CustomerType,
                 CustomerNameEn,
                 CustomerNameAr,
@@ -132,11 +194,27 @@ namespace CarRentalBusiness
                 Blacklist,
                 Company?.ID,
                 Nationality?.Id,
-                Mediator?.id);
+                Mediator?.id,
 
-            if (id != -1)
+                // New fields passed here
+                IdTypeEn,
+                IdTypeAr,
+                IdNumber,
+                IdentityNumber,
+                IdentityPlaceOfIssueEn,
+                IdentityPlaceOfIssueAr,
+                LicenseNumber,
+                LicenseCategoryEn,
+                LicenseCategoryAr,
+                LicensePlaceOfIssueEn,
+                LicenseIssueDate,
+                LicenseExpiryDate,
+                LicensePlaceOfIssueAr);
+
+            
+            if (newId > 0)
             {
-                CustomerId = id;
+                CustomerId = newId;
                 return true;
             }
             return false;
@@ -161,7 +239,22 @@ namespace CarRentalBusiness
                 Blacklist,
                 Company?.ID,
                 Nationality?.Id,
-                Mediator?.id);
+                Mediator?.id,
+
+                // New fields passed here
+                IdTypeEn,
+                IdTypeAr,
+                IdNumber,
+                IdentityNumber,
+                IdentityPlaceOfIssueEn,
+                IdentityPlaceOfIssueAr,
+                LicenseNumber,
+                LicenseCategoryEn,
+                LicenseCategoryAr,
+                LicensePlaceOfIssueEn,
+                LicenseIssueDate,
+                LicenseExpiryDate,
+                LicensePlaceOfIssueAr);
 
             return result;
         }
@@ -188,6 +281,21 @@ namespace CarRentalBusiness
             int? nationalityId = null;
             int? mediatorId = null;
 
+            // New fields declared here
+            string idTypeEn = "";
+            string idTypeAr = "";
+            string idNumber = "";
+            string identityNumber = "";
+            string identityPlaceOfIssueEn = "";
+            string identityPlaceOfIssueAr = "";
+            string licenseNumber = "";
+            string licenseCategoryEn = "";
+            string licenseCategoryAr = "";
+            string licensePlaceOfIssueEn = "";
+            DateTime? licenseIssueDate = null;
+            DateTime? licenseExpiryDate = null;
+            string licensePlaceOfIssueAr = "";
+
             bool found = ClsCustomerData.GetCustomerInfoById(
                 customerId,
                 ref customerType,
@@ -202,7 +310,22 @@ namespace CarRentalBusiness
                 ref blacklist,
                 ref companyId,
                 ref nationalityId,
-                ref mediatorId);
+                ref mediatorId,
+
+                // New fields passed as ref
+                ref idTypeEn,
+                ref idTypeAr,
+                ref idNumber,
+                ref identityNumber,
+                ref identityPlaceOfIssueEn,
+                ref identityPlaceOfIssueAr,
+                ref licenseNumber,
+                ref licenseCategoryEn,
+                ref licenseCategoryAr,
+                ref licensePlaceOfIssueEn,
+                ref licenseIssueDate,
+                ref licenseExpiryDate,
+                ref licensePlaceOfIssueAr);
 
             if (!found)
                 return null;
@@ -222,10 +345,24 @@ namespace CarRentalBusiness
                 companyId,
                 nationalityId,
                 mediatorId,
+
+                // New fields
+                idTypeEn,
+                idTypeAr,
+                idNumber,
+                identityNumber,
+                identityPlaceOfIssueEn,
+                identityPlaceOfIssueAr,
+                licenseNumber,
+                licenseCategoryEn,
+                licenseCategoryAr,
+                licensePlaceOfIssueEn,
+                licenseIssueDate,
+                licenseExpiryDate,
+                licensePlaceOfIssueAr,
+
                 blacklistStatus);
         }
-
-        
 
         public static DataTable GetCustomersDataTable()
         {
@@ -245,6 +382,102 @@ namespace CarRentalBusiness
         public static DataTable GetAllCustomersTypes()
         {
             return ClsCustomerData.GetCustomerTypes();
+        }
+
+        public static ClsCustomer FindByName(string customerNameEn, string customerNameAr = null)
+        {
+            int? customerId = null;
+            string customerType = "";
+            string phoneNumber = "";
+            string email = "";
+            string addressEn = "";
+            string addressAr = "";
+            string notesEn = "";
+            string notesAr = "";
+            bool blacklist = false;
+            int? companyId = null;
+            int? nationalityId = null;
+            int? mediatorId = null;
+
+            // New fields declared here too
+            string idTypeEn = "";
+            string idTypeAr = "";
+            string idNumber = "";
+            string identityNumber = "";
+            string identityPlaceOfIssueEn = "";
+            string identityPlaceOfIssueAr = "";
+            string licenseNumber = "";
+            string licenseCategoryEn = "";
+            string licenseCategoryAr = "";
+            string licensePlaceOfIssueEn = "";
+            DateTime? licenseIssueDate = null;
+            DateTime? licenseExpiryDate = null;
+            string licensePlaceOfIssueAr = "";
+
+            bool found = ClsCustomerData.GetCustomerInfoByName(
+                customerNameEn,
+                customerNameAr,
+                ref customerId,
+                ref customerType,
+                ref phoneNumber,
+                ref email,
+                ref addressEn,
+                ref addressAr,
+                ref notesEn,
+                ref notesAr,
+                ref blacklist,
+                ref companyId,
+                ref nationalityId,
+                ref mediatorId,
+
+                // New fields passed as ref
+                ref idTypeEn,
+                ref idTypeAr,
+                ref idNumber,
+                ref identityNumber,
+                ref identityPlaceOfIssueEn,
+                ref identityPlaceOfIssueAr,
+                ref licenseNumber,
+                ref licenseCategoryEn,
+                ref licenseCategoryAr,
+                ref licensePlaceOfIssueEn,
+                ref licenseIssueDate,
+                ref licenseExpiryDate,
+                ref licensePlaceOfIssueAr);
+
+            if (!found || customerId == null)
+                return null;
+
+            return new ClsCustomer(
+                customerId,
+                customerType,
+                customerNameEn,
+                customerNameAr,
+                phoneNumber,
+                email,
+                addressEn,
+                addressAr,
+                notesEn,
+                notesAr,
+                blacklist,
+                companyId,
+                nationalityId,
+                mediatorId,
+
+                // New fields
+                idTypeEn,
+                idTypeAr,
+                idNumber,
+                identityNumber,
+                identityPlaceOfIssueEn,
+                identityPlaceOfIssueAr,
+                licenseNumber,
+                licenseCategoryEn,
+                licenseCategoryAr,
+                licensePlaceOfIssueEn,
+                licenseIssueDate,
+                licenseExpiryDate,
+                licensePlaceOfIssueAr);
         }
     }
 }
