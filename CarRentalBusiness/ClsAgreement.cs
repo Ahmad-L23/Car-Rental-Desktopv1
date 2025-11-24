@@ -41,6 +41,9 @@ namespace CarRentalBusiness
         public decimal? RentalAdditionsPrice { get; set; }
         public decimal? RequiredInsurancePrice { get; set; }
 
+        public decimal? RentalDaysCost { get; set; }
+        public decimal? TotalIncludetax {  get; set; }
+
         public List<(int Id, decimal Price)> AdditionContracts { get; set; } = new List<(int, decimal)>();
         public List<(int Id, decimal Price)> RentalAdditions { get; set; } = new List<(int, decimal)>();
         public List<(int Id, decimal Price)> RequiredInsurances { get; set; } = new List<(int, decimal)>();
@@ -107,7 +110,9 @@ namespace CarRentalBusiness
             int serialNumber,
             decimal? additionContractPrice,
             decimal? rentalAdditionsPrice,
-            decimal? requiredInsurancePrice)
+            decimal? requiredInsurancePrice,
+            decimal? rentalDaysCost,
+            decimal? totalIncludetax)
         {
             AgreementID = agreementID;
             CustomerID = customerID;
@@ -137,6 +142,8 @@ namespace CarRentalBusiness
             RequiredInsurancePrice = requiredInsurancePrice;
 
             mode = enMode.Update;
+            RentalDaysCost = rentalDaysCost;
+            TotalIncludetax = totalIncludetax;
         }
 
         public bool Save()
@@ -181,7 +188,9 @@ namespace CarRentalBusiness
                 SerialNumber,
                 AdditionContractPrice ?? 0m,
                 RentalAdditionsPrice ?? 0m,
-                RequiredInsurancePrice ?? 0m);
+                RequiredInsurancePrice ?? 0m,
+                RentalDaysCost??0m
+                , TotalIncludetax ?? 0m);
 
             if (newId > 0)
             {
@@ -246,7 +255,9 @@ namespace CarRentalBusiness
                 SerialNumber,
                 AdditionContractPrice ?? 0m,
                 RentalAdditionsPrice ?? 0m,
-                RequiredInsurancePrice ?? 0m);
+                RequiredInsurancePrice ?? 0m,
+                 RentalDaysCost ?? 0m
+                , TotalIncludetax ?? 0m);
 
             if (!mainUpdated)
                 return false;
@@ -294,30 +305,21 @@ namespace CarRentalBusiness
 
         public static ClsAgreement FindById(int agreementId)
         {
-            int customerID = 0;
-            int carID = 0;
-            int pickupBranchID = 0;
-            int dropOffBranchID = 0;
-            DateTime startDate = DateTime.MinValue;
-            DateTime endDate = DateTime.MinValue;
-            decimal agreedPrice = 0m;
-            decimal rentalPenaltyPerDay = 0m;  // NON-nullable here
-            decimal totalAmountBeforeTax = 0m;
-            int permittedDailyKilometers = 0;
-            decimal additionalKilometerPrice = 0m;
-            decimal taxRate = 0m;
-            decimal initialPaidAmount = 0m;   // NON-nullable
-            string paymentMethod = string.Empty; // string, not int
-            DateTime paymentDate = DateTime.MinValue; // NON-nullable
-            DateTime? actualDeliveryDate = null; // nullable stays nullable
-            int receivingOdometer = 0;        // NON-nullable
-            int consumedMileage = 0;          // NON-nullable
-            int mileage = 0;                  // NON-nullable
+            int customerID = 0, carID = 0, pickupBranchID = 0, dropOffBranchID = 0,
+      permittedDailyKilometers = 0, receivingOdometer = 0, consumedMileage = 0, mileage = 0, serialNumber = 0;
+
+            DateTime startDate = DateTime.MinValue, endDate = DateTime.MinValue, paymentDate = DateTime.MinValue;
+            DateTime? actualDeliveryDate = null;
+
+            decimal agreedPrice = 0, rentalPenaltyPerDay = 0, totalAmountBeforeTax = 0,
+                    additionalKilometerPrice = 0, taxRate = 0, initialPaidAmount = 0;
+
+            decimal additionContractPrice = 0, rentalAdditionsPrice = 0, requiredInsurancePrice = 0;
+
+            string paymentMethod = string.Empty;
             string ExitFuel = "";
-            int serialNumber = 0;
-            decimal additionContractPrice = 0m;
-            decimal rentalAdditionsPrice = 0m;
-            decimal requiredInsurancePrice = 0m;
+            decimal RentalDaysCost = 0m;
+            decimal TotalIncludetax = 0m;
 
             bool found = ClsAgreementData.GetAgreementById(
                 agreementId,
@@ -328,15 +330,15 @@ namespace CarRentalBusiness
                 ref startDate,
                 ref endDate,
                 ref agreedPrice,
-                ref rentalPenaltyPerDay,          // pass non-nullable decimal
+                ref rentalPenaltyPerDay,
                 ref totalAmountBeforeTax,
                 ref permittedDailyKilometers,
                 ref additionalKilometerPrice,
                 ref taxRate,
-                ref initialPaidAmount,            // non-nullable decimal
+                ref initialPaidAmount,
                 ref paymentMethod,
-                ref paymentDate,                  // non-nullable DateTime
-                ref actualDeliveryDate,           // nullable DateTime - keep nullable here if DAL supports it
+                ref paymentDate,
+                ref actualDeliveryDate,
                 ref receivingOdometer,
                 ref consumedMileage,
                 ref mileage,
@@ -344,12 +346,16 @@ namespace CarRentalBusiness
                 ref serialNumber,
                 ref additionContractPrice,
                 ref rentalAdditionsPrice,
-                ref requiredInsurancePrice);
+                ref requiredInsurancePrice,
+                ref RentalDaysCost,
+                ref TotalIncludetax
+            );
 
             if (!found)
                 return null;
 
-            return new ClsAgreement(
+            // Create agreement object
+            var agreement = new ClsAgreement(
                 agreementId,
                 customerID,
                 carID,
@@ -373,7 +379,45 @@ namespace CarRentalBusiness
                 serialNumber,
                 additionContractPrice,
                 rentalAdditionsPrice,
-                requiredInsurancePrice);
+                requiredInsurancePrice,
+                RentalDaysCost,
+                TotalIncludetax
+            );
+
+            // ============================
+            // 🔥 Fetch AdditionContracts
+            // ============================
+            DataTable dtAdditionContracts = ClsAgreementAdditionContractData.GetAllByAgreementId(agreementId);
+            agreement.AdditionContracts = dtAdditionContracts.AsEnumerable()
+                .Select(row => (
+                    Id: row.Field<int>("AdditionContractID"),
+                    Price: row.Field<decimal>("ActualPrice")
+                ))
+                .ToList();
+
+            // ============================
+            // 🔥 Fetch RentalAdditions
+            // ============================
+            DataTable dtRentalAdditions = ClsAgreementRentalAdditionData.GetAllByAgreementId(agreementId);
+            agreement.RentalAdditions = dtRentalAdditions.AsEnumerable()
+                .Select(row => (
+                    Id: row.Field<int>("RentalAdditionID"),
+                    Price: row.Field<decimal>("ActualPrice")
+                ))
+                .ToList();
+
+            // ============================
+            // 🔥 Fetch RequiredInsurances
+            // ============================
+            DataTable dtRequiredInsurances = ClsAgreementRequiredInsuranceData.GetAllByAgreementId(agreementId);
+            agreement.RequiredInsurances = dtRequiredInsurances.AsEnumerable()
+                .Select(row => (
+                    Id: row.Field<int>("RequiredInsuranceID"),
+                    Price: row.Field<decimal>("ActualPrice")
+                ))
+                .ToList();
+
+            return agreement;
         }
 
 

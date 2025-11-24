@@ -55,6 +55,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbCustomers = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblRentalAdditionsTotal = new System.Windows.Forms.Label();
+            this.lblAdditionContractTotal = new System.Windows.Forms.Label();
+            this.lblRequiredInsuranceTotal = new System.Windows.Forms.Label();
             this.lblTotalAmountOfAdditions = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.otherAdditions = new System.Windows.Forms.Label();
@@ -100,7 +103,7 @@
             this.txtLatePenalty = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbAgreementAndDuration = new System.Windows.Forms.GroupBox();
             this.cbDropOfbranch = new System.Windows.Forms.ComboBox();
             this.cbPickBranch = new System.Windows.Forms.ComboBox();
             this.gbCar.SuspendLayout();
@@ -114,7 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuPremmitedMeters)).BeginInit();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPaidAmount)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.gbAgreementAndDuration.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbCars
@@ -124,6 +127,8 @@
             this.cbCars.Name = "cbCars";
             this.cbCars.Size = new System.Drawing.Size(157, 21);
             this.cbCars.TabIndex = 0;
+            this.cbCars.SelectedIndexChanged += new System.EventHandler(this.cbCars_SelectedIndexChanged_1);
+            this.cbCars.Validating += new System.ComponentModel.CancelEventHandler(this.cbCars_Validating);
             // 
             // label1
             // 
@@ -261,7 +266,7 @@
             this.gbCustomer.Controls.Add(this.label10);
             this.gbCustomer.Controls.Add(this.txtCustIdenetity);
             this.gbCustomer.Controls.Add(this.label3);
-            this.gbCustomer.Location = new System.Drawing.Point(398, 81);
+            this.gbCustomer.Location = new System.Drawing.Point(399, 81);
             this.gbCustomer.Name = "gbCustomer";
             this.gbCustomer.Size = new System.Drawing.Size(352, 306);
             this.gbCustomer.TabIndex = 5;
@@ -335,7 +340,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(395, 46);
+            this.label4.Location = new System.Drawing.Point(396, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 13);
             this.label4.TabIndex = 4;
@@ -344,13 +349,17 @@
             // cbCustomers
             // 
             this.cbCustomers.FormattingEnabled = true;
-            this.cbCustomers.Location = new System.Drawing.Point(488, 43);
+            this.cbCustomers.Location = new System.Drawing.Point(489, 43);
             this.cbCustomers.Name = "cbCustomers";
             this.cbCustomers.Size = new System.Drawing.Size(157, 21);
             this.cbCustomers.TabIndex = 3;
+            this.cbCustomers.SelectedIndexChanged += new System.EventHandler(this.cbCustomers_SelectedIndexChanged);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblRentalAdditionsTotal);
+            this.groupBox4.Controls.Add(this.lblAdditionContractTotal);
+            this.groupBox4.Controls.Add(this.lblRequiredInsuranceTotal);
             this.groupBox4.Controls.Add(this.lblTotalAmountOfAdditions);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.otherAdditions);
@@ -359,18 +368,45 @@
             this.groupBox4.Controls.Add(this.chAdditionInsurance);
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.chRequiredInsurance);
-            this.groupBox4.Location = new System.Drawing.Point(17, 429);
+            this.groupBox4.Location = new System.Drawing.Point(1, 429);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(465, 306);
+            this.groupBox4.Size = new System.Drawing.Size(594, 360);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Insurances and Additions";
+            // 
+            // lblRentalAdditionsTotal
+            // 
+            this.lblRentalAdditionsTotal.AutoSize = true;
+            this.lblRentalAdditionsTotal.Location = new System.Drawing.Point(378, 274);
+            this.lblRentalAdditionsTotal.Name = "lblRentalAdditionsTotal";
+            this.lblRentalAdditionsTotal.Size = new System.Drawing.Size(25, 13);
+            this.lblRentalAdditionsTotal.TabIndex = 28;
+            this.lblRentalAdditionsTotal.Text = "???";
+            // 
+            // lblAdditionContractTotal
+            // 
+            this.lblAdditionContractTotal.AutoSize = true;
+            this.lblAdditionContractTotal.Location = new System.Drawing.Point(204, 274);
+            this.lblAdditionContractTotal.Name = "lblAdditionContractTotal";
+            this.lblAdditionContractTotal.Size = new System.Drawing.Size(25, 13);
+            this.lblAdditionContractTotal.TabIndex = 27;
+            this.lblAdditionContractTotal.Text = "???";
+            // 
+            // lblRequiredInsuranceTotal
+            // 
+            this.lblRequiredInsuranceTotal.AutoSize = true;
+            this.lblRequiredInsuranceTotal.Location = new System.Drawing.Point(58, 273);
+            this.lblRequiredInsuranceTotal.Name = "lblRequiredInsuranceTotal";
+            this.lblRequiredInsuranceTotal.Size = new System.Drawing.Size(25, 13);
+            this.lblRequiredInsuranceTotal.TabIndex = 26;
+            this.lblRequiredInsuranceTotal.Text = "???";
             // 
             // lblTotalAmountOfAdditions
             // 
             this.lblTotalAmountOfAdditions.AutoSize = true;
             this.lblTotalAmountOfAdditions.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmountOfAdditions.Location = new System.Drawing.Point(110, 278);
+            this.lblTotalAmountOfAdditions.Location = new System.Drawing.Point(121, 321);
             this.lblTotalAmountOfAdditions.Name = "lblTotalAmountOfAdditions";
             this.lblTotalAmountOfAdditions.Size = new System.Drawing.Size(37, 15);
             this.lblTotalAmountOfAdditions.TabIndex = 25;
@@ -380,7 +416,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(8, 278);
+            this.label25.Location = new System.Drawing.Point(19, 321);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(88, 15);
             this.label25.TabIndex = 24;
@@ -389,7 +425,7 @@
             // otherAdditions
             // 
             this.otherAdditions.AutoSize = true;
-            this.otherAdditions.Location = new System.Drawing.Point(331, 26);
+            this.otherAdditions.Location = new System.Drawing.Point(359, 26);
             this.otherAdditions.Name = "otherAdditions";
             this.otherAdditions.Size = new System.Drawing.Size(79, 13);
             this.otherAdditions.TabIndex = 23;
@@ -398,9 +434,9 @@
             // chOtherAdditions
             // 
             this.chOtherAdditions.FormattingEnabled = true;
-            this.chOtherAdditions.Location = new System.Drawing.Point(329, 55);
+            this.chOtherAdditions.Location = new System.Drawing.Point(394, 55);
             this.chOtherAdditions.Name = "chOtherAdditions";
-            this.chOtherAdditions.Size = new System.Drawing.Size(127, 199);
+            this.chOtherAdditions.Size = new System.Drawing.Size(185, 199);
             this.chOtherAdditions.TabIndex = 22;
             // 
             // label23
@@ -415,9 +451,9 @@
             // chAdditionInsurance
             // 
             this.chAdditionInsurance.FormattingEnabled = true;
-            this.chAdditionInsurance.Location = new System.Drawing.Point(169, 55);
+            this.chAdditionInsurance.Location = new System.Drawing.Point(202, 55);
             this.chAdditionInsurance.Name = "chAdditionInsurance";
-            this.chAdditionInsurance.Size = new System.Drawing.Size(127, 199);
+            this.chAdditionInsurance.Size = new System.Drawing.Size(186, 199);
             this.chAdditionInsurance.TabIndex = 20;
             // 
             // label22
@@ -431,10 +467,11 @@
             // 
             // chRequiredInsurance
             // 
+            this.chRequiredInsurance.CheckOnClick = true;
             this.chRequiredInsurance.FormattingEnabled = true;
             this.chRequiredInsurance.Location = new System.Drawing.Point(6, 55);
             this.chRequiredInsurance.Name = "chRequiredInsurance";
-            this.chRequiredInsurance.Size = new System.Drawing.Size(127, 199);
+            this.chRequiredInsurance.Size = new System.Drawing.Size(190, 199);
             this.chRequiredInsurance.TabIndex = 0;
             // 
             // groupBox5
@@ -443,7 +480,7 @@
             this.groupBox5.Controls.Add(this.gbPremmitedKillo);
             this.groupBox5.Controls.Add(this.chIncludePremitKillo);
             this.groupBox5.Controls.Add(this.chIncludeTax);
-            this.groupBox5.Location = new System.Drawing.Point(522, 429);
+            this.groupBox5.Location = new System.Drawing.Point(601, 429);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(700, 306);
             this.groupBox5.TabIndex = 18;
@@ -508,6 +545,8 @@
             this.nuTaxrate.Name = "nuTaxrate";
             this.nuTaxrate.Size = new System.Drawing.Size(141, 20);
             this.nuTaxrate.TabIndex = 1;
+            this.nuTaxrate.ValueChanged += new System.EventHandler(this.nuTaxrate_ValueChanged);
+            this.nuTaxrate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nuTaxrate_KeyDown);
             // 
             // gbPremmitedKillo
             // 
@@ -590,7 +629,7 @@
             this.groupBox8.Controls.Add(this.nuPaidAmount);
             this.groupBox8.Controls.Add(this.label34);
             this.groupBox8.Controls.Add(this.label33);
-            this.groupBox8.Location = new System.Drawing.Point(1242, 429);
+            this.groupBox8.Location = new System.Drawing.Point(1321, 429);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(369, 265);
             this.groupBox8.TabIndex = 18;
@@ -743,6 +782,7 @@
             this.txtRentalDays.Name = "txtRentalDays";
             this.txtRentalDays.Size = new System.Drawing.Size(178, 20);
             this.txtRentalDays.TabIndex = 11;
+            this.txtRentalDays.TextChanged += new System.EventHandler(this.txtRentalDays_TextChanged);
             // 
             // label19
             // 
@@ -759,6 +799,7 @@
             this.txtAgreedPrice.Name = "txtAgreedPrice";
             this.txtAgreedPrice.Size = new System.Drawing.Size(178, 20);
             this.txtAgreedPrice.TabIndex = 13;
+            this.txtAgreedPrice.TextChanged += new System.EventHandler(this.txtAgreedPrice_TextChanged);
             // 
             // label20
             // 
@@ -790,33 +831,35 @@
             this.txtTotalPrice.Enabled = false;
             this.txtTotalPrice.Location = new System.Drawing.Point(425, 194);
             this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.Size = new System.Drawing.Size(178, 20);
             this.txtTotalPrice.TabIndex = 17;
+            this.txtTotalPrice.TextChanged += new System.EventHandler(this.txtTotalPrice_TextChanged);
             // 
-            // groupBox3
+            // gbAgreementAndDuration
             // 
-            this.groupBox3.Controls.Add(this.cbDropOfbranch);
-            this.groupBox3.Controls.Add(this.cbPickBranch);
-            this.groupBox3.Controls.Add(this.txtTotalPrice);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.txtLatePenalty);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.txtAgreedPrice);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.txtRentalDays);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.dpDelveringDate);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.dpRecivingDate);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(778, 81);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(628, 257);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Agreement Duration and Pricing";
+            this.gbAgreementAndDuration.Controls.Add(this.cbDropOfbranch);
+            this.gbAgreementAndDuration.Controls.Add(this.cbPickBranch);
+            this.gbAgreementAndDuration.Controls.Add(this.txtTotalPrice);
+            this.gbAgreementAndDuration.Controls.Add(this.label21);
+            this.gbAgreementAndDuration.Controls.Add(this.txtLatePenalty);
+            this.gbAgreementAndDuration.Controls.Add(this.label20);
+            this.gbAgreementAndDuration.Controls.Add(this.txtAgreedPrice);
+            this.gbAgreementAndDuration.Controls.Add(this.label19);
+            this.gbAgreementAndDuration.Controls.Add(this.txtRentalDays);
+            this.gbAgreementAndDuration.Controls.Add(this.label18);
+            this.gbAgreementAndDuration.Controls.Add(this.dpDelveringDate);
+            this.gbAgreementAndDuration.Controls.Add(this.label17);
+            this.gbAgreementAndDuration.Controls.Add(this.dpRecivingDate);
+            this.gbAgreementAndDuration.Controls.Add(this.label13);
+            this.gbAgreementAndDuration.Controls.Add(this.label15);
+            this.gbAgreementAndDuration.Controls.Add(this.label16);
+            this.gbAgreementAndDuration.Location = new System.Drawing.Point(778, 81);
+            this.gbAgreementAndDuration.Name = "gbAgreementAndDuration";
+            this.gbAgreementAndDuration.Size = new System.Drawing.Size(628, 257);
+            this.gbAgreementAndDuration.TabIndex = 8;
+            this.gbAgreementAndDuration.TabStop = false;
+            this.gbAgreementAndDuration.Text = "Agreement Duration and Pricing";
             // 
             // cbDropOfbranch
             // 
@@ -843,7 +886,7 @@
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbAgreementAndDuration);
             this.Controls.Add(this.gbCustomer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.gbCar);
@@ -871,8 +914,8 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPaidAmount)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbAgreementAndDuration.ResumeLayout(false);
+            this.gbAgreementAndDuration.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -952,8 +995,11 @@
         private System.Windows.Forms.TextBox txtLatePenalty;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTotalPrice;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbAgreementAndDuration;
         private System.Windows.Forms.ComboBox cbPickBranch;
         private System.Windows.Forms.ComboBox cbDropOfbranch;
+        private System.Windows.Forms.Label lblRequiredInsuranceTotal;
+        private System.Windows.Forms.Label lblAdditionContractTotal;
+        private System.Windows.Forms.Label lblRentalAdditionsTotal;
     }
 }

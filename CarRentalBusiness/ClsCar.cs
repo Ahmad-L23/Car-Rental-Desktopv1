@@ -449,5 +449,15 @@ namespace CarRentalBusiness
             return ClsCarData.GetAllCarsIdAndPlateNumber();
         }
 
+        public static bool IsAvaliable(int carId)
+        {
+            return ClsCarData.IsCarAvailable(carId);
+        }
+
+        public static string UnavaliableReason(int carId)
+        {
+            return ClsCarData.GetCarUnavailableReason(carId);
+        }
+
     }
 }

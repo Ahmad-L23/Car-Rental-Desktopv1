@@ -432,7 +432,63 @@ namespace CarRentalDataAccess
             return false;
         }
 
-     
+
+
+        public static bool IsCarAvailable(int carId)
+        {
+            string query = "SELECT IsAvailable FROM vehicles WHERE CarID = @CarID";
+
+            using (var connection = new System.Data.SqlClient.SqlConnection(conn))
+            using (var cmd = new System.Data.SqlClient.SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@CarID", carId);
+
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToBoolean(result);
+                }
+                else
+                {
+                    // If car not found or availability not set, return false
+                    return false;
+                }
+            }
+        }
+
+
+        public static string GetCarUnavailableReason(int carId)
+        {
+            string query = @"
+        SELECT 
+            CASE 
+                WHEN IsAvailable = 1 AND Status = 0 THEN 'Car is available.'
+                WHEN IsAvailable = 0 THEN 'Car is marked as not available.'
+                WHEN Status = 1 THEN 'Car is currently rented.'
+                WHEN Status = 2 THEN 'Car is in employee usage.'
+                WHEN Status = 3 THEN 'Car is under maintenance.'
+                ELSE 'Car status unknown or not available.'
+            END AS AvailabilityReason
+        FROM vehicles
+        WHERE CarID = @CarID";
+
+            using (var connection = new System.Data.SqlClient.SqlConnection(conn))
+            using (var cmd = new System.Data.SqlClient.SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@CarID", carId);
+
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return result.ToString();
+                }
+            }
+
+            return "Car not found.";
+        }
 
 
     }

@@ -34,7 +34,7 @@ namespace CarRentalDataAccess
             int serialNumber,
             decimal additionContractPrice,
             decimal rentalAdditionsPrice,
-            decimal requiredInsurancePrice
+            decimal requiredInsurancePrice, decimal rentalDaysCost, decimal TotalAmountIncludeTax
         )
         {
             string query = @"
@@ -44,7 +44,7 @@ namespace CarRentalDataAccess
                     RentalPenaltyPerDay, TotalAmountBeforeTax, PermittedDailyKilometers, AdditionalKilometerPrice,
                     TaxRate, InitialPaidAmount, PaymentMethod, PaymentDate, ActualDeliveryDate,
                     ReceivingOdometer, ConsumedMileage, Mileage, ExitFuel, SerialNumber,
-                    additionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice
+                    additionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice,rentalDaysCost,TotalAmountIncludeTax
                 )
                 VALUES
                 (
@@ -52,7 +52,7 @@ namespace CarRentalDataAccess
                     @RentalPenaltyPerDay, @TotalAmountBeforeTax, @PermittedDailyKilometers, @AdditionalKilometerPrice,
                     @TaxRate, @InitialPaidAmount, @PaymentMethod, @PaymentDate, @ActualDeliveryDate,
                     @ReceivingOdometer, @ConsumedMileage, @Mileage, @ExitFuel, @SerialNumber,
-                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice
+                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice, @rentalDaysCost,@TotalAmountIncludeTax
                 );
                 SELECT CAST(scope_identity() AS int);
             ";
@@ -79,6 +79,8 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@ReceivingOdometer", receivingOdometer);
                 cmd.Parameters.AddWithValue("@ConsumedMileage", consumedMileage);
                 cmd.Parameters.AddWithValue("@Mileage", mileage);
+                cmd.Parameters.AddWithValue("@rentalDaysCost", rentalDaysCost);
+                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", TotalAmountIncludeTax);
                 cmd.Parameters.AddWithValue("@ExitFuel", ExitFuel ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
                 cmd.Parameters.AddWithValue("@AdditionContractPrice", additionContractPrice);
@@ -119,7 +121,8 @@ namespace CarRentalDataAccess
             int serialNumber,
             decimal additionContractPrice,
             decimal rentalAdditionsPrice,
-            decimal requiredInsurancePrice
+            decimal requiredInsurancePrice,
+             decimal rentalDaysCost, decimal TotalAmountIncludeTax
         )
         {
             string query = @"
@@ -147,7 +150,9 @@ namespace CarRentalDataAccess
                     SerialNumber = @SerialNumber,
                     additionContractPrice = @AdditionContractPrice,
                     RentalAdditionsPrice = @RentalAdditionsPrice,
-                    RequiredInsurancePrice = @RequiredInsurancePrice
+                    RequiredInsurancePrice = @RequiredInsurancePrice,
+                    rentalDaysCost = @rentalDaysCost,
+                    TotalAmountIncludeTax = @TotalAmountIncludeTax
                 WHERE AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -173,6 +178,8 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@ReceivingOdometer", receivingOdometer);
                 cmd.Parameters.AddWithValue("@ConsumedMileage", consumedMileage);
                 cmd.Parameters.AddWithValue("@Mileage", mileage);
+                cmd.Parameters.AddWithValue("@rentalDaysCost", rentalDaysCost);
+                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", TotalAmountIncludeTax);
                 cmd.Parameters.AddWithValue("@ExitFuel", ExitFuel ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
                 cmd.Parameters.AddWithValue("@AdditionContractPrice", additionContractPrice);
@@ -236,7 +243,7 @@ namespace CarRentalDataAccess
             ref decimal additionalKilometerPrice, ref decimal taxRate, ref decimal initialPaidAmount,
             ref string paymentMethod, ref DateTime paymentDate, ref DateTime? actualDeliveryDate,
             ref int receivingOdometer, ref int consumedMileage, ref int mileage, ref string ExitFuel, ref int serialNumber,
-            ref decimal additionContractPrice, ref decimal rentalAdditionsPrice, ref decimal requiredInsurancePrice)
+            ref decimal additionContractPrice, ref decimal rentalAdditionsPrice, ref decimal requiredInsurancePrice, ref decimal rentalDaysCost, ref decimal TotalAmountIncludeTax)
         {
             string query = "SELECT * FROM Agreement WHERE AgreementID = @AgreementID";
 
@@ -275,6 +282,8 @@ namespace CarRentalDataAccess
                         additionContractPrice = Convert.ToDecimal(reader["additionContractPrice"]);
                         rentalAdditionsPrice = Convert.ToDecimal(reader["RentalAdditionsPrice"]);
                         requiredInsurancePrice = Convert.ToDecimal(reader["RequiredInsurancePrice"]);
+                        rentalDaysCost = Convert.ToDecimal(reader["rentalDaysCost"]);
+                        TotalAmountIncludeTax = Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
 
                         return true;
                     }
@@ -308,6 +317,8 @@ namespace CarRentalDataAccess
             a.ReceivingOdometer,
             a.ConsumedMileage,
             a.Mileage,
+            a.rentalDaysCost,
+            a.TotalAmountIncludeTax,
             ExitFuel,
             a.SerialNumber,
             a.additionContractPrice,
@@ -370,6 +381,8 @@ namespace CarRentalDataAccess
             a.ReceivingOdometer,
             a.ConsumedMileage,
             a.Mileage,
+            a.rentalDaysCost,
+            a.TotalAmountIncludeTax,
             ExitFuel,
             a.SerialNumber,
             a.additionContractPrice,

@@ -26,37 +26,68 @@ namespace CarRentalDataAccess
             int entryCountre,
             string entryFuel)
         {
-            string query = @"
-                INSERT INTO EmployeeUsage
-                (EmployeeId, CarId, BranchId, UsageReason, ExitDate, Status,
-                 ExitCounter, ExitFuel, EntryBranchId, EntryDate, EntryCountre, EntryFuel)
-                VALUES
-                (@EmployeeId, @CarId, @BranchId, @UsageReason, @ExitDate, @Status,
-                 @ExitCounter, @ExitFuel, @EntryBranchId, @EntryDate, @EntryCountre, @EntryFuel);
-                SELECT CAST(SCOPE_IDENTITY() AS INT);";
-
             using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
             {
-                cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
-                cmd.Parameters.AddWithValue("@CarId", carId);
-                cmd.Parameters.AddWithValue("@BranchId", branchId);
-                cmd.Parameters.AddWithValue("@UsageReason", usageReason);
-                cmd.Parameters.AddWithValue("@ExitDate", exitDate);
-                cmd.Parameters.AddWithValue("@Status", status);
-
-                cmd.Parameters.AddWithValue("@ExitCounter", exitCounter);
-                cmd.Parameters.AddWithValue("@ExitFuel", exitFuel);
-
-                cmd.Parameters.AddWithValue("@EntryBranchId", entryBranchId);
-                cmd.Parameters.AddWithValue("@EntryDate", entryDate);
-                cmd.Parameters.AddWithValue("@EntryCountre", entryCountre);
-                cmd.Parameters.AddWithValue("@EntryFuel", entryFuel);
-
                 connection.Open();
-                object result = cmd.ExecuteScalar();
 
-                return result != null ? Convert.ToInt32(result) : -1;
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // 1. Insert EmployeeUsage record
+                        string insertQuery = @"
+                    INSERT INTO EmployeeUsage
+                    (EmployeeId, CarId, BranchId, UsageReason, ExitDate, Status,
+                     ExitCounter, ExitFuel, EntryBranchId, EntryDate, EntryCountre, EntryFuel)
+                    VALUES
+                    (@EmployeeId, @CarId, @BranchId, @UsageReason, @ExitDate, @Status,
+                     @ExitCounter, @ExitFuel, @EntryBranchId, @EntryDate, @EntryCountre, @EntryFuel);
+                    SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
+                        using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection, transaction))
+                        {
+                            insertCmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+                            insertCmd.Parameters.AddWithValue("@CarId", carId);
+                            insertCmd.Parameters.AddWithValue("@BranchId", branchId);
+                            insertCmd.Parameters.AddWithValue("@UsageReason", usageReason);
+                            insertCmd.Parameters.AddWithValue("@ExitDate", exitDate);
+                            insertCmd.Parameters.AddWithValue("@Status", status);
+
+                            insertCmd.Parameters.AddWithValue("@ExitCounter", exitCounter);
+                            insertCmd.Parameters.AddWithValue("@ExitFuel", exitFuel);
+
+                            insertCmd.Parameters.AddWithValue("@EntryBranchId", entryBranchId);
+                            insertCmd.Parameters.AddWithValue("@EntryDate", entryDate);
+                            insertCmd.Parameters.AddWithValue("@EntryCountre", entryCountre);
+                            insertCmd.Parameters.AddWithValue("@EntryFuel", entryFuel);
+
+                            object result = insertCmd.ExecuteScalar();
+                            int insertedId = result != null ? Convert.ToInt32(result) : -1;
+
+                            if (insertedId == -1)
+                                throw new Exception("Failed to insert EmployeeUsage record.");
+
+                            // 2. Update vehicles.CurrentCounter with entryCounter value
+                            string updateQuery = "UPDATE vehicles SET CurrentCounter = @CurrentCounter WHERE CarID = @CarID";
+
+                            using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection, transaction))
+                            {
+                                updateCmd.Parameters.AddWithValue("@CurrentCounter", entryCountre);
+                                updateCmd.Parameters.AddWithValue("@CarID", carId);
+                                updateCmd.ExecuteNonQuery();
+                            }
+
+                            // Commit transaction if both succeed
+                            transaction.Commit();
+                            return insertedId;
+                        }
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
         }
 
