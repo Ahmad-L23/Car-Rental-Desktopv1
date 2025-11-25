@@ -127,8 +127,7 @@
             this.cbCars.Name = "cbCars";
             this.cbCars.Size = new System.Drawing.Size(157, 21);
             this.cbCars.TabIndex = 0;
-            this.cbCars.SelectedIndexChanged += new System.EventHandler(this.cbCars_SelectedIndexChanged_1);
-            this.cbCars.Validating += new System.ComponentModel.CancelEventHandler(this.cbCars_Validating);
+            this.cbCars.SelectedIndexChanged += new System.EventHandler(this.cbCars_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -438,6 +437,7 @@
             this.chOtherAdditions.Name = "chOtherAdditions";
             this.chOtherAdditions.Size = new System.Drawing.Size(185, 199);
             this.chOtherAdditions.TabIndex = 22;
+            this.chOtherAdditions.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chOtherAdditions_ItemCheck);
             // 
             // label23
             // 
@@ -451,10 +451,12 @@
             // chAdditionInsurance
             // 
             this.chAdditionInsurance.FormattingEnabled = true;
+            this.chAdditionInsurance.HorizontalScrollbar = true;
             this.chAdditionInsurance.Location = new System.Drawing.Point(202, 55);
             this.chAdditionInsurance.Name = "chAdditionInsurance";
-            this.chAdditionInsurance.Size = new System.Drawing.Size(186, 199);
+            this.chAdditionInsurance.Size = new System.Drawing.Size(144, 199);
             this.chAdditionInsurance.TabIndex = 20;
+            this.chAdditionInsurance.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chAdditionInsurance_ItemCheck);
             // 
             // label22
             // 
@@ -473,6 +475,7 @@
             this.chRequiredInsurance.Name = "chRequiredInsurance";
             this.chRequiredInsurance.Size = new System.Drawing.Size(190, 199);
             this.chRequiredInsurance.TabIndex = 0;
+            this.chRequiredInsurance.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chRequiredInsurance_ItemCheck);
             // 
             // groupBox5
             // 
@@ -546,7 +549,6 @@
             this.nuTaxrate.Size = new System.Drawing.Size(141, 20);
             this.nuTaxrate.TabIndex = 1;
             this.nuTaxrate.ValueChanged += new System.EventHandler(this.nuTaxrate_ValueChanged);
-            this.nuTaxrate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nuTaxrate_KeyDown);
             // 
             // gbPremmitedKillo
             // 
@@ -748,6 +750,7 @@
             this.dpRecivingDate.Name = "dpRecivingDate";
             this.dpRecivingDate.Size = new System.Drawing.Size(178, 20);
             this.dpRecivingDate.TabIndex = 7;
+            this.dpRecivingDate.ValueChanged += new System.EventHandler(this.dpRecivingDate_ValueChanged_1);
             // 
             // label17
             // 
@@ -765,6 +768,7 @@
             this.dpDelveringDate.Name = "dpDelveringDate";
             this.dpDelveringDate.Size = new System.Drawing.Size(178, 20);
             this.dpDelveringDate.TabIndex = 9;
+            this.dpDelveringDate.ValueChanged += new System.EventHandler(this.dpDelveringDate_ValueChanged_1);
             // 
             // label18
             // 
@@ -868,6 +872,7 @@
             this.cbDropOfbranch.Name = "cbDropOfbranch";
             this.cbDropOfbranch.Size = new System.Drawing.Size(178, 21);
             this.cbDropOfbranch.TabIndex = 19;
+            this.cbDropOfbranch.SelectedIndexChanged += new System.EventHandler(this.cbDropOfbranch_SelectedIndexChanged);
             // 
             // cbPickBranch
             // 
@@ -876,6 +881,7 @@
             this.cbPickBranch.Name = "cbPickBranch";
             this.cbPickBranch.Size = new System.Drawing.Size(178, 21);
             this.cbPickBranch.TabIndex = 18;
+            this.cbPickBranch.SelectedIndexChanged += new System.EventHandler(this.cbPickBranch_SelectedIndexChanged);
             // 
             // frmAddUpdateAgreement
             // 

@@ -49,7 +49,7 @@ namespace CarRentalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddUpdateAgreement()); 
+            Application.Run(new frmAddUpdatAgreement()); 
         }
     }
 }

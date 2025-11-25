@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,8 +11,7 @@ namespace CarRentalSystem.Agreement
     {
         private ClsAgreement _Agreement;
         private int? _AgreementId = null;
-        private decimal _TotalAmount = 0;
-        decimal totalIncludingTax = 0;
+        decimal taxRate = 0m;
 
         public frmAddUpdateAgreement()
         {
@@ -27,22 +25,15 @@ namespace CarRentalSystem.Agreement
             gbPremmitedKillo.Enabled = false;
             gbIncludetax.Enabled = false;
 
-            dpRecivingDate.ValueChanged += DateValueChanged;
-            dpDelveringDate.ValueChanged += DateValueChanged;
+            // Do NOT subscribe to events here - handled in Designer or manually.
 
-            chRequiredInsurance.ItemCheck += CheckedListBox_ItemCheck;
-            chAdditionInsurance.ItemCheck += CheckedListBox_ItemCheck;
-            chOtherAdditions.ItemCheck += CheckedListBox_ItemCheck;
-
-
-            // Clear total labels when adding new
+            // Initialize labels
             lblAdditionContractTotal.Text = "Total: 0.00";
             lblRentalAdditionsTotal.Text = "Total: 0.00";
             lblRequiredInsuranceTotal.Text = "Total: 0.00";
             lbltotalAmountIncTax.Text = "0.00";
-            this.Load += frmAddUpdateAgreement_Load;
 
-            UpdateTotalAmountOfAdditions();
+            this.Load += frmAddUpdateAgreement_Load;
         }
 
         public frmAddUpdateAgreement(int agreementId) : this()
@@ -53,19 +44,12 @@ namespace CarRentalSystem.Agreement
             gbIncludetax.Enabled = false;
         }
 
-        private void DateValueChanged(object sender, EventArgs e)
+        private void RefreshAll()
         {
-            int days = (dpDelveringDate.Value.Date - dpRecivingDate.Value.Date).Days;
-            txtRentalDays.Text = (days < 0) ? "0" : days.ToString();
-
-
-            if (chIncludeTax.Checked)
-            {
-                totalIncludingTax = CalculateTotalIncludingTax();
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
-
-            }
+            UpdateRentalDays();
+            UpdateTotalPrice();
+            UpdateTotalAmountOfAdditions();
+            UpdateTotalIncludingTax();
         }
 
         private void LoadAgreementData(int id)
@@ -90,27 +74,35 @@ namespace CarRentalSystem.Agreement
 
             txtAgreedPrice.Text = _Agreement.AgreedPrice.ToString("F2");
             txtLatePenalty.Text = (_Agreement.RentalPenaltyPerDay ?? 0).ToString("F2");
-            txtTotalPrice.Text = _Agreement.TotalAmountBeforeTax.ToString("F2");
-            nuPremmitedMeters.Value = _Agreement.PermittedDailyKilometers;
-            nuPricePerAddKilo.Value = _Agreement.AdditionalKilometerPrice;
+            txtTotalPrice.Text = _Agreement.TotalAmountBeforeTax?.ToString("F2") ?? "0.00";
+            nuPremmitedMeters.Value = (decimal)_Agreement.PermittedDailyKilometers;
+            nuPricePerAddKilo.Value = (decimal)_Agreement.AdditionalKilometerPrice;
+            if(_Agreement.PermittedDailyKilometers.HasValue || _Agreement.AdditionalKilometerPrice.HasValue)
+            {
+                chIncludePremitKillo.Checked = true;
+                gbPremmitedKillo.Enabled = true;
+            }
+
+            if(_Agreement.TaxRate > 0)
+             {
+                 chIncludeTax.Checked = true;
+                gbIncludetax.Enabled = true;
+             }
+
             nuTaxrate.Value = _Agreement.TaxRate;
             nuPaidAmount.Value = _Agreement.InitialPaidAmount ?? 0m;
             txtCurrentCounter.Text = (_Agreement.Mileage ?? 0).ToString();
             txtExitFuel.Text = _Agreement.ExitFuel ?? "";
 
-            // Check checked items based on saved IDs
             CheckItemsInCheckedListBox(chAdditionInsurance, _Agreement.AdditionContracts.Select(x => x.Id).ToList());
             CheckItemsInCheckedListBox(chOtherAdditions, _Agreement.RentalAdditions.Select(x => x.Id).ToList());
             CheckItemsInCheckedListBox(chRequiredInsurance, _Agreement.RequiredInsurances.Select(x => x.Id).ToList());
 
-            // Show saved totals in labels
             lblAdditionContractTotal.Text = $"Total: {_Agreement.AdditionContractPrice?.ToString("F2") ?? "0.00"}";
             lblRentalAdditionsTotal.Text = $"Total: {_Agreement.RentalAdditionsPrice?.ToString("F2") ?? "0.00"}";
             lblRequiredInsuranceTotal.Text = $"Total: {_Agreement.RequiredInsurancePrice?.ToString("F2") ?? "0.00"}";
 
-            // Also update combined total label
-            UpdateTotalAmountOfAdditions();
-
+            RefreshAll();
         }
 
         private void CheckItemsInCheckedListBox(CheckedListBox clb, List<int> ids)
@@ -158,8 +150,8 @@ namespace CarRentalSystem.Agreement
         {
             var dt = ClsPaymentMethod.GetAllPaymentMethods();
             cbPaymentMethod.DataSource = dt;
-            cbPaymentMethod.DisplayMember = "MethodName";  // اسم طريقة الدفع للعرض
-            cbPaymentMethod.ValueMember = "MethodName";    // القيمة (يمكن تغييرها حسب جدولك)
+            cbPaymentMethod.DisplayMember = "MethodName";
+            cbPaymentMethod.ValueMember = "MethodName";
             cbPaymentMethod.SelectedIndex = -1;
         }
 
@@ -187,98 +179,108 @@ namespace CarRentalSystem.Agreement
             return total;
         }
 
-        private void CheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            if (this.IsHandleCreated)
-            {
-                this.BeginInvoke((MethodInvoker)(() => UpdateTotalAmountOfAdditions()));
-            }
-            else
-            {
-                // Either do nothing or call directly (if safe)
-                UpdateTotalAmountOfAdditions();
-            }
-
-        }
-
-        private void UpdateTotalAmountOfAdditions()
-        {
-            decimal additionTotal = SumCheckedItemsPrices(chAdditionInsurance);
-            decimal rentalTotal = SumCheckedItemsPrices(chOtherAdditions);
-            decimal requiredTotal = SumCheckedItemsPrices(chRequiredInsurance);
-
-            lblAdditionContractTotal.Text = $"Total: {additionTotal:F2}";
-            lblRentalAdditionsTotal.Text = $"Total: {rentalTotal:F2}";
-            lblRequiredInsuranceTotal.Text = $"Total: {requiredTotal:F2}";
-
-            // Optional: update combined total label if you have one
-            decimal combinedTotal = additionTotal + rentalTotal + requiredTotal;
-            lblTotalAmountOfAdditions.Text = combinedTotal.ToString("F2");
-
-        }
-
         private int GetLastSerialNumber() => ClsAgreement.GetLastSerialNumber() + 1;
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (!ValidateChildren())
                 return;
 
             if (chRequiredInsurance.CheckedItems.Count == 0)
             {
-                MessageBox.Show("Please select at least one required insurance .");
+                MessageBox.Show("Please select at least one required insurance.");
                 return;
             }
             if (nuPaidAmount.Value == 0 || cbPaymentMethod.SelectedIndex == -1)
             {
-                MessageBox.Show("Pleas Fill Payment and Financial authorization");
+                MessageBox.Show("Please Fill Payment and Financial authorization");
                 return;
             }
 
-            if (!ValidateTextBoxesInGroupBox(gbAgreementAndDuration))
-                return; // Block progress if validation fails
 
             if (_AgreementId == null)
                 _Agreement = new ClsAgreement();
             else
                 _Agreement = ClsAgreement.FindById(_AgreementId.Value);
 
-            _Agreement.CarID = cbCars.SelectedValue is int carId ? carId : 0;
+
+
+            // Required selections with fallback to 0 (non-nullable int)
             _Agreement.CustomerID = cbCustomers.SelectedValue is int custId ? custId : 0;
+            _Agreement.CarID = cbCars.SelectedValue is int carId ? carId : 0;
             _Agreement.PickupBranchID = cbPickBranch.SelectedValue is int pickId ? pickId : 0;
             _Agreement.DropOffBranchID = cbDropOfbranch.SelectedValue is int dropId ? dropId : 0;
 
+            // Dates (non-nullable DateTime)
             _Agreement.StartDate = dpRecivingDate.Value;
             _Agreement.EndDate = dpDelveringDate.Value;
-            _Agreement.AgreedPrice = decimal.TryParse(txtAgreedPrice.Text, out var ap) ? ap : 0m;
+
+            // Prices and penalties (decimal), try parse with fallback to 0
+            _Agreement.AgreedPrice = decimal.TryParse(txtAgreedPrice.Text, out var agreedPrice) ? agreedPrice : 0m;
             _Agreement.RentalPenaltyPerDay = decimal.TryParse(txtLatePenalty.Text, out var penalty) ? penalty : 0m;
-            _Agreement.TotalAmountBeforeTax = (decimal.TryParse(txtTotalPrice.Text, out var total) ? total : 0m) + (decimal.TryParse(lblTotalAmountOfAdditions.Text, out var totalOfAdditions) ? totalOfAdditions : 0m);
+
+            // Calculate total before tax = total price + additions
+            decimal totalPrice = decimal.TryParse(txtTotalPrice.Text, out var total) ? total : 0m;
+            decimal totalAdditions = decimal.TryParse(lblTotalAmountOfAdditions.Text, out var totalOfAdditions) ? totalOfAdditions : 0m;
+            _Agreement.TotalAmountBeforeTax = totalPrice + totalAdditions;
+
+            // Total including tax, depends on checkbox, fallback 0
             if (chIncludeTax.Checked)
-            {
-                _Agreement.TotalIncludetax = CalculateTotalIncludingTax();
-            }
+                _Agreement.TotalIncludetax = decimal.TryParse(lbltotalAmountIncTax.Text, out var totIncTax) ? totIncTax : 0m;
             else
-            {
-                _Agreement.TotalIncludetax = 0;
-            }
-            _Agreement.RentalDaysCost = (decimal.TryParse(txtTotalPrice.Text, out var RentalDaysCost) ? RentalDaysCost : 0m);
-            _Agreement.PermittedDailyKilometers = (int)nuPremmitedMeters.Value;
-            _Agreement.AdditionalKilometerPrice = nuPricePerAddKilo.Value;
-            _Agreement.TaxRate = nuTaxrate.Value;
+                _Agreement.TotalIncludetax = 0m;
+
+            // Rental days cost (decimal)
+            _Agreement.RentalDaysCost = totalPrice;
+
+            // Nullable int: PermittedDailyKilometers based on checkbox and numeric input
+            if (chIncludePremitKillo.Checked && nuPremmitedMeters.Value > 0)
+                _Agreement.PermittedDailyKilometers = (int)nuPremmitedMeters.Value;
+            else
+                _Agreement.PermittedDailyKilometers = null;
+
+            // Nullable decimal: AdditionalKilometerPrice based on checkbox and numeric input
+            if (chIncludePremitKillo.Checked && nuPricePerAddKilo.Value > 0)
+                _Agreement.AdditionalKilometerPrice = nuPricePerAddKilo.Value; // keep decimal type
+            else
+                _Agreement.AdditionalKilometerPrice = null;
+
+            // TaxRate (decimal, non-nullable)
+            _Agreement.TaxRate = taxRate;
+
+            // InitialPaidAmount (decimal, non-nullable)
             _Agreement.InitialPaidAmount = nuPaidAmount.Value;
+
+            // Payment info
             _Agreement.PaymentMethod = cbPaymentMethod.SelectedValue?.ToString() ?? "";
             _Agreement.PaymentDate = dpPaymentDate.Value;
-            _Agreement.ActualDeliveryDate = DateTime.Now;
-            _Agreement.Mileage = int.TryParse(txtCurrentCounter.Text, out int mileage) ? mileage : 0;
-            _Agreement.ExitFuel = txtExitFuel.Text.Trim();
+            _Agreement.ActualDeliveryDate = null;
+
+            // Nullable ints - set to null or assign when available
+            _Agreement.ReceivingOdometer = null;
+            _Agreement.ConsumedMileage = null;
+
+            // Nullable int: Mileage from text input
+            if (int.TryParse(txtCurrentCounter.Text, out var mileage))
+                _Agreement.Mileage = mileage;
+            else
+                _Agreement.Mileage = null;
+
+            // ExitFuel (string), nullable, trim whitespace and check empty
+            _Agreement.ExitFuel = string.IsNullOrWhiteSpace(txtExitFuel.Text) ? null : txtExitFuel.Text.Trim();
+
+            // SerialNumber (int, non-nullable)
             _Agreement.SerialNumber = GetLastSerialNumber();
+
+
+
+
+
 
             _Agreement.AdditionContractPrice = SumCheckedItemsPrices(chAdditionInsurance);
             _Agreement.RentalAdditionsPrice = SumCheckedItemsPrices(chOtherAdditions);
             _Agreement.RequiredInsurancePrice = SumCheckedItemsPrices(chRequiredInsurance);
 
-            // Fill lists of additions
             _Agreement.AdditionContracts = GetCheckedItemsList(chAdditionInsurance);
             _Agreement.RentalAdditions = GetCheckedItemsList(chOtherAdditions);
             _Agreement.RequiredInsurances = GetCheckedItemsList(chRequiredInsurance);
@@ -299,17 +301,18 @@ namespace CarRentalSystem.Agreement
 
         private decimal CalculateTotalIncludingTax()
         {
-            decimal.TryParse(txtTotalPrice.Text, out decimal basePrice);
+            decimal basePrice = 0m;
+            decimal.TryParse(txtTotalPrice.Text, out basePrice);
+
+            decimal additions = 0m;
+            decimal.TryParse(lblTotalAmountOfAdditions.Text, out additions);
+
             decimal taxRate = nuTaxrate.Value;
 
             decimal taxAmount = basePrice * (taxRate / 100);
 
-            decimal.TryParse(lblTotalAmountOfAdditions.Text, out decimal additions);
-            taxAmount += additions;
-
-            return taxAmount;
+            return basePrice + taxAmount + additions;
         }
-
 
         private List<(int Id, decimal Price)> GetCheckedItemsList(CheckedListBox clb)
         {
@@ -322,7 +325,6 @@ namespace CarRentalSystem.Agreement
             return list;
         }
 
-
         private void ClearCarTextBoxes()
         {
             txtCarPlate.Text = "";
@@ -332,7 +334,6 @@ namespace CarRentalSystem.Agreement
             txtCurrentCounter.Text = "";
             txtExitFuel.Text = "";
         }
-
 
         private void ClearCustomerTextBoxes()
         {
@@ -355,85 +356,11 @@ namespace CarRentalSystem.Agreement
             gbPremmitedKillo.Enabled = chIncludePremitKillo.Checked;
         }
 
-        private void chIncludeTax_CheckedChanged(object sender, EventArgs e)
+        private void UpdateRentalDays()
         {
-            gbIncludetax.Enabled = chIncludeTax.Checked;
-
-            if (decimal.TryParse(txtTotalPrice.Text, out decimal price) && chIncludeTax.Checked && nuTaxrate.Value == 0)
-            {
-                decimal taxRate = 16; // example: 16
-                decimal taxAmount = price * (taxRate / 100);
-                totalIncludingTax = price + taxAmount;
-                decimal.TryParse(lblTotalAmountOfAdditions.Text, out decimal additions);
-                totalIncludingTax += additions;
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
-            }
-
-            else if (chIncludeTax.Checked && nuTaxrate.Value > 0)
-            {
-                if (decimal.TryParse(txtTotalPrice.Text, out decimal price1))
-                {
-                    decimal taxRate = nuTaxrate.Value; // example: 16
-                    decimal taxAmount = price * (taxRate / 100);
-                    totalIncludingTax = price + taxAmount;
-
-                    decimal.TryParse(lblTotalAmountOfAdditions.Text, out decimal additions);
-                    totalIncludingTax += additions;
-                    lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
-                }
-            }
-
-            else if (!chIncludeTax.Checked)
-            {
-                totalIncludingTax = 0;
-                lbltotalAmountIncTax.Text = "0.00";
-            }
-
+            int days = (dpDelveringDate.Value.Date - dpRecivingDate.Value.Date).Days;
+            txtRentalDays.Text = (days < 0) ? "0" : days.ToString();
         }
-
-        private void frmAddUpdateAgreement_Load(object sender, EventArgs e)
-        {
-            chRequiredInsurance.ItemCheck += CheckedListBox_ItemCheck;
-            chAdditionInsurance.ItemCheck += CheckedListBox_ItemCheck;
-            chOtherAdditions.ItemCheck += CheckedListBox_ItemCheck;
-            if (_AgreementId == null)
-            {
-                lblAdditionContractTotal.Text = "Total: 0.00";
-                lblRentalAdditionsTotal.Text = "Total: 0.00";
-                lblRequiredInsuranceTotal.Text = "Total: 0.00";
-            }
-        }
-
-
-
-        private void cbCars_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (cbCars.SelectedIndex == -1)
-            {
-                e.Cancel = true; // cancel validation
-                MessageBox.Show("Please select a car.");
-                return;
-            }
-
-            int selectedCarId = (int)cbCars.SelectedValue;
-
-            if (!ClsCar.IsAvaliable(selectedCarId))
-            {
-                e.Cancel = true; // cancel validation
-                MessageBox.Show("This car is not available due to: " + ClsCar.UnavaliableReason(selectedCarId));
-            }
-        }
-
-        private void chRequiredInsurance_SelectedIndexChanged(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (chRequiredInsurance.CheckedItems.Count == 0)
-            {
-                e.Cancel = true;
-                MessageBox.Show("Please select at least one insurance option.");
-            }
-        }
-
 
         private void UpdateTotalPrice()
         {
@@ -441,52 +368,87 @@ namespace CarRentalSystem.Agreement
                 decimal.TryParse(txtAgreedPrice.Text, out decimal price))
             {
                 decimal total = days * price;
-                txtTotalPrice.Text = total.ToString();
+                txtTotalPrice.Text = total.ToString("F2");
             }
             else
             {
                 txtTotalPrice.Text = "";
             }
         }
-        private void txtRentalDays_TextChanged(object sender, EventArgs e)
+
+        private void UpdateTotalAmountOfAdditions()
         {
-            UpdateTotalPrice();
+            decimal additionTotal = SumCheckedItemsPrices(chAdditionInsurance);
+            decimal rentalTotal = SumCheckedItemsPrices(chOtherAdditions);
+            decimal requiredTotal = SumCheckedItemsPrices(chRequiredInsurance);
+
+            lblAdditionContractTotal.Text = $"Total: {additionTotal:F2}";
+            lblRentalAdditionsTotal.Text = $"Total: {rentalTotal:F2}";
+            lblRequiredInsuranceTotal.Text = $"Total: {requiredTotal:F2}";
+
+            decimal combinedTotal = additionTotal + rentalTotal + requiredTotal;
+            lblTotalAmountOfAdditions.Text = combinedTotal.ToString("F2");
         }
 
-        private void txtAgreedPrice_TextChanged(object sender, EventArgs e)
+        private void UpdateTotalIncludingTax()
         {
-            UpdateTotalPrice();
-
-            if (chIncludeTax.Checked)
+            if (!chIncludeTax.Checked)
             {
-                totalIncludingTax = CalculateTotalIncludingTax();
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
-
-            }
-        }
-
-        private bool ValidateTextBoxesInGroupBox(GroupBox group)
-        {
-            foreach (Control control in group.Controls)
-            {
-                if (control is TextBox tb)
-                {
-                    if (string.IsNullOrWhiteSpace(tb.Text))
-                    {
-                        MessageBox.Show($"Please fill the field: {tb.Name}");
-                        tb.Focus();
-                        return false;
-                    }
-                }
+                lbltotalAmountIncTax.Text = "0.00";
+                return;
             }
 
-            return true;
+            decimal basePrice = 0m;
+            decimal additions = 0m;
+            
+
+            decimal.TryParse(txtTotalPrice.Text, out basePrice);
+            decimal.TryParse(lblTotalAmountOfAdditions.Text, out additions);
+
+            if (nuTaxrate.Value == 0 && chIncludeTax.Checked)
+                taxRate = 16;
+            else if (!chIncludeTax.Checked)
+                taxRate = 0;
+
+            else
+                taxRate = nuTaxrate.Value;
+
+
+                decimal taxAmount = basePrice * (taxRate / 100);
+
+                decimal totalIncludingTax = basePrice + taxAmount + additions;
+                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("F2");
+            
         }
 
+        private void frmAddUpdateAgreement_Load(object sender, EventArgs e)
+        {
+            if (_AgreementId == null)
+            {
+                lblAdditionContractTotal.Text = "Total: 0.00";
+                lblRentalAdditionsTotal.Text = "Total: 0.00";
+                lblRequiredInsuranceTotal.Text = "Total: 0.00";
+            }
+            RefreshAll();
+        }
+
+        // Then, inside all related control events, just call RefreshAll():
+        private void dpRecivingDate_ValueChanged(object sender, EventArgs e) => RefreshAll();
+        private void dpDelveringDate_ValueChanged(object sender, EventArgs e) => RefreshAll();
+
+        
+        private void chOtherAdditions_SelectedIndexChanged(object sender, EventArgs e) => RefreshAll();
+
+        private void txtAgreedPrice_TextChanged(object sender, EventArgs e) => RefreshAll();
+        private void txtRentalDays_TextChanged(object sender, EventArgs e) => RefreshAll();
+
+        private void nuTaxrate_ValueChanged(object sender, EventArgs e) => RefreshAll();
+        private void txtTotalPrice_TextChanged(object sender, EventArgs e) => RefreshAll();
 
 
-        private void cbCars_SelectedIndexChanged_1(object sender, EventArgs e)
+       
+
+        private void cbCars_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbCars.SelectedValue == null) return;
 
@@ -544,61 +506,68 @@ namespace CarRentalSystem.Agreement
             }
         }
 
-        private void nuTaxrate_ValueChanged(object sender, EventArgs e)
+        private void dpRecivingDate_ValueChanged_1(object sender, EventArgs e) => RefreshAll();
+
+        private void dpDelveringDate_ValueChanged_1(object sender, EventArgs e) => RefreshAll();
+
+        private void chRequiredInsurance_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTotalPrice.Text))
+            if (this.IsHandleCreated)
             {
-                MessageBox.Show("Pleas Fill the related data for the Agreement Duration and Pricing");
-                return;
+                this.BeginInvoke((MethodInvoker)(() => RefreshAll()));
             }
-            else if (chRequiredInsurance.CheckedItems.Count == 0)
+            else
             {
-                MessageBox.Show("Pleas Select at least one required insurance");
-                return;
-            }
-
-            if (nuTaxrate.Value > 0 && chIncludeTax.Checked)
-            {
-
-                totalIncludingTax = CalculateTotalIncludingTax();
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
+                // Either do nothing or call directly (if safe)
+                RefreshAll();
             }
         }
 
-        private void nuTaxrate_KeyDown(object sender, KeyEventArgs e)
+        private void chAdditionInsurance_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTotalPrice.Text))
+            if (this.IsHandleCreated)
             {
-                MessageBox.Show("Pleas Fill the related data for the Agreement Duration and Pricing");
-                return;
+                this.BeginInvoke((MethodInvoker)(() => RefreshAll()));
             }
-            else if (chRequiredInsurance.CheckedItems.Count == 0)
+            else
             {
-                MessageBox.Show("Pleas Select at least one required insurance");
-                return;
-            }
-
-            if (nuTaxrate.Value > 0 && chIncludeTax.Checked)
-            {
-
-
-                totalIncludingTax = CalculateTotalIncludingTax();
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
+                // Either do nothing or call directly (if safe)
+                RefreshAll();
             }
         }
 
-        private void txtTotalPrice_TextChanged(object sender, EventArgs e)
+        private void chOtherAdditions_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (chIncludeTax.Checked)
+            if (this.IsHandleCreated)
             {
-                totalIncludingTax = CalculateTotalIncludingTax();
-
-                lbltotalAmountIncTax.Text = totalIncludingTax.ToString("0.00");
-
+                this.BeginInvoke((MethodInvoker)(() => RefreshAll()));
+            }
+            else
+            {
+                // Either do nothing or call directly (if safe)
+                RefreshAll();
             }
         }
+
+        private void chIncludeTax_CheckedChanged(object sender, EventArgs e)
+        {
+            gbIncludetax.Enabled = chIncludeTax.Checked;
+            RefreshAll();
+        }
+
+        private void cbPickBranch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbDropOfbranch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        // Other event handlers you already have can remain as is, just make sure to call RefreshAll() where necessary
     }
 }
 

@@ -11,30 +11,31 @@ namespace CarRentalDataAccess
 
         public static int AddNewAgreement(
             int customerId,
-
             int carId,
             int pickupBranchId,
             int dropOffBranchId,
             DateTime startDate,
             DateTime endDate,
             decimal agreedPrice,
-            decimal rentalPenaltyPerDay,
-            decimal totalAmountBeforeTax,
-            int permittedDailyKilometers,
-            decimal additionalKilometerPrice,
+            decimal? rentalPenaltyPerDay,
+            decimal? totalAmountBeforeTax,
+            int? permittedDailyKilometers,
+            decimal? additionalKilometerPrice,
             decimal taxRate,
-            decimal initialPaidAmount,
+            decimal? initialPaidAmount,
             string paymentMethod,
             DateTime paymentDate,
             DateTime? actualDeliveryDate,
-            int receivingOdometer,
-            int consumedMileage,
-            int mileage,
-            string ExitFuel,
+            int? receivingOdometer,
+            int? consumedMileage,
+            int? mileage,
+            string exitFuel,
             int serialNumber,
-            decimal additionContractPrice,
-            decimal rentalAdditionsPrice,
-            decimal requiredInsurancePrice, decimal rentalDaysCost, decimal TotalAmountIncludeTax
+            decimal? additionContractPrice,
+            decimal? rentalAdditionsPrice,
+            decimal? requiredInsurancePrice,
+            decimal? rentalDaysCost,
+            decimal? totalAmountIncludeTax
         )
         {
             string query = @"
@@ -44,7 +45,7 @@ namespace CarRentalDataAccess
                     RentalPenaltyPerDay, TotalAmountBeforeTax, PermittedDailyKilometers, AdditionalKilometerPrice,
                     TaxRate, InitialPaidAmount, PaymentMethod, PaymentDate, ActualDeliveryDate,
                     ReceivingOdometer, ConsumedMileage, Mileage, ExitFuel, SerialNumber,
-                    additionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice,rentalDaysCost,TotalAmountIncludeTax
+                    AdditionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice, rentalDaysCost, TotalAmountIncludeTax
                 )
                 VALUES
                 (
@@ -52,7 +53,7 @@ namespace CarRentalDataAccess
                     @RentalPenaltyPerDay, @TotalAmountBeforeTax, @PermittedDailyKilometers, @AdditionalKilometerPrice,
                     @TaxRate, @InitialPaidAmount, @PaymentMethod, @PaymentDate, @ActualDeliveryDate,
                     @ReceivingOdometer, @ConsumedMileage, @Mileage, @ExitFuel, @SerialNumber,
-                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice, @rentalDaysCost,@TotalAmountIncludeTax
+                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice, @rentalDaysCost, @TotalAmountIncludeTax
                 );
                 SELECT CAST(scope_identity() AS int);
             ";
@@ -67,25 +68,25 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
                 cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
-                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", rentalPenaltyPerDay);
+                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
-                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", permittedDailyKilometers);
-                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", additionalKilometerPrice);
+                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TaxRate", taxRate);
-                cmd.Parameters.AddWithValue("@InitialPaidAmount", initialPaidAmount);
-                cmd.Parameters.AddWithValue("@PaymentMethod", paymentMethod ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
                 cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ReceivingOdometer", receivingOdometer);
-                cmd.Parameters.AddWithValue("@ConsumedMileage", consumedMileage);
-                cmd.Parameters.AddWithValue("@Mileage", mileage);
-                cmd.Parameters.AddWithValue("@rentalDaysCost", rentalDaysCost);
-                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", TotalAmountIncludeTax);
-                cmd.Parameters.AddWithValue("@ExitFuel", ExitFuel ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@ReceivingOdometer", (object)receivingOdometer ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
-                cmd.Parameters.AddWithValue("@AdditionContractPrice", additionContractPrice);
-                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", rentalAdditionsPrice);
-                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", requiredInsurancePrice);
+                cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
 
                 connection.Open();
                 object result = cmd.ExecuteScalar();
@@ -96,7 +97,7 @@ namespace CarRentalDataAccess
             }
         }
 
-        public static bool EditAgreement( 
+        public static bool EditAgreement(
             int agreementId,
             int customerId,
             int carId,
@@ -105,24 +106,25 @@ namespace CarRentalDataAccess
             DateTime startDate,
             DateTime endDate,
             decimal agreedPrice,
-            decimal rentalPenaltyPerDay,
-            decimal totalAmountBeforeTax,
-            int permittedDailyKilometers,
-            decimal additionalKilometerPrice,
+            decimal? rentalPenaltyPerDay,
+            decimal? totalAmountBeforeTax,
+            int? permittedDailyKilometers,
+            decimal? additionalKilometerPrice,
             decimal taxRate,
-            decimal initialPaidAmount,
+            decimal? initialPaidAmount,
             string paymentMethod,
             DateTime paymentDate,
             DateTime? actualDeliveryDate,
-            int receivingOdometer,
-            int consumedMileage,
-            int mileage,
-            string ExitFuel,
+            int? receivingOdometer,
+            int? consumedMileage,
+            int? mileage,
+            string exitFuel,
             int serialNumber,
-            decimal additionContractPrice,
-            decimal rentalAdditionsPrice,
-            decimal requiredInsurancePrice,
-             decimal rentalDaysCost, decimal TotalAmountIncludeTax
+            decimal? additionContractPrice,
+            decimal? rentalAdditionsPrice,
+            decimal? requiredInsurancePrice,
+            decimal? rentalDaysCost,
+            decimal? totalAmountIncludeTax
         )
         {
             string query = @"
@@ -148,7 +150,7 @@ namespace CarRentalDataAccess
                     Mileage = @Mileage,
                     ExitFuel = @ExitFuel,
                     SerialNumber = @SerialNumber,
-                    additionContractPrice = @AdditionContractPrice,
+                    AdditionContractPrice = @AdditionContractPrice,
                     RentalAdditionsPrice = @RentalAdditionsPrice,
                     RequiredInsurancePrice = @RequiredInsurancePrice,
                     rentalDaysCost = @rentalDaysCost,
@@ -166,25 +168,25 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
                 cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
-                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", rentalPenaltyPerDay);
+                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
-                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", permittedDailyKilometers);
-                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", additionalKilometerPrice);
+                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TaxRate", taxRate);
-                cmd.Parameters.AddWithValue("@InitialPaidAmount", initialPaidAmount);
-                cmd.Parameters.AddWithValue("@PaymentMethod", paymentMethod ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
                 cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ReceivingOdometer", receivingOdometer);
-                cmd.Parameters.AddWithValue("@ConsumedMileage", consumedMileage);
-                cmd.Parameters.AddWithValue("@Mileage", mileage);
-                cmd.Parameters.AddWithValue("@rentalDaysCost", rentalDaysCost);
-                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", TotalAmountIncludeTax);
-                cmd.Parameters.AddWithValue("@ExitFuel", ExitFuel ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@ReceivingOdometer", (object)receivingOdometer ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
-                cmd.Parameters.AddWithValue("@AdditionContractPrice", additionContractPrice);
-                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", rentalAdditionsPrice);
-                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", requiredInsurancePrice);
+                cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
 
                 connection.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -237,13 +239,35 @@ namespace CarRentalDataAccess
             }
         }
 
-        public static bool GetAgreementById(int agreementId, ref int customerId, ref int carId, ref int pickupBranchId,
-            ref int dropOffBranchId, ref DateTime startDate, ref DateTime endDate, ref decimal agreedPrice,
-            ref decimal rentalPenaltyPerDay, ref decimal totalAmountBeforeTax, ref int permittedDailyKilometers,
-            ref decimal additionalKilometerPrice, ref decimal taxRate, ref decimal initialPaidAmount,
-            ref string paymentMethod, ref DateTime paymentDate, ref DateTime? actualDeliveryDate,
-            ref int receivingOdometer, ref int consumedMileage, ref int mileage, ref string ExitFuel, ref int serialNumber,
-            ref decimal additionContractPrice, ref decimal rentalAdditionsPrice, ref decimal requiredInsurancePrice, ref decimal rentalDaysCost, ref decimal TotalAmountIncludeTax)
+        public static bool GetAgreementById(
+            int agreementId,
+            ref int customerId,
+            ref int carId,
+            ref int pickupBranchId,
+            ref int dropOffBranchId,
+            ref DateTime startDate,
+            ref DateTime endDate,
+            ref decimal agreedPrice,
+            ref decimal? rentalPenaltyPerDay,
+            ref decimal? totalAmountBeforeTax,
+            ref int? permittedDailyKilometers,
+            ref decimal? additionalKilometerPrice,
+            ref decimal taxRate,
+            ref decimal? initialPaidAmount,
+            ref string paymentMethod,
+            ref DateTime paymentDate,
+            ref DateTime? actualDeliveryDate,
+            ref int? receivingOdometer,
+            ref int? consumedMileage,
+            ref int? mileage,
+            ref string exitFuel,
+            ref int serialNumber,
+            ref decimal? additionContractPrice,
+            ref decimal? rentalAdditionsPrice,
+            ref decimal? requiredInsurancePrice,
+            ref decimal? rentalDaysCost,
+            ref decimal? totalAmountIncludeTax
+        )
         {
             string query = "SELECT * FROM Agreement WHERE AgreementID = @AgreementID";
 
@@ -265,25 +289,30 @@ namespace CarRentalDataAccess
                         startDate = Convert.ToDateTime(reader["StartDate"]);
                         endDate = Convert.ToDateTime(reader["EndDate"]);
                         agreedPrice = Convert.ToDecimal(reader["AgreedPrice"]);
-                        rentalPenaltyPerDay = Convert.ToDecimal(reader["RentalPenaltyPerDay"]);
-                        totalAmountBeforeTax = Convert.ToDecimal(reader["TotalAmountBeforeTax"]);
-                        permittedDailyKilometers = Convert.ToInt32(reader["PermittedDailyKilometers"]);
-                        additionalKilometerPrice = Convert.ToDecimal(reader["AdditionalKilometerPrice"]);
+
+                        rentalPenaltyPerDay = reader["RentalPenaltyPerDay"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["RentalPenaltyPerDay"]);
+                        totalAmountBeforeTax = reader["TotalAmountBeforeTax"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["TotalAmountBeforeTax"]);
+                        permittedDailyKilometers = reader["PermittedDailyKilometers"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["PermittedDailyKilometers"]);
+                        additionalKilometerPrice = reader["AdditionalKilometerPrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["AdditionalKilometerPrice"]);
                         taxRate = Convert.ToDecimal(reader["TaxRate"]);
-                        initialPaidAmount = Convert.ToDecimal(reader["InitialPaidAmount"]);
-                        paymentMethod = reader["PaymentMethod"]?.ToString();
+                        initialPaidAmount = reader["InitialPaidAmount"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["InitialPaidAmount"]);
+
+                        paymentMethod = reader["PaymentMethod"] == DBNull.Value ? null : reader["PaymentMethod"].ToString();
                         paymentDate = Convert.ToDateTime(reader["PaymentDate"]);
                         actualDeliveryDate = reader["ActualDeliveryDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["ActualDeliveryDate"]);
-                        receivingOdometer = Convert.ToInt32(reader["ReceivingOdometer"]);
-                        consumedMileage = Convert.ToInt32(reader["ConsumedMileage"]);
-                        mileage = Convert.ToInt32(reader["Mileage"]);
-                        ExitFuel = reader["ExitFuel"]?.ToString();
-                        serialNumber =Convert.ToInt32 (reader["SerialNumber"]);
-                        additionContractPrice = Convert.ToDecimal(reader["additionContractPrice"]);
-                        rentalAdditionsPrice = Convert.ToDecimal(reader["RentalAdditionsPrice"]);
-                        requiredInsurancePrice = Convert.ToDecimal(reader["RequiredInsurancePrice"]);
-                        rentalDaysCost = Convert.ToDecimal(reader["rentalDaysCost"]);
-                        TotalAmountIncludeTax = Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
+
+                        receivingOdometer = reader["ReceivingOdometer"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["ReceivingOdometer"]);
+                        consumedMileage = reader["ConsumedMileage"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["ConsumedMileage"]);
+                        mileage = reader["Mileage"] == DBNull.Value ? (int?)null : Convert.ToInt32(reader["Mileage"]);
+
+                        exitFuel = reader["ExitFuel"] == DBNull.Value ? null : reader["ExitFuel"].ToString();
+                        serialNumber = Convert.ToInt32(reader["SerialNumber"]);
+
+                        additionContractPrice = reader["AdditionContractPrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["AdditionContractPrice"]);
+                        rentalAdditionsPrice = reader["RentalAdditionsPrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["RentalAdditionsPrice"]);
+                        requiredInsurancePrice = reader["RequiredInsurancePrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["RequiredInsurancePrice"]);
+                        rentalDaysCost = reader["rentalDaysCost"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["rentalDaysCost"]);
+                        totalAmountIncludeTax = reader["TotalAmountIncludeTax"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
 
                         return true;
                     }
@@ -292,55 +321,54 @@ namespace CarRentalDataAccess
             return false;
         }
 
-
         public static DataTable GetAgreementFullInfoAsDataTable(int agreementId)
         {
             string query = @"
-        SELECT 
-            a.AgreementID,
-            a.CustomerID,
-            a.CarID,
-            a.PickupBranchID,
-            a.DropOffBranchID,
-            a.StartDate,
-            a.EndDate,
-            a.AgreedPrice,
-            a.RentalPenaltyPerDay,
-            a.TotalAmountBeforeTax,
-            a.PermittedDailyKilometers,
-            a.AdditionalKilometerPrice,
-            a.TaxRate,
-            a.InitialPaidAmount,
-            a.PaymentMethod,
-            a.PaymentDate,
-            a.ActualDeliveryDate,
-            a.ReceivingOdometer,
-            a.ConsumedMileage,
-            a.Mileage,
-            a.rentalDaysCost,
-            a.TotalAmountIncludeTax,
-            ExitFuel,
-            a.SerialNumber,
-            a.additionContractPrice,
-            a.RentalAdditionsPrice,
-            a.RequiredInsurancePrice,
+                SELECT 
+                    a.AgreementID,
+                    a.CustomerID,
+                    a.CarID,
+                    a.PickupBranchID,
+                    a.DropOffBranchID,
+                    a.StartDate,
+                    a.EndDate,
+                    a.AgreedPrice,
+                    a.RentalPenaltyPerDay,
+                    a.TotalAmountBeforeTax,
+                    a.PermittedDailyKilometers,
+                    a.AdditionalKilometerPrice,
+                    a.TaxRate,
+                    a.InitialPaidAmount,
+                    a.PaymentMethod,
+                    a.PaymentDate,
+                    a.ActualDeliveryDate,
+                    a.ReceivingOdometer,
+                    a.ConsumedMileage,
+                    a.Mileage,
+                    a.rentalDaysCost,
+                    a.TotalAmountIncludeTax,
+                    a.ExitFuel,
+                    a.SerialNumber,
+                    a.AdditionContractPrice,
+                    a.RentalAdditionsPrice,
+                    a.RequiredInsurancePrice,
 
-            c.customer_name_en,
-            c.identity_number,
-            c.phone_number,
-            c.address_en,
+                    c.customer_name_en,
+                    c.identity_number,
+                    c.phone_number,
+                    c.address_en,
 
-            v.CarNameEn,
-            v.PlateNumber,
-            cat.NameEn AS CarCategory,
-            v.Year,
-            v.CurrentCounter,
-            v.FuelExit
-        FROM Agreement a
-        INNER JOIN Customers c ON a.CustomerID = c.customer_id
-        INNER JOIN vehicles v ON a.CarID = v.CarID
-        INNER JOIN Categories cat ON v.CategoryId = cat.CategoryID
-        WHERE a.AgreementID = @AgreementID";
+                    v.CarNameEn,
+                    v.PlateNumber,
+                    cat.NameEn AS CarCategory,
+                    v.Year,
+                    v.CurrentCounter,
+                    v.FuelExit
+                FROM Agreement a
+                INNER JOIN Customers c ON a.CustomerID = c.customer_id
+                INNER JOIN vehicles v ON a.CarID = v.CarID
+                INNER JOIN Categories cat ON v.CategoryId = cat.CategoryID
+                WHERE a.AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
             using (SqlCommand cmd = new SqlCommand(query, connection))
@@ -356,55 +384,54 @@ namespace CarRentalDataAccess
             }
         }
 
-
         public static DataTable GetAllAgreementsFullInfo()
         {
             string query = @"
-        SELECT 
-            a.AgreementID,
-            a.CustomerID,
-            a.CarID,
-            a.PickupBranchID,
-            a.DropOffBranchID,
-            a.StartDate,
-            a.EndDate,
-            a.AgreedPrice,
-            a.RentalPenaltyPerDay,
-            a.TotalAmountBeforeTax,
-            a.PermittedDailyKilometers,
-            a.AdditionalKilometerPrice,
-            a.TaxRate,
-            a.InitialPaidAmount,
-            a.PaymentMethod,
-            a.PaymentDate,
-            a.ActualDeliveryDate,
-            a.ReceivingOdometer,
-            a.ConsumedMileage,
-            a.Mileage,
-            a.rentalDaysCost,
-            a.TotalAmountIncludeTax,
-            ExitFuel,
-            a.SerialNumber,
-            a.additionContractPrice,
-            a.RentalAdditionsPrice,
-            a.RequiredInsurancePrice,
+                SELECT 
+                    a.AgreementID,
+                    a.CustomerID,
+                    a.CarID,
+                    a.PickupBranchID,
+                    a.DropOffBranchID,
+                    a.StartDate,
+                    a.EndDate,
+                    a.AgreedPrice,
+                    a.RentalPenaltyPerDay,
+                    a.TotalAmountBeforeTax,
+                    a.PermittedDailyKilometers,
+                    a.AdditionalKilometerPrice,
+                    a.TaxRate,
+                    a.InitialPaidAmount,
+                    a.PaymentMethod,
+                    a.PaymentDate,
+                    a.ActualDeliveryDate,
+                    a.ReceivingOdometer,
+                    a.ConsumedMileage,
+                    a.Mileage,
+                    a.rentalDaysCost,
+                    a.TotalAmountIncludeTax,
+                    a.ExitFuel,
+                    a.SerialNumber,
+                    a.AdditionContractPrice,
+                    a.RentalAdditionsPrice,
+                    a.RequiredInsurancePrice,
 
-            c.customer_name_en,
-            c.identity_number,
-            c.phone_number,
-            c.address_en,
+                    c.customer_name_en,
+                    c.identity_number,
+                    c.phone_number,
+                    c.address_en,
 
-            v.CarNameEn,
-            v.PlateNumber,
-            cat.NameEn AS CarCategory,
-            v.Year,
-            v.CurrentCounter,
-            v.FuelExit
-        FROM Agreement a
-        INNER JOIN Customers c ON a.CustomerID = c.customer_id
-        INNER JOIN vehicles v ON a.CarID = v.CarID
-        INNER JOIN Categories cat ON v.CategoryId = cat.CategoryID
-        ORDER BY a.AgreementID DESC";
+                    v.CarNameEn,
+                    v.PlateNumber,
+                    cat.NameEn AS CarCategory,
+                    v.Year,
+                    v.CurrentCounter,
+                    v.FuelExit
+                FROM Agreement a
+                INNER JOIN Customers c ON a.CustomerID = c.customer_id
+                INNER JOIN vehicles v ON a.CarID = v.CarID
+                INNER JOIN Categories cat ON v.CategoryId = cat.CategoryID
+                ORDER BY a.AgreementID DESC";
 
             using (SqlConnection connection = new SqlConnection(conn))
             using (SqlCommand cmd = new SqlCommand(query, connection))
@@ -425,15 +452,10 @@ namespace CarRentalDataAccess
             {
                 connection.Open();
                 object result = cmd.ExecuteScalar();
-                if (result != null && int.TryParse(result.ToString(), out int lastSerial))
-                {
-                    return lastSerial;
-                }
-                return 0; // if no rows, return 0 as default
+                if (result != null && int.TryParse(result.ToString(), out int serial))
+                    return serial;
+                return 0;
             }
         }
-
-
-
     }
 }
