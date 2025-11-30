@@ -133,7 +133,6 @@ namespace CarRentalDataAccess
                        ari.RequiredInsuranceID,
                        ari.ActualPrice,
                        ri.ItemName,
-                       ri.Price
                 FROM AgreementRequiredInsurance ari
                 INNER JOIN RequiredInsurance ri ON ari.RequiredInsuranceID = ri.Id
                 WHERE ari.AgreementID = @AgreementID";
@@ -150,7 +149,7 @@ namespace CarRentalDataAccess
                     return dt;
                 }
             }
-        }
+        }// put it in list and return it make the fucntion return the same typ f list => the list is (list(string itemName, int id, decimal ))
 
         // Get single record by ID (with ref parameters)
         public static bool GetById(int agreementRequiredInsuranceId, ref int agreementId, ref int requiredInsuranceId, ref decimal actualPrice)
