@@ -6,6 +6,13 @@ using System.Linq;
 
 namespace CarRentalBusiness
 {
+
+  public class item
+    {
+        public int id;
+        public string name;
+        public decimal price;
+    }
     public class ClsAgreement
     {
         private enum enMode { AddNew, Update }
@@ -41,10 +48,14 @@ namespace CarRentalBusiness
         public decimal? RentalDaysCost { get; set; }
         public decimal? TotalIncludetax { get; set; }
 
-        public List<(int Id, decimal Price)> AdditionContracts { get; set; } = new List<(int, decimal)>();
-        public List<(int Id, decimal Price)> RentalAdditions { get; set; } = new List<(int, decimal)>();
-        public List<(int Id, decimal Price)> RequiredInsurances { get; set; } = new List<(int, decimal)>();
+        public List<(int Id, decimal Price, string Name)> AdditionContracts { get; set; } = new List<(int, decimal, string)>();
+        public List<(int Id, decimal Price, string Name)> RentalAdditions { get; set; } = new List<(int, decimal,string)>();
+        public List<(int Id, decimal Price, string Name)> RequiredInsurances { get; set; } = new List<(int, decimal,string)>();
 
+  
+
+
+        
         public ClsAgreement()
         {
             AgreementID = null;
@@ -76,9 +87,9 @@ namespace CarRentalBusiness
             RentalDaysCost = null;
             TotalIncludetax = null;
 
-            AdditionContracts = new List<(int, decimal)>();
-            RentalAdditions = new List<(int, decimal)>();
-            RequiredInsurances = new List<(int, decimal)>();
+            AdditionContracts = new List<(int, decimal, string)>();
+            RentalAdditions = new List<(int, decimal,string)>();
+            RequiredInsurances = new List<(int, decimal,string)>();
 
             mode = enMode.AddNew;
         }
@@ -351,20 +362,24 @@ namespace CarRentalBusiness
                 totalIncludetax
             );
 
+
+
+           
+
             // Load linked items
             DataTable dtAdditionContracts = ClsAgreementAdditionContractData.GetAllByAgreementId(agreementId);
             agreement.AdditionContracts = dtAdditionContracts.AsEnumerable()
-                .Select(row => (Id: row.Field<int>("AdditionContractID"), Price: row.Field<decimal>("ActualPrice")))
+                .Select(row => (Id: row.Field<int>("AdditionContractID"), Price: row.Field<decimal>("ActualPrice"), Name: row.Field<string>("name")))
                 .ToList();
 
             DataTable dtRentalAdditions = ClsAgreementRentalAdditionData.GetAllByAgreementId(agreementId);
             agreement.RentalAdditions = dtRentalAdditions.AsEnumerable()
-                .Select(row => (Id: row.Field<int>("RentalAdditionID"), Price: row.Field<decimal>("ActualPrice")))
+                .Select(row => (Id: row.Field<int>("RentalAdditionID"), Price: row.Field<decimal>("ActualPrice"), Name: row.Field<string>("RentalName")))
                 .ToList();
 
             DataTable dtRequiredInsurances = ClsAgreementRequiredInsuranceData.GetAllByAgreementId(agreementId);
             agreement.RequiredInsurances = dtRequiredInsurances.AsEnumerable()
-                .Select(row => (Id: row.Field<int>("RequiredInsuranceID"), Price: row.Field<decimal>("ActualPrice")))
+                .Select(row => (Id: row.Field<int>("RequiredInsuranceID"), Price: row.Field<decimal>("ActualPrice"), Name: row.Field<string>("ItemName")))
                 .ToList();
 
             return agreement;

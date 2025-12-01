@@ -1,10 +1,18 @@
 ﻿using CarRentalBusiness;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace CarRentalDataAccess
 {
+
+    public class RequiredInsuranc
+    {
+        public int id { set; get; }
+        public string name {  set; get; }
+        public decimal price {  set; get; }
+    }
     public static class ClsAgreementRequiredInsuranceData
     {
         private static readonly string conn = ClsDataAccessSettings.ConnectionString;
@@ -108,31 +116,12 @@ namespace CarRentalDataAccess
         // Get all records by AgreementID
         public static DataTable GetAllByAgreementId(int agreementId)
         {
-            string query = "SELECT * FROM AgreementRequiredInsurance WHERE AgreementID = @AgreementID";
-
-            using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
-            {
-                cmd.Parameters.AddWithValue("@AgreementID", agreementId);
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    return dt;
-                }
-            }
-        }
-
-        // Get all with RequiredInsurance name and price joined
-        public static DataTable GetAllWithInsuranceDetails(int agreementId)
-        {
             string query = @"
                 SELECT ari.AgreementRequiredInsuranceID,
                        ari.AgreementID,
                        ari.RequiredInsuranceID,
                        ari.ActualPrice,
-                       ri.ItemName,
+                       ri.ItemName
                 FROM AgreementRequiredInsurance ari
                 INNER JOIN RequiredInsurance ri ON ari.RequiredInsuranceID = ri.Id
                 WHERE ari.AgreementID = @AgreementID";
@@ -149,7 +138,44 @@ namespace CarRentalDataAccess
                     return dt;
                 }
             }
-        }// put it in list and return it make the fucntion return the same typ f list => the list is (list(string itemName, int id, decimal ))
+        }
+
+        // Get all with RequiredInsurance name and price joined
+        public static List<RequiredInsuranc> GetAllWithInsuranceDetails(int agreementId )
+        {
+            List<RequiredInsuranc> RequiiredAdditions = new List<RequiredInsuranc>();
+            
+            string query = @"
+                SELECT ari.AgreementRequiredInsuranceID,
+                       ari.AgreementID,
+                       ari.RequiredInsuranceID,
+                       ari.ActualPrice,
+                       ri.ItemName,
+                FROM AgreementRequiredInsurance ari
+                INNER JOIN RequiredInsurance ri ON ari.RequiredInsuranceID = ri.Id
+                WHERE ari.AgreementID = @AgreementID";
+
+            using (SqlConnection connection = new SqlConnection(conn))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@AgreementID", agreementId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        RequiredInsuranc Requiired = new RequiredInsuranc
+                        {
+                            id = reader.GetInt32(0),
+                            name = reader.GetString(4),
+                            price = Convert.ToDecimal(reader.GetString(3))
+                        };
+                        RequiiredAdditions.Add(Requiired);
+                    }
+                }
+                return RequiiredAdditions;
+            }
+        }
 
         // Get single record by ID (with ref parameters)
         public static bool GetById(int agreementRequiredInsuranceId, ref int agreementId, ref int requiredInsuranceId, ref decimal actualPrice)

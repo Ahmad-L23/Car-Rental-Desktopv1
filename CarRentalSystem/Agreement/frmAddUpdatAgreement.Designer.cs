@@ -132,6 +132,27 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.chOtherAdditions = new System.Windows.Forms.CheckedListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbAgree = new System.Windows.Forms.ComboBox();
+            this.btnConfirmUpdates = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.cbCarEntryFuel = new System.Windows.Forms.ComboBox();
+            this.dpEntryDate = new System.Windows.Forms.DateTimePicker();
+            this.label102 = new System.Windows.Forms.Label();
+            this.txtMovedDistance = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.txtLateFee = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.txtEntryCounter = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.txtPaidAmount = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.txtEntryPrice = new System.Windows.Forms.TextBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.txtDiffrencesDays = new System.Windows.Forms.TextBox();
             this.cbAgreement = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblShowLateFee = new System.Windows.Forms.Label();
@@ -144,7 +165,7 @@
             this.label105 = new System.Windows.Forms.Label();
             this.lblShowPaidAmount = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
-            this.lblShowFinalTotal = new System.Windows.Forms.Label();
+            this.lblShowFinalTotala = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.lblShowTax = new System.Windows.Forms.Label();
@@ -266,27 +287,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabAgreement = new System.Windows.Forms.TabControl();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtDiffrencesDays = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.txtEntryPrice = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.txtPaidAmount = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.txtEntryCounter = new System.Windows.Forms.TextBox();
-            this.label100 = new System.Windows.Forms.Label();
-            this.txtLateFee = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
-            this.txtMovedDistance = new System.Windows.Forms.TextBox();
-            this.dpEntryDate = new System.Windows.Forms.DateTimePicker();
-            this.btnConfirmUpdates = new System.Windows.Forms.Button();
-            this.cbCarEntryFuel = new System.Windows.Forms.ComboBox();
-            this.cbAgree = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -296,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPaidAmountDelv)).BeginInit();
@@ -315,7 +316,6 @@
             this.gbPremmitedKillo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPricePerAddKilo)).BeginInit();
             this.tabAgreement.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -1334,6 +1334,217 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // cbAgree
+            // 
+            this.cbAgree.FormattingEnabled = true;
+            this.cbAgree.Location = new System.Drawing.Point(1276, 42);
+            this.cbAgree.Name = "cbAgree";
+            this.cbAgree.Size = new System.Drawing.Size(182, 21);
+            this.cbAgree.TabIndex = 55;
+            this.cbAgree.Text = "Select Agreement Nubmer";
+            this.cbAgree.SelectedIndexChanged += new System.EventHandler(this.cbAgree_SelectedIndexChanged);
+            // 
+            // btnConfirmUpdates
+            // 
+            this.btnConfirmUpdates.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnConfirmUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmUpdates.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmUpdates.Location = new System.Drawing.Point(1418, 792);
+            this.btnConfirmUpdates.Name = "btnConfirmUpdates";
+            this.btnConfirmUpdates.Size = new System.Drawing.Size(183, 43);
+            this.btnConfirmUpdates.TabIndex = 54;
+            this.btnConfirmUpdates.Text = "Confirm the Updates";
+            this.btnConfirmUpdates.UseVisualStyleBackColor = false;
+            this.btnConfirmUpdates.Click += new System.EventHandler(this.btnConfirmUpdates_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.cbCarEntryFuel);
+            this.panel11.Controls.Add(this.dpEntryDate);
+            this.panel11.Controls.Add(this.label102);
+            this.panel11.Controls.Add(this.txtMovedDistance);
+            this.panel11.Controls.Add(this.label100);
+            this.panel11.Controls.Add(this.txtLateFee);
+            this.panel11.Controls.Add(this.label98);
+            this.panel11.Controls.Add(this.txtEntryCounter);
+            this.panel11.Controls.Add(this.label78);
+            this.panel11.Controls.Add(this.txtPaidAmount);
+            this.panel11.Controls.Add(this.label77);
+            this.panel11.Controls.Add(this.txtEntryPrice);
+            this.panel11.Controls.Add(this.label74);
+            this.panel11.Controls.Add(this.label72);
+            this.panel11.Controls.Add(this.label70);
+            this.panel11.Controls.Add(this.label68);
+            this.panel11.Controls.Add(this.label61);
+            this.panel11.Controls.Add(this.txtDiffrencesDays);
+            this.panel11.Location = new System.Drawing.Point(838, 279);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(415, 254);
+            this.panel11.TabIndex = 53;
+            // 
+            // cbCarEntryFuel
+            // 
+            this.cbCarEntryFuel.FormattingEnabled = true;
+            this.cbCarEntryFuel.Items.AddRange(new object[] {
+            "+1/2",
+            "1/4",
+            "3/4",
+            "Full",
+            "Empty"});
+            this.cbCarEntryFuel.Location = new System.Drawing.Point(137, 82);
+            this.cbCarEntryFuel.Name = "cbCarEntryFuel";
+            this.cbCarEntryFuel.Size = new System.Drawing.Size(121, 21);
+            this.cbCarEntryFuel.TabIndex = 55;
+            // 
+            // dpEntryDate
+            // 
+            this.dpEntryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpEntryDate.Location = new System.Drawing.Point(268, 82);
+            this.dpEntryDate.Name = "dpEntryDate";
+            this.dpEntryDate.Size = new System.Drawing.Size(125, 20);
+            this.dpEntryDate.TabIndex = 29;
+            this.dpEntryDate.ValueChanged += new System.EventHandler(this.dpEntryDate_ValueChanged);
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(134, 187);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(83, 13);
+            this.label102.TabIndex = 28;
+            this.label102.Text = "Moved distence";
+            // 
+            // txtMovedDistance
+            // 
+            this.txtMovedDistance.Enabled = false;
+            this.txtMovedDistance.Location = new System.Drawing.Point(137, 213);
+            this.txtMovedDistance.Name = "txtMovedDistance";
+            this.txtMovedDistance.Size = new System.Drawing.Size(125, 20);
+            this.txtMovedDistance.TabIndex = 27;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(3, 187);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(49, 13);
+            this.label100.TabIndex = 26;
+            this.label100.Text = "Late Fee";
+            // 
+            // txtLateFee
+            // 
+            this.txtLateFee.Enabled = false;
+            this.txtLateFee.Location = new System.Drawing.Point(6, 213);
+            this.txtLateFee.Name = "txtLateFee";
+            this.txtLateFee.Size = new System.Drawing.Size(125, 20);
+            this.txtLateFee.TabIndex = 25;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(265, 124);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(71, 13);
+            this.label98.TabIndex = 24;
+            this.label98.Text = "Entry Counter";
+            // 
+            // txtEntryCounter
+            // 
+            this.txtEntryCounter.Location = new System.Drawing.Point(268, 150);
+            this.txtEntryCounter.Name = "txtEntryCounter";
+            this.txtEntryCounter.Size = new System.Drawing.Size(125, 20);
+            this.txtEntryCounter.TabIndex = 23;
+            this.txtEntryCounter.TextChanged += new System.EventHandler(this.txtEntryCounter_TextChanged);
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(134, 124);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(67, 13);
+            this.label78.TabIndex = 22;
+            this.label78.Text = "Paid Amount";
+            // 
+            // txtPaidAmount
+            // 
+            this.txtPaidAmount.Enabled = false;
+            this.txtPaidAmount.Location = new System.Drawing.Point(137, 150);
+            this.txtPaidAmount.Name = "txtPaidAmount";
+            this.txtPaidAmount.Size = new System.Drawing.Size(125, 20);
+            this.txtPaidAmount.TabIndex = 21;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(3, 124);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(58, 13);
+            this.label77.TabIndex = 20;
+            this.label77.Text = "Entry Price";
+            // 
+            // txtEntryPrice
+            // 
+            this.txtEntryPrice.Location = new System.Drawing.Point(6, 150);
+            this.txtEntryPrice.Name = "txtEntryPrice";
+            this.txtEntryPrice.Size = new System.Drawing.Size(125, 20);
+            this.txtEntryPrice.TabIndex = 19;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(265, 55);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(57, 13);
+            this.label74.TabIndex = 18;
+            this.label74.Text = "Entry Date";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(134, 56);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(54, 13);
+            this.label72.TabIndex = 16;
+            this.label72.Text = "Entry Fuel";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(3, 56);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(82, 13);
+            this.label70.TabIndex = 14;
+            this.label70.Text = "Diffrences Days";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(3, 34);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(370, 13);
+            this.label68.TabIndex = 13;
+            this.label68.Text = "---------------------------------------------------------------------------------" +
+    "----------------------------------------\r\n";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(3, 18);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(70, 16);
+            this.label61.TabIndex = 1;
+            this.label61.Text = "Car Entry";
+            // 
+            // txtDiffrencesDays
+            // 
+            this.txtDiffrencesDays.Enabled = false;
+            this.txtDiffrencesDays.Location = new System.Drawing.Point(6, 82);
+            this.txtDiffrencesDays.Name = "txtDiffrencesDays";
+            this.txtDiffrencesDays.Size = new System.Drawing.Size(125, 20);
+            this.txtDiffrencesDays.TabIndex = 0;
+            // 
             // cbAgreement
             // 
             this.cbAgreement.FormattingEnabled = true;
@@ -1351,17 +1562,18 @@
             this.panel10.AutoScroll = true;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel10.Controls.Add(this.lblOtherAdditionsShow);
+            this.panel10.Controls.Add(this.lblAdditionalInsurance);
+            this.panel10.Controls.Add(this.lblShowRequiredInsurance);
             this.panel10.Controls.Add(this.lblShowLateFee);
             this.panel10.Controls.Add(this.label99);
             this.panel10.Controls.Add(this.lblShowAddionalKiloPrice);
             this.panel10.Controls.Add(this.label101);
-            this.panel10.Controls.Add(this.lblAdditionalInsurance);
-            this.panel10.Controls.Add(this.lblShowRequiredInsurance);
             this.panel10.Controls.Add(this.lblShowDueBalanceUpdate);
             this.panel10.Controls.Add(this.label105);
             this.panel10.Controls.Add(this.lblShowPaidAmount);
             this.panel10.Controls.Add(this.label107);
-            this.panel10.Controls.Add(this.lblShowFinalTotal);
+            this.panel10.Controls.Add(this.lblShowFinalTotala);
             this.panel10.Controls.Add(this.label109);
             this.panel10.Controls.Add(this.label110);
             this.panel10.Controls.Add(this.lblShowTax);
@@ -1370,7 +1582,6 @@
             this.panel10.Controls.Add(this.lblSubTotalShow);
             this.panel10.Controls.Add(this.label115);
             this.panel10.Controls.Add(this.label116);
-            this.panel10.Controls.Add(this.lblOtherAdditionsShow);
             this.panel10.Controls.Add(this.label118);
             this.panel10.Controls.Add(this.label119);
             this.panel10.Controls.Add(this.label120);
@@ -1480,14 +1691,14 @@
             this.label107.TabIndex = 23;
             this.label107.Text = "Paid for now";
             // 
-            // lblShowFinalTotal
+            // lblShowFinalTotala
             // 
-            this.lblShowFinalTotal.AutoSize = true;
-            this.lblShowFinalTotal.Location = new System.Drawing.Point(322, 566);
-            this.lblShowFinalTotal.Name = "lblShowFinalTotal";
-            this.lblShowFinalTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblShowFinalTotal.TabIndex = 22;
-            this.lblShowFinalTotal.Text = "Price";
+            this.lblShowFinalTotala.AutoSize = true;
+            this.lblShowFinalTotala.Location = new System.Drawing.Point(322, 566);
+            this.lblShowFinalTotala.Name = "lblShowFinalTotala";
+            this.lblShowFinalTotala.Size = new System.Drawing.Size(31, 13);
+            this.lblShowFinalTotala.TabIndex = 22;
+            this.lblShowFinalTotala.Text = "Price";
             // 
             // label109
             // 
@@ -2030,6 +2241,11 @@
             // nuAdditonalKiloPriceDelv
             // 
             this.nuAdditonalKiloPriceDelv.Location = new System.Drawing.Point(155, 89);
+            this.nuAdditonalKiloPriceDelv.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nuAdditonalKiloPriceDelv.Name = "nuAdditonalKiloPriceDelv";
             this.nuAdditonalKiloPriceDelv.Size = new System.Drawing.Size(142, 20);
             this.nuAdditonalKiloPriceDelv.TabIndex = 16;
@@ -2729,6 +2945,11 @@
             // nuPricePerAddKilo
             // 
             this.nuPricePerAddKilo.Location = new System.Drawing.Point(155, 89);
+            this.nuPricePerAddKilo.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nuPricePerAddKilo.Name = "nuPricePerAddKilo";
             this.nuPricePerAddKilo.Size = new System.Drawing.Size(142, 20);
             this.nuPricePerAddKilo.TabIndex = 16;
@@ -2764,217 +2985,6 @@
             this.tabAgreement.Size = new System.Drawing.Size(1924, 1061);
             this.tabAgreement.TabIndex = 1;
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Controls.Add(this.cbCarEntryFuel);
-            this.panel11.Controls.Add(this.dpEntryDate);
-            this.panel11.Controls.Add(this.label102);
-            this.panel11.Controls.Add(this.txtMovedDistance);
-            this.panel11.Controls.Add(this.label100);
-            this.panel11.Controls.Add(this.txtLateFee);
-            this.panel11.Controls.Add(this.label98);
-            this.panel11.Controls.Add(this.txtEntryCounter);
-            this.panel11.Controls.Add(this.label78);
-            this.panel11.Controls.Add(this.txtPaidAmount);
-            this.panel11.Controls.Add(this.label77);
-            this.panel11.Controls.Add(this.txtEntryPrice);
-            this.panel11.Controls.Add(this.label74);
-            this.panel11.Controls.Add(this.label72);
-            this.panel11.Controls.Add(this.label70);
-            this.panel11.Controls.Add(this.label68);
-            this.panel11.Controls.Add(this.label61);
-            this.panel11.Controls.Add(this.txtDiffrencesDays);
-            this.panel11.Location = new System.Drawing.Point(838, 279);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(415, 254);
-            this.panel11.TabIndex = 53;
-            // 
-            // txtDiffrencesDays
-            // 
-            this.txtDiffrencesDays.Enabled = false;
-            this.txtDiffrencesDays.Location = new System.Drawing.Point(6, 82);
-            this.txtDiffrencesDays.Name = "txtDiffrencesDays";
-            this.txtDiffrencesDays.Size = new System.Drawing.Size(125, 20);
-            this.txtDiffrencesDays.TabIndex = 0;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(3, 18);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(70, 16);
-            this.label61.TabIndex = 1;
-            this.label61.Text = "Car Entry";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(3, 34);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(370, 13);
-            this.label68.TabIndex = 13;
-            this.label68.Text = "---------------------------------------------------------------------------------" +
-    "----------------------------------------\r\n";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(3, 56);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(82, 13);
-            this.label70.TabIndex = 14;
-            this.label70.Text = "Diffrences Days";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(134, 56);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(54, 13);
-            this.label72.TabIndex = 16;
-            this.label72.Text = "Entry Fuel";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(265, 55);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(57, 13);
-            this.label74.TabIndex = 18;
-            this.label74.Text = "Entry Date";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(3, 124);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(58, 13);
-            this.label77.TabIndex = 20;
-            this.label77.Text = "Entry Price";
-            // 
-            // txtEntryPrice
-            // 
-            this.txtEntryPrice.Location = new System.Drawing.Point(6, 150);
-            this.txtEntryPrice.Name = "txtEntryPrice";
-            this.txtEntryPrice.Size = new System.Drawing.Size(125, 20);
-            this.txtEntryPrice.TabIndex = 19;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(134, 124);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(67, 13);
-            this.label78.TabIndex = 22;
-            this.label78.Text = "Paid Amount";
-            // 
-            // txtPaidAmount
-            // 
-            this.txtPaidAmount.Enabled = false;
-            this.txtPaidAmount.Location = new System.Drawing.Point(137, 150);
-            this.txtPaidAmount.Name = "txtPaidAmount";
-            this.txtPaidAmount.Size = new System.Drawing.Size(125, 20);
-            this.txtPaidAmount.TabIndex = 21;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(265, 124);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(71, 13);
-            this.label98.TabIndex = 24;
-            this.label98.Text = "Entry Counter";
-            // 
-            // txtEntryCounter
-            // 
-            this.txtEntryCounter.Location = new System.Drawing.Point(268, 150);
-            this.txtEntryCounter.Name = "txtEntryCounter";
-            this.txtEntryCounter.Size = new System.Drawing.Size(125, 20);
-            this.txtEntryCounter.TabIndex = 23;
-            this.txtEntryCounter.TextChanged += new System.EventHandler(this.txtEntryCounter_TextChanged);
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(3, 187);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(49, 13);
-            this.label100.TabIndex = 26;
-            this.label100.Text = "Late Fee";
-            // 
-            // txtLateFee
-            // 
-            this.txtLateFee.Enabled = false;
-            this.txtLateFee.Location = new System.Drawing.Point(6, 213);
-            this.txtLateFee.Name = "txtLateFee";
-            this.txtLateFee.Size = new System.Drawing.Size(125, 20);
-            this.txtLateFee.TabIndex = 25;
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(134, 187);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(83, 13);
-            this.label102.TabIndex = 28;
-            this.label102.Text = "Moved distence";
-            // 
-            // txtMovedDistance
-            // 
-            this.txtMovedDistance.Enabled = false;
-            this.txtMovedDistance.Location = new System.Drawing.Point(137, 213);
-            this.txtMovedDistance.Name = "txtMovedDistance";
-            this.txtMovedDistance.Size = new System.Drawing.Size(125, 20);
-            this.txtMovedDistance.TabIndex = 27;
-            // 
-            // dpEntryDate
-            // 
-            this.dpEntryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpEntryDate.Location = new System.Drawing.Point(268, 82);
-            this.dpEntryDate.Name = "dpEntryDate";
-            this.dpEntryDate.Size = new System.Drawing.Size(125, 20);
-            this.dpEntryDate.TabIndex = 29;
-            this.dpEntryDate.ValueChanged += new System.EventHandler(this.dpEntryDate_ValueChanged);
-            // 
-            // btnConfirmUpdates
-            // 
-            this.btnConfirmUpdates.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnConfirmUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmUpdates.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmUpdates.Location = new System.Drawing.Point(1418, 792);
-            this.btnConfirmUpdates.Name = "btnConfirmUpdates";
-            this.btnConfirmUpdates.Size = new System.Drawing.Size(183, 43);
-            this.btnConfirmUpdates.TabIndex = 54;
-            this.btnConfirmUpdates.Text = "Confirm the Updates";
-            this.btnConfirmUpdates.UseVisualStyleBackColor = false;
-            this.btnConfirmUpdates.Click += new System.EventHandler(this.btnConfirmUpdates_Click);
-            // 
-            // cbCarEntryFuel
-            // 
-            this.cbCarEntryFuel.FormattingEnabled = true;
-            this.cbCarEntryFuel.Items.AddRange(new object[] {
-            "+1/2",
-            "1/4",
-            "3/4",
-            "Full",
-            "Empty"});
-            this.cbCarEntryFuel.Location = new System.Drawing.Point(137, 82);
-            this.cbCarEntryFuel.Name = "cbCarEntryFuel";
-            this.cbCarEntryFuel.Size = new System.Drawing.Size(121, 21);
-            this.cbCarEntryFuel.TabIndex = 55;
-            // 
-            // cbAgree
-            // 
-            this.cbAgree.FormattingEnabled = true;
-            this.cbAgree.Location = new System.Drawing.Point(1276, 42);
-            this.cbAgree.Name = "cbAgree";
-            this.cbAgree.Size = new System.Drawing.Size(182, 21);
-            this.cbAgree.TabIndex = 55;
-            this.cbAgree.Text = "Select Agreement Nubmer";
-            this.cbAgree.SelectedIndexChanged += new System.EventHandler(this.cbAgree_SelectedIndexChanged);
-            // 
             // frmAddUpdatAgreement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2999,6 +3009,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -3030,8 +3042,6 @@
             this.gbPremmitedKillo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPricePerAddKilo)).EndInit();
             this.tabAgreement.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3240,7 +3250,7 @@
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label lblShowPaidAmount;
         private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.Label lblShowFinalTotal;
+        private System.Windows.Forms.Label lblShowFinalTotala;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label lblShowTax;

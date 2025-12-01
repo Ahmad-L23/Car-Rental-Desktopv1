@@ -71,6 +71,7 @@
     <Compile Include="ClsNationlaitiesData.cs" />
     <Compile Include="ClsPaymentMethodData.cs" />
     <Compile Include="ClsRentalAdditionsData.cs" />
+    <Compile Include="clsRentalInsurancesData.cs" />
     <Compile Include="ClsRequiredInsuranceData.cs" />
     <Compile Include="ClsRoleData.cs" />
     <Compile Include="ClsTargetClientsData.cs" />

@@ -24,6 +24,7 @@ using CarRentalSystem.Nationlity;
 using CarRentalSystem.PaymentMethod;
 using CarRentalSystem.Quires;
 using CarRentalSystem.RentalAddition;
+using CarRentalSystem.RentalInsurance;
 using CarRentalSystem.RequiredInsurance;
 using CarRentalSystem.Role;
 using CarRentalSystem.Setting;
@@ -49,7 +50,7 @@ namespace CarRentalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddUpdatAgreement()); 
+            Application.Run(new frmAddUpdateRentalInsurance(1)); 
         }
     }
 }

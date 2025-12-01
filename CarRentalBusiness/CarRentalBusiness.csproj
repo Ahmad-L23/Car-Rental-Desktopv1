@@ -67,6 +67,7 @@
     <Compile Include="ClsNationlity.cs" />
     <Compile Include="ClsPaymentMethod.cs" />
     <Compile Include="ClsRentalAddition.cs" />
+    <Compile Include="clsRentalInsurance.cs" />
     <Compile Include="ClsRequiredInsurance.cs" />
     <Compile Include="ClsRole.cs" />
     <Compile Include="ClsTargetClient.cs" />

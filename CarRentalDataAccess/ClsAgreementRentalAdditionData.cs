@@ -1,10 +1,18 @@
 ﻿using CarRentalBusiness;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace CarRentalDataAccess
 {
+
+    public class RentalAdditionsItems
+    {
+        public int id;
+        public string name;
+        public decimal price;
+    }
     public static class ClsAgreementRentalAdditionData
     {
         private static readonly string conn = ClsDataAccessSettings.ConnectionString;
@@ -108,7 +116,16 @@ namespace CarRentalDataAccess
         // Get all records by AgreementID
         public static DataTable GetAllByAgreementId(int agreementId)
         {
-            string query = "SELECT * FROM AgreementRentalAddition WHERE AgreementID = @AgreementID";
+            string query = @"
+                SELECT arl.AgreementRentalAdditionID,
+                       arl.AgreementID,
+                       arl.RentalAdditionID,
+                       arl.ActualPrice,
+                       ra.RentalName,
+                       ra.Price
+                FROM AgreementRentalAddition arl
+                INNER JOIN RentalAdditions ra ON arl.RentalAdditionID = ra.RentalAdditionID
+                WHERE arl.AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
             using (SqlCommand cmd = new SqlCommand(query, connection))
@@ -125,17 +142,18 @@ namespace CarRentalDataAccess
         }
 
         // Get all with RentalAddition name and price joined
-        public static DataTable GetAllWithRentalAdditionDetails(int agreementId)
+        public static List<RentalAdditionsItems> GetAllWithRentalAdditionDetails(int agreementId)
         {
+            List< RentalAdditionsItems > RenAddItems = new List<RentalAdditionsItems> ();
             string query = @"
                 SELECT arl.AgreementRentalAdditionID,
                        arl.AgreementID,
                        arl.RentalAdditionID,
                        arl.ActualPrice,
-                       ra.Name,
+                       ra.RentalName,
                        ra.Price
                 FROM AgreementRentalAddition arl
-                INNER JOIN RentalAdditions ra ON arl.RentalAdditionID = ra.ID
+                INNER JOIN RentalAdditions ra ON arl.RentalAdditionID = ra.RentalAdditionID
                 WHERE arl.AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -143,13 +161,22 @@ namespace CarRentalDataAccess
             {
                 cmd.Parameters.AddWithValue("@AgreementID", agreementId);
 
-                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                using(SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    return dt;
+                    while(reader.Read())
+                    {
+                        RentalAdditionsItems items = new RentalAdditionsItems
+                        {
+                            id = reader.GetInt32(0),
+                            name = reader.GetString(4),
+                            price = Convert.ToDecimal(reader.GetString(3))
+                        };
+
+                        RenAddItems.Add(items);
+                    }
                 }
             }
+            return RenAddItems;
         }
 
         // Get single record by ID (with ref parameters)

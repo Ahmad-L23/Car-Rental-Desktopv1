@@ -5,6 +5,12 @@ using System.Data.SqlClient;
 
 namespace CarRentalDataAccess
 {
+    public class AdditionContract
+    {
+        public int id {  get; set; }
+        public string name {  get; set; }
+        public decimal price {  get; set; } 
+    }
     public static class ClsAgreementAdditionContractData
     {
         private static readonly string conn = ClsDataAccessSettings.ConnectionString;
@@ -77,7 +83,17 @@ namespace CarRentalDataAccess
         // Get all records for a given AgreementID
         public static DataTable GetAllByAgreementId(int agreementId)
         {
-            string query = "SELECT * FROM AgreementAdditionContract WHERE AgreementID = @AgreementID";
+            string query = @"
+                SELECT 
+                    aac.AgreementAdditionContractID,
+                    aac.AgreementID,
+                    aac.AdditionContractID,
+                    aac.ActualPrice,
+                    ac.Name,
+                    ac.Price AS ContractPrice
+                FROM AgreementAdditionContract aac
+                INNER JOIN AdditionContracts ac ON aac.AdditionContractID = ac.id
+                WHERE aac.AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
             using (SqlCommand cmd = new SqlCommand(query, connection))

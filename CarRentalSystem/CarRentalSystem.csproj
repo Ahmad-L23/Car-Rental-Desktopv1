@@ -395,6 +395,12 @@
     <Compile Include="RentalAddition\frmListRentalAdditions.Designer.cs">
       <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentalInsurance\frmAddUpdateRentalInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalInsurance\frmAddUpdateRentalInsurance.Designer.cs">
+      <DependentUpon>frmAddUpdateRentalInsurance.cs</DependentUpon>
+    </Compile>
     <Compile Include="RequiredInsurance\frmAddUpdateRequiredInsurance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -655,6 +661,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RentalAddition\frmListRentalAdditions.resx">
       <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalInsurance\frmAddUpdateRentalInsurance.resx">
+      <DependentUpon>frmAddUpdateRentalInsurance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Role\frmAddEditRole.resx">
       <DependentUpon>frmAddEditRole.cs</DependentUpon>

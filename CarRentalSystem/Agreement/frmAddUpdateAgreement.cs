@@ -314,13 +314,13 @@ namespace CarRentalSystem.Agreement
             return basePrice + taxAmount + additions;
         }
 
-        private List<(int Id, decimal Price)> GetCheckedItemsList(CheckedListBox clb)
+        private List<(int Id, decimal Price, string name)> GetCheckedItemsList(CheckedListBox clb)
         {
-            var list = new List<(int Id, decimal Price)>();
+            var list = new List<(int Id, decimal Price, string name)>();
             foreach (var item in clb.CheckedItems)
             {
                 if (item is Item i)
-                    list.Add((i.Id, i.Price));
+                    list.Add((i.Id, i.Price, i.Name));
             }
             return list;
         }

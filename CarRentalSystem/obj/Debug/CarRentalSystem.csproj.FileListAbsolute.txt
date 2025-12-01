@@ -124,3 +124,4 @@ C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Quires.frmQuery.r
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CurtainDemo.frmAgreement.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Agreement.frmAddUpdateAgreement.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Agreement.frmAddUpdatAgreement.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.frmAddUpdateRentalInsurance.resources

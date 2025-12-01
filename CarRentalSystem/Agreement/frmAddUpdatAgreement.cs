@@ -124,25 +124,37 @@ namespace CarRentalSystem.Agreement
 
 
             clbAddtionInsuranceDelv.Items.Clear();
+            lblAdditionalInsurance.Text = "";
             foreach (var item in  _Agreement.AdditionContracts)
             {
                 clbAddtionInsuranceDelv.Items.Add(item);
+                
+                lblAdditionalInsurance.Text += item.Name + " (" + item.Price.ToString() + "), ";
             }
 
             clbOtherAdditionDelv.Items.Clear();
+            lblOtherAdditionsShow.Text = "";
             foreach (var item in  _Agreement.RentalAdditions)
             {
                 clbOtherAdditionDelv.Items.Add(item);
+
+                
+                lblOtherAdditionsShow.Text +=  item.Name + " (" + item.Price.ToString() + "), ";
             }
 
             clbRequiredInsuranceDelv.Items.Clear();
+            lblShowRequiredInsurance.Text = "";
             foreach (var item in  _Agreement.RequiredInsurances)
             {
                 clbRequiredInsuranceDelv.Items.Add(item);
+
+
+                lblShowRequiredInsurance.Text += item.Name + " (" + item.Price.ToString() + "), ";
             }
 
 
-            
+
+
             CheckItemsInCheckedListBox(clbRequiredInsuranceDelv, _Agreement.AdditionContracts.Select(x => x.Id).ToList());
             CheckItemsInCheckedListBox(clbAddtionInsuranceDelv, _Agreement.RentalAdditions.Select(x => x.Id).ToList());
             CheckItemsInCheckedListBox(clbOtherAdditionDelv, _Agreement.RequiredInsurances.Select(x => x.Id).ToList());
@@ -164,7 +176,7 @@ namespace CarRentalSystem.Agreement
                 if (_Agreement.AdditionalKilometerPrice.HasValue)
                 {
                     nuAdditonalKiloPriceDelv.Value = (decimal)_Agreement.AdditionalKilometerPrice;
-                    lblPriceinctaxDelv.Text = _Agreement.TotalIncludetax?.ToString() ?? "00.0";
+                    lblShowAddionalKiloPrice.Text = _Agreement.AdditionalKilometerPrice?.ToString() ?? "00.0";
                 }
 
                 chKmdelv.Checked = true;
@@ -203,9 +215,7 @@ namespace CarRentalSystem.Agreement
             lblShowBasePrice.Text = _Agreement.RentalDaysCost.ToString();
 
 
-            GetNameAndPriceOfCheckedItem(lblShowRequiredInsurance, clbRequiredInsuranceDelv);
-            GetNameAndPriceOfCheckedItem(lblAdditionalInsurance, clbAddtionInsuranceDelv);
-            GetNameAndPriceOfCheckedItem(lblOtherAdditionsShow, clbOtherAdditionDelv);
+
 
 
             lblSubTotalShow.Text = _Agreement.TotalAmountBeforeTax.ToString();
@@ -223,12 +233,12 @@ namespace CarRentalSystem.Agreement
 
             if (_Agreement.TaxRate > 0)
             {
-                lblShowFinalTotal.Text = _Agreement.TotalIncludetax.ToString();
+                lblShowFinalTotala.Text = _Agreement.TotalIncludetax.ToString();
                 txtEntryPrice.Text = _Agreement.TotalIncludetax?.ToString();
             }
             else
             {
-                lblShowFinalTotal.Text = _Agreement.TotalAmountBeforeTax?.ToString();
+                lblShowFinalTotala.Text = _Agreement.TotalAmountBeforeTax.ToString();
                 txtEntryPrice.Text = (_Agreement.TotalAmountBeforeTax - _Agreement.InitialPaidAmount).ToString();
             }
 
@@ -430,13 +440,13 @@ namespace CarRentalSystem.Agreement
         }
 
 
-        private List<(int Id, decimal Price)> GetCheckedItemsList(CheckedListBox clb)
+        private List<(int Id, decimal Price, string name)> GetCheckedItemsList(CheckedListBox clb)
         {
-            var list = new List<(int Id, decimal Price)>();
+            var list = new List<(int Id, decimal Price,string name)>();
             foreach (var item in clb.CheckedItems)
             {
                 if (item is Item i)
-                    list.Add((i.Id, i.Price));
+                    list.Add((i.Id, i.Price, i.Name));
             }
             return list;
         }
@@ -1041,9 +1051,9 @@ namespace CarRentalSystem.Agreement
             else
             {
 
-
                 lblFinalPrice.Text = (subTotal + AdditonalKiloPrice).ToString();
-                    }//txtTotalPrice    lblTotalAmountOfAdditions
+
+            }//txtTotalPrice    lblTotalAmountOfAdditions
 
 
             lblPaidAmount.Text = nuPaidAmount.Value.ToString();
@@ -1169,34 +1179,27 @@ namespace CarRentalSystem.Agreement
         {
             int latedays = (dpEntryDate.Value.Date - dpDelvring.Value.Date).Days;
             decimal lateFee = 0;
+
             if (_Agreement.RentalPenaltyPerDay > 0)
             {
-                lateFee = (decimal)(latedays * _Agreement?.RentalPenaltyPerDay ?? 0);
+                lateFee = (decimal)(latedays * (_Agreement.RentalPenaltyPerDay));
             }
+
             txtDiffrencesDays.Text = latedays.ToString();
             txtLateFee.Text = lateFee.ToString();
             lblShowLateFee.Text = lateFee.ToString();
 
-            if (_Agreement.TaxRate > 0)
-            {
-                lblShowFinalTotal.Text = _Agreement.TotalIncludetax.ToString();
-                txtEntryPrice.Text = _Agreement.TotalIncludetax?.ToString();
-            }
-            else
-            {
-                lblShowFinalTotal.Text = _Agreement.TotalAmountBeforeTax?.ToString();
-                txtEntryPrice.Text = (_Agreement.TotalAmountBeforeTax - _Agreement.InitialPaidAmount).ToString();
-            }
+            // base price (with or without tax)
+            decimal basePrice = (decimal)(_Agreement.TaxRate > 0
+                ? _Agreement.TotalIncludetax
+                : _Agreement.TotalAmountBeforeTax);
 
-            if (decimal.TryParse(lblShowFinalTotal.Text, out decimal FinalPrice))
-            {
+            lblShowFinalTotala.Text = basePrice.ToString();
 
-                
-                FinalPrice += lateFee + PriceOfAdditaonalDistance;
-                lblShowFinalTotal.Text = FinalPrice.ToString();
-            }
+            // Entry Price (what customer should pay now)
+            txtEntryPrice.Text = (basePrice - _Agreement.InitialPaidAmount).ToString();
 
-
+            // Distance calculation
             if (int.TryParse(txtEntryCounter.Text, out int eCounter))
             {
                 int MovedDistance = (int)(eCounter - _Agreement.Mileage);
@@ -1206,26 +1209,31 @@ namespace CarRentalSystem.Agreement
                 if (MovedDistance > _Agreement.PermittedDailyKilometers)
                 {
                     int AdditonalDistance = (int)(MovedDistance - _Agreement.PermittedDailyKilometers);
-
-                    PriceOfAdditaonalDistance = (int)(AdditonalDistance * _Agreement.AdditionalKilometerPrice);
-
+                    PriceOfAdditaonalDistance = (decimal)(AdditonalDistance * _Agreement.AdditionalKilometerPrice);
                     lblShowAddionalKiloPrice.Text = PriceOfAdditaonalDistance.ToString();
                 }
                 else
                 {
+                    PriceOfAdditaonalDistance = 0;
                     lblShowAddionalKiloPrice.Text = "0.00";
                 }
             }
             else
             {
+                PriceOfAdditaonalDistance = 0;
                 lblShowAddionalKiloPrice.Text = "0.00";
             }
 
+            // Final price (base + late + additional KM)
+            decimal FinalPrice = basePrice + lateFee + PriceOfAdditaonalDistance;
+
+            lblShowFinalTotala.Text = FinalPrice.ToString();
             lblShowDueBalanceUpdate.Text = (FinalPrice - _Agreement.InitialPaidAmount).ToString();
+
 
         }
 
-        
+
         private void dpEntryDate_ValueChanged(object sender, EventArgs e)
         {
             UpdateSideSectionUpdateMode();
@@ -1291,8 +1299,9 @@ namespace CarRentalSystem.Agreement
                 return;
 
 
-
             UpdateMode(AgreementId);
+            UpdateSideSectionUpdateMode();
+
         }
     }
 }
