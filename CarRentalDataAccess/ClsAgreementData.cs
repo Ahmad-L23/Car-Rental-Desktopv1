@@ -35,7 +35,8 @@ namespace CarRentalDataAccess
             decimal? rentalAdditionsPrice,
             decimal? requiredInsurancePrice,
             decimal? rentalDaysCost,
-            decimal? totalAmountIncludeTax
+            decimal? totalAmountIncludeTax,
+            decimal? Discount
         )
         {
             string query = @"
@@ -45,7 +46,7 @@ namespace CarRentalDataAccess
                     RentalPenaltyPerDay, TotalAmountBeforeTax, PermittedDailyKilometers, AdditionalKilometerPrice,
                     TaxRate, InitialPaidAmount, PaymentMethod, PaymentDate, ActualDeliveryDate,
                     ReceivingOdometer, ConsumedMileage, Mileage, ExitFuel, SerialNumber,
-                    AdditionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice, rentalDaysCost, TotalAmountIncludeTax
+                    AdditionContractPrice, RentalAdditionsPrice, RequiredInsurancePrice, rentalDaysCost, TotalAmountIncludeTax, Discount
                 )
                 VALUES
                 (
@@ -53,7 +54,7 @@ namespace CarRentalDataAccess
                     @RentalPenaltyPerDay, @TotalAmountBeforeTax, @PermittedDailyKilometers, @AdditionalKilometerPrice,
                     @TaxRate, @InitialPaidAmount, @PaymentMethod, @PaymentDate, @ActualDeliveryDate,
                     @ReceivingOdometer, @ConsumedMileage, @Mileage, @ExitFuel, @SerialNumber,
-                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice, @rentalDaysCost, @TotalAmountIncludeTax
+                    @AdditionContractPrice, @RentalAdditionsPrice, @RequiredInsurancePrice, @rentalDaysCost, @TotalAmountIncludeTax, @Discount
                 );
                 SELECT CAST(scope_identity() AS int);
             ";
@@ -87,6 +88,7 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
 
                 connection.Open();
                 object result = cmd.ExecuteScalar();
@@ -124,7 +126,8 @@ namespace CarRentalDataAccess
             decimal? rentalAdditionsPrice,
             decimal? requiredInsurancePrice,
             decimal? rentalDaysCost,
-            decimal? totalAmountIncludeTax
+            decimal? totalAmountIncludeTax,
+            decimal? Discount
         )
         {
             string query = @"
@@ -154,7 +157,8 @@ namespace CarRentalDataAccess
                     RentalAdditionsPrice = @RentalAdditionsPrice,
                     RequiredInsurancePrice = @RequiredInsurancePrice,
                     rentalDaysCost = @rentalDaysCost,
-                    TotalAmountIncludeTax = @TotalAmountIncludeTax
+                    TotalAmountIncludeTax = @TotalAmountIncludeTax,
+                    Discount = @Discount  
                 WHERE AgreementID = @AgreementID";
 
             using (SqlConnection connection = new SqlConnection(conn))
@@ -187,6 +191,7 @@ namespace CarRentalDataAccess
                 cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
 
                 connection.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -266,7 +271,8 @@ namespace CarRentalDataAccess
             ref decimal? rentalAdditionsPrice,
             ref decimal? requiredInsurancePrice,
             ref decimal? rentalDaysCost,
-            ref decimal? totalAmountIncludeTax
+            ref decimal? totalAmountIncludeTax,
+            ref decimal? Discount
         )
         {
             string query = "SELECT * FROM Agreement WHERE AgreementID = @AgreementID";
@@ -313,6 +319,7 @@ namespace CarRentalDataAccess
                         requiredInsurancePrice = reader["RequiredInsurancePrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["RequiredInsurancePrice"]);
                         rentalDaysCost = reader["rentalDaysCost"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["rentalDaysCost"]);
                         totalAmountIncludeTax = reader["TotalAmountIncludeTax"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
+                        totalAmountIncludeTax = reader["Discount"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["Discount"]);
 
                         return true;
                     }

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using CarRentalSystem.MaintenanceTypes;
 using CarRentalSystem.AdditionContracts;
 using CarRentalSystem.RequiredInsurances;
+using CarRentalSystem.RentalInsurance;
 
 namespace CarRentalSystem.Setting
 {
@@ -17,6 +18,7 @@ namespace CarRentalSystem.Setting
         private ucMaintenanceTypes _ucMaintenanceTypes;
         private ucAdditionContracts _ucAdditionContracts;
         private ucRequiredInsurances _ucRequiredInsurances;
+        private ListRentalInsuranceCtrl _listRentalInsurancectrl;
 
         public frmSettings()
         {
@@ -26,7 +28,7 @@ namespace CarRentalSystem.Setting
 
         private void SetupSidebar()
         {
-            string[] sidebarItems = { "Coverages", "Target Clients", "Payment Methods", "Maintenance Types", "Additons Contracts", "Required Insurances" };
+            string[] sidebarItems = { "Coverages", "Target Clients", "Payment Methods", "Maintenance Types", "Additons Contracts", "Required Insurances", "Rental Insurance" };
 
             listBoxSidebar.Items.Clear();
 
@@ -44,6 +46,7 @@ namespace CarRentalSystem.Setting
             _ucMaintenanceTypes = new ucMaintenanceTypes();
             _ucAdditionContracts = new ucAdditionContracts();
             _ucRequiredInsurances = new ucRequiredInsurances();
+            _listRentalInsurancectrl = new ListRentalInsuranceCtrl();
             listBoxSidebar.SelectedIndex = 0;
 
         }
@@ -85,6 +88,11 @@ namespace CarRentalSystem.Setting
                 case "Required Insurances":
                     _ucRequiredInsurances.Dock = DockStyle.Fill;
                     panelMain.Controls.Add(_ucRequiredInsurances);
+                    break;
+
+                case "Rental Insurance":
+                    _listRentalInsurancectrl.Dock = DockStyle.Fill;
+                    panelMain.Controls.Add(_listRentalInsurancectrl);
                     break;
             }
         }

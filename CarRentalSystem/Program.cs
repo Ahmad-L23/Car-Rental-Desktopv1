@@ -50,7 +50,7 @@ namespace CarRentalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddUpdateRentalInsurance(1)); 
+            Application.Run(new frmAddUpdatAgreement()); 
         }
     }
 }

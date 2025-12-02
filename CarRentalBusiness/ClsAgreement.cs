@@ -47,6 +47,7 @@ namespace CarRentalBusiness
         public decimal? RequiredInsurancePrice { get; set; }
         public decimal? RentalDaysCost { get; set; }
         public decimal? TotalIncludetax { get; set; }
+        public decimal? Discount {  get; set; }
 
         public List<(int Id, decimal Price, string Name)> AdditionContracts { get; set; } = new List<(int, decimal, string)>();
         public List<(int Id, decimal Price, string Name)> RentalAdditions { get; set; } = new List<(int, decimal,string)>();
@@ -90,6 +91,7 @@ namespace CarRentalBusiness
             AdditionContracts = new List<(int, decimal, string)>();
             RentalAdditions = new List<(int, decimal,string)>();
             RequiredInsurances = new List<(int, decimal,string)>();
+            Discount = null;
 
             mode = enMode.AddNew;
         }
@@ -120,7 +122,8 @@ namespace CarRentalBusiness
             decimal? rentalAdditionsPrice,
             decimal? requiredInsurancePrice,
             decimal? rentalDaysCost,
-            decimal? totalIncludetax)
+            decimal? totalIncludetax,
+            decimal? Discount)
         {
             AgreementID = agreementID;
             CustomerID = customerID;
@@ -150,6 +153,7 @@ namespace CarRentalBusiness
             RequiredInsurancePrice = requiredInsurancePrice;
             RentalDaysCost = rentalDaysCost;
             TotalIncludetax = totalIncludetax;
+            this.Discount = Discount;
 
             mode = enMode.Update;
         }
@@ -198,7 +202,8 @@ namespace CarRentalBusiness
                 RentalAdditionsPrice,
                 RequiredInsurancePrice,
                 RentalDaysCost,
-                TotalIncludetax
+                TotalIncludetax,
+                Discount
             );
 
             if (newId > 0)
@@ -259,7 +264,8 @@ namespace CarRentalBusiness
                 RentalAdditionsPrice,
                 RequiredInsurancePrice,
                 RentalDaysCost,
-                TotalIncludetax
+                TotalIncludetax,
+                Discount
             );
 
             if (!updated)
@@ -296,7 +302,7 @@ namespace CarRentalBusiness
             decimal? rentalPenaltyPerDay = null, initialPaidAmount = null,
                 additionContractPrice = null, rentalAdditionsPrice = null,
                 requiredInsurancePrice = null, rentalDaysCost = null,
-                totalIncludetax = null, additionalKilometerPrice = null, totalAmountBeforeTax = null;
+                totalIncludetax = null, additionalKilometerPrice = null, totalAmountBeforeTax = null, Discount = null;
             int? permittedDailyKilometers = null, receivingOdometer = null, consumedMileage = null, mileage = null;
             string paymentMethod = null, exitFuel = null;
 
@@ -327,7 +333,8 @@ namespace CarRentalBusiness
                 ref rentalAdditionsPrice,
                 ref requiredInsurancePrice,
                 ref rentalDaysCost,
-                ref totalIncludetax
+                ref totalIncludetax,
+                ref Discount
             );
 
             if (!found)
@@ -359,7 +366,8 @@ namespace CarRentalBusiness
                 rentalAdditionsPrice,
                 requiredInsurancePrice,
                 rentalDaysCost,
-                totalIncludetax
+                totalIncludetax,
+                Discount
             );
 
 

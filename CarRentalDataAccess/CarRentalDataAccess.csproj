@@ -49,6 +49,7 @@
     <Compile Include="ClsAgreementRequiredInsuranceData.cs" />
     <Compile Include="ClsBoxData.cs" />
     <Compile Include="ClsBranchData.cs" />
+    <Compile Include="clsCachReceiptData.cs" />
     <Compile Include="ClsCarData.cs" />
     <Compile Include="ClsCarTransferData.cs" />
     <Compile Include="ClsCategoryData.cs" />

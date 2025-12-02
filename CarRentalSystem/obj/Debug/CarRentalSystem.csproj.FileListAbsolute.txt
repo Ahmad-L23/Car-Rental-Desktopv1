@@ -117,11 +117,13 @@ C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.EmployeeUsage.frm
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.frmAddUpdateCarTransfer.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.frmListCarTransfer.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.frmCarTransferCard.resources
-C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.exe.config
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CarTransfer.ucCarTransferDetails.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Vehicle.ucShowVehicleDetalis.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Quires.frmQuery.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CurtainDemo.frmAgreement.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Agreement.frmAddUpdateAgreement.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.Agreement.frmAddUpdatAgreement.resources
-C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.frmAddUpdateRentalInsurance.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.frmAddUpdateRentalInsuranc.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.ListRentalInsuranceCtrl.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.frmListRentalInsurance.resources
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.exe.config

@@ -3,9 +3,11 @@ using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,7 +57,7 @@ namespace CarRentalDataAccess
         public static bool UpdateRentalInsurance(int id, string name, int paymentMethodId, double price, string status, bool Active, bool Includetax, string Notes)
         {
             string Query = @"update RentalInsurances 
-                              set name = @name,PaymenMethod = @paymentMethodId, price = @price, status = @status, isActice = @Active, Includetax = @includetax, Notes = @notes where RentalinsuranceId = @id";
+                              set name = @name,paymentMethodId = @paymentMethodId, price = @price, status = @status, isActice = @Active, Includetax = @includetax, Notes = @notes where RentalinsuranceId = @id";
             try
             {
                 using (SqlConnection connection = new SqlConnection(conn))
@@ -86,26 +88,38 @@ namespace CarRentalDataAccess
 
         public static bool DeleteRentalInsuracne(int rentalInsuracneId)
         {
-            string query = @"Delete from RentalInsurances where RentalinsuranceId = @rentalInsuracneId";
+            
 
-            using(SqlConnection connection = new SqlConnection(conn))
-             using(SqlCommand command = new SqlCommand(query, connection))
+            try
             {
-                command.Parameters.AddWithValue("@rentalInsuracneId", rentalInsuracneId);
-                connection.Open();
-                command.ExecuteNonQuery();
+                string query = @"Delete from RentalInsurances where RentalinsuranceId = @rentalInsuracneId";
 
-                int rows = command.ExecuteNonQuery();
+                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@rentalInsuracneId", rentalInsuracneId);
+                    connection.Open();
 
-                return rows > 0;
+                    int rows = command.ExecuteNonQuery();
+
+                    return rows > 0;
+                }
+            }
+
+            catch
+            {
+                return false;
             }
         }
 
 
+       
+
+
         public static DataTable GetAllRentalInsuracne()
         {
-            string query = @"select ri.id, ri.name, ri.price, ri.status, ri.active, ri.includetax, ri.notes, pm.MethodName
-                            from RentalInsurances ri join PaymentMethod pm on ri.PaymentMethodId = pm.Id";
+            string query = @"select ri.RentalinsuranceId, ri.name, ri.price, ri.status, ri.isActice, ri.includetax, ri.notes, pm.MethodName
+                            from RentalInsurances ri join PaymentMethods pm on ri.PaymentMethodId = pm.Id";
 
             try
             {
@@ -153,6 +167,28 @@ namespace CarRentalDataAccess
                 }
             }
             return false;
+        }
+
+
+        public static DataTable GetAllRentalInsurance()
+        {
+            string query = @"select ri.* pm.MethodName from RentalInsurances ri
+                              join PaymentMethods pm on ri.PaymentMethodId = pm.Id";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(conn))
+                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(command))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

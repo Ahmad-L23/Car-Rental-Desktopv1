@@ -233,6 +233,7 @@ namespace CarRentalSystem.Agreement
 
             if (_Agreement.TaxRate > 0)
             {
+
                 lblShowFinalTotala.Text = _Agreement.TotalIncludetax.ToString();
                 txtEntryPrice.Text = _Agreement.TotalIncludetax?.ToString();
             }
@@ -267,7 +268,8 @@ namespace CarRentalSystem.Agreement
                 txtMovedDistance.Text = _Agreement.ConsumedMileage.ToString();
             }
 
-           
+
+            lblDisountShow.Text= _Agreement.Discount.ToString();
 
             //RefreshAll();
         }
@@ -527,8 +529,8 @@ namespace CarRentalSystem.Agreement
             else
                 taxRate = nuTaxrate.Value;
 
-
-            decimal taxAmount = basePrice * (taxRate / 100);
+            decimal TotalPrice = basePrice + additions;
+            decimal taxAmount = TotalPrice * (taxRate / 100);
 
             decimal totalIncludingTax = basePrice + taxAmount + additions;
             lbltotalAmountIncTax.Text = totalIncludingTax.ToString("F2");
@@ -947,8 +949,18 @@ namespace CarRentalSystem.Agreement
             else
                 _Agreement.Mileage = null;
 
-            // ExitFuel (string), nullable, trim whitespace and check empty
-            _Agreement.ExitFuel = string.IsNullOrWhiteSpace(txtExitFuel.Text) ? null : txtExitFuel.Text.Trim();
+            if(decimal.TryParse(txtDiscount.Text, out decimal Discount) && Discount>0)
+            {
+                _Agreement.Discount = Discount;
+            }
+            else
+            {
+                _Agreement.Discount = null;
+            }
+
+
+                // ExitFuel (string), nullable, trim whitespace and check empty
+                _Agreement.ExitFuel = string.IsNullOrWhiteSpace(txtExitFuel.Text) ? null : txtExitFuel.Text.Trim();
 
             // SerialNumber (int, non-nullable)
             _Agreement.SerialNumber = GetLastSerialNumber();
@@ -972,7 +984,7 @@ namespace CarRentalSystem.Agreement
             {
                 MessageBox.Show("Saved successfully!");
                 DialogResult = DialogResult.OK;
-                Close();
+                
             }
             else
             {
@@ -1056,10 +1068,14 @@ namespace CarRentalSystem.Agreement
             }//txtTotalPrice    lblTotalAmountOfAdditions
 
 
-            lblPaidAmount.Text = nuPaidAmount.Value.ToString();
+            lblPaidAmountA.Text = nuPaidAmount.Value.ToString();
 
+            decimal Discount = 0;
+            
+            if(decimal.TryParse(txtDiscount.Text, out Discount))
+            
 
-            lblDueBalance.Text = (Convert.ToDecimal(lblFinalPrice.Text) - nuPaidAmount.Value).ToString();
+            lblDueBalance.Text = (Convert.ToDecimal(lblFinalPrice.Text) - nuPaidAmount.Value - Discount).ToString();
 
         }
 
@@ -1177,7 +1193,7 @@ namespace CarRentalSystem.Agreement
         decimal PriceOfAdditaonalDistance = 0;
         void UpdateSideSectionUpdateMode()
         {
-            int latedays = (dpEntryDate.Value.Date - dpDelvring.Value.Date).Days;
+            int latedays = (dpEntryDate.Value.Date - _Agreement.EndDate.Date).Days;
             decimal lateFee = 0;
 
             if (_Agreement.RentalPenaltyPerDay > 0)
@@ -1206,9 +1222,11 @@ namespace CarRentalSystem.Agreement
                 MovedDistance = MovedDistance > 0 ? MovedDistance : 0;
                 txtMovedDistance.Text = MovedDistance.ToString();
 
+
+                int AdditonalDistance = (int)(MovedDistance - _Agreement?.PermittedDailyKilometers?? 0);
+                txtAdditionalDistance.Text = AdditonalDistance.ToString();
                 if (MovedDistance > _Agreement.PermittedDailyKilometers)
                 {
-                    int AdditonalDistance = (int)(MovedDistance - _Agreement.PermittedDailyKilometers);
                     PriceOfAdditaonalDistance = (decimal)(AdditonalDistance * _Agreement.AdditionalKilometerPrice);
                     lblShowAddionalKiloPrice.Text = PriceOfAdditaonalDistance.ToString();
                 }
@@ -1225,11 +1243,20 @@ namespace CarRentalSystem.Agreement
             }
 
             // Final price (base + late + additional KM)
-            decimal FinalPrice = basePrice + lateFee + PriceOfAdditaonalDistance;
+            decimal FinalPrice = (decimal)(_Agreement.TotalAmountBeforeTax + lateFee + PriceOfAdditaonalDistance);
+            decimal AddTax = 0;               
+            if(_Agreement.TaxRate>0)
+            {
+                AddTax = FinalPrice * (100 / _Agreement.TaxRate);
+            }
+            FinalPrice += AddTax;
 
             lblShowFinalTotala.Text = FinalPrice.ToString();
-            lblShowDueBalanceUpdate.Text = (FinalPrice - _Agreement.InitialPaidAmount).ToString();
+            if(_Agreement.Discount.HasValue)
+             lblShowDueBalanceUpdate.Text = (FinalPrice - _Agreement.InitialPaidAmount - _Agreement?.Discount ?? 0).ToString();
 
+            else
+                lblShowDueBalanceUpdate.Text = (FinalPrice - _Agreement.InitialPaidAmount).ToString();
 
         }
 
@@ -1302,6 +1329,17 @@ namespace CarRentalSystem.Agreement
             UpdateMode(AgreementId);
             UpdateSideSectionUpdateMode();
 
+        }
+
+        private void label103_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+            RefreshAll();
+            
         }
     }
 }

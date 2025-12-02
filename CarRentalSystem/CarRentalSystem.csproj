@@ -395,11 +395,23 @@
     <Compile Include="RentalAddition\frmListRentalAdditions.Designer.cs">
       <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
     </Compile>
-    <Compile Include="RentalInsurance\frmAddUpdateRentalInsurance.cs">
+    <Compile Include="RentalInsurance\frmAddUpdateRentalInsuranc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RentalInsurance\frmAddUpdateRentalInsurance.Designer.cs">
-      <DependentUpon>frmAddUpdateRentalInsurance.cs</DependentUpon>
+    <Compile Include="RentalInsurance\frmAddUpdateRentalInsuranc.Designer.cs">
+      <DependentUpon>frmAddUpdateRentalInsuranc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalInsurance\frmListRentalInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalInsurance\frmListRentalInsurance.Designer.cs">
+      <DependentUpon>frmListRentalInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalInsurance\ListRentalInsuranceCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RentalInsurance\ListRentalInsuranceCtrl.Designer.cs">
+      <DependentUpon>ListRentalInsuranceCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="RequiredInsurance\frmAddUpdateRequiredInsurance.cs">
       <SubType>Form</SubType>
@@ -662,8 +674,14 @@
     <EmbeddedResource Include="RentalAddition\frmListRentalAdditions.resx">
       <DependentUpon>frmListRentalAdditions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RentalInsurance\frmAddUpdateRentalInsurance.resx">
-      <DependentUpon>frmAddUpdateRentalInsurance.cs</DependentUpon>
+    <EmbeddedResource Include="RentalInsurance\frmAddUpdateRentalInsuranc.resx">
+      <DependentUpon>frmAddUpdateRentalInsuranc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalInsurance\frmListRentalInsurance.resx">
+      <DependentUpon>frmListRentalInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalInsurance\ListRentalInsuranceCtrl.resx">
+      <DependentUpon>ListRentalInsuranceCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Role\frmAddEditRole.resx">
       <DependentUpon>frmAddEditRole.cs</DependentUpon>

@@ -58,7 +58,7 @@
             this.lblKiloPrice = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.lblDu = new System.Windows.Forms.Label();
-            this.lblPaidAmount = new System.Windows.Forms.Label();
+            this.lblPaidAmountA = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.lblFinalPrice = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -155,12 +155,13 @@
             this.txtDiffrencesDays = new System.Windows.Forms.TextBox();
             this.cbAgreement = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblOtherAdditionsShow = new System.Windows.Forms.Label();
+            this.lblAdditionalInsurance = new System.Windows.Forms.Label();
+            this.lblShowRequiredInsurance = new System.Windows.Forms.Label();
             this.lblShowLateFee = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
             this.lblShowAddionalKiloPrice = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
-            this.lblAdditionalInsurance = new System.Windows.Forms.Label();
-            this.lblShowRequiredInsurance = new System.Windows.Forms.Label();
             this.lblShowDueBalanceUpdate = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.lblShowPaidAmount = new System.Windows.Forms.Label();
@@ -174,7 +175,6 @@
             this.lblSubTotalShow = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
-            this.lblOtherAdditionsShow = new System.Windows.Forms.Label();
             this.label118 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.label120 = new System.Windows.Forms.Label();
@@ -287,6 +287,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabAgreement = new System.Windows.Forms.TabControl();
+            this.label103 = new System.Windows.Forms.Label();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.txtAdditionalDistance = new System.Windows.Forms.TextBox();
+            this.lblDisountShow = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -576,23 +584,23 @@
             this.lblDu.TabIndex = 25;
             this.lblDu.Text = "Due Balance";
             // 
-            // lblPaidAmount
+            // lblPaidAmountA
             // 
-            this.lblPaidAmount.AutoSize = true;
-            this.lblPaidAmount.Location = new System.Drawing.Point(322, 605);
-            this.lblPaidAmount.Name = "lblPaidAmount";
-            this.lblPaidAmount.Size = new System.Drawing.Size(31, 13);
-            this.lblPaidAmount.TabIndex = 24;
-            this.lblPaidAmount.Text = "Price";
+            this.lblPaidAmountA.AutoSize = true;
+            this.lblPaidAmountA.Location = new System.Drawing.Point(322, 596);
+            this.lblPaidAmountA.Name = "lblPaidAmountA";
+            this.lblPaidAmountA.Size = new System.Drawing.Size(31, 13);
+            this.lblPaidAmountA.TabIndex = 24;
+            this.lblPaidAmountA.Text = "Price";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(13, 605);
+            this.label52.Location = new System.Drawing.Point(13, 616);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(66, 13);
+            this.label52.Size = new System.Drawing.Size(49, 13);
             this.label52.TabIndex = 23;
-            this.label52.Text = "Paid for now";
+            this.label52.Text = "Discount";
             // 
             // lblFinalPrice
             // 
@@ -1360,6 +1368,8 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.label104);
+            this.panel11.Controls.Add(this.txtAdditionalDistance);
             this.panel11.Controls.Add(this.cbCarEntryFuel);
             this.panel11.Controls.Add(this.dpEntryDate);
             this.panel11.Controls.Add(this.label102);
@@ -1380,7 +1390,7 @@
             this.panel11.Controls.Add(this.txtDiffrencesDays);
             this.panel11.Location = new System.Drawing.Point(838, 279);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(415, 254);
+            this.panel11.Size = new System.Drawing.Size(432, 263);
             this.panel11.TabIndex = 53;
             // 
             // cbCarEntryFuel
@@ -1562,6 +1572,8 @@
             this.panel10.AutoScroll = true;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel10.Controls.Add(this.lblDisountShow);
+            this.panel10.Controls.Add(this.label111);
             this.panel10.Controls.Add(this.lblOtherAdditionsShow);
             this.panel10.Controls.Add(this.lblAdditionalInsurance);
             this.panel10.Controls.Add(this.lblShowRequiredInsurance);
@@ -1600,6 +1612,33 @@
             this.panel10.Size = new System.Drawing.Size(467, 695);
             this.panel10.TabIndex = 51;
             // 
+            // lblOtherAdditionsShow
+            // 
+            this.lblOtherAdditionsShow.AutoSize = true;
+            this.lblOtherAdditionsShow.Location = new System.Drawing.Point(9, 353);
+            this.lblOtherAdditionsShow.Name = "lblOtherAdditionsShow";
+            this.lblOtherAdditionsShow.Size = new System.Drawing.Size(50, 13);
+            this.lblOtherAdditionsShow.TabIndex = 13;
+            this.lblOtherAdditionsShow.Text = "Additions";
+            // 
+            // lblAdditionalInsurance
+            // 
+            this.lblAdditionalInsurance.AutoSize = true;
+            this.lblAdditionalInsurance.Location = new System.Drawing.Point(281, 277);
+            this.lblAdditionalInsurance.Name = "lblAdditionalInsurance";
+            this.lblAdditionalInsurance.Size = new System.Drawing.Size(105, 13);
+            this.lblAdditionalInsurance.TabIndex = 28;
+            this.lblAdditionalInsurance.Text = "AdditionalInsurances";
+            // 
+            // lblShowRequiredInsurance
+            // 
+            this.lblShowRequiredInsurance.AutoSize = true;
+            this.lblShowRequiredInsurance.Location = new System.Drawing.Point(281, 251);
+            this.lblShowRequiredInsurance.Name = "lblShowRequiredInsurance";
+            this.lblShowRequiredInsurance.Size = new System.Drawing.Size(102, 13);
+            this.lblShowRequiredInsurance.TabIndex = 27;
+            this.lblShowRequiredInsurance.Text = "RequiredInsurances";
+            // 
             // lblShowLateFee
             // 
             this.lblShowLateFee.AutoSize = true;
@@ -1636,24 +1675,6 @@
             this.label101.TabIndex = 29;
             this.label101.Text = "Price Of Additional kilo Meters";
             // 
-            // lblAdditionalInsurance
-            // 
-            this.lblAdditionalInsurance.AutoSize = true;
-            this.lblAdditionalInsurance.Location = new System.Drawing.Point(281, 277);
-            this.lblAdditionalInsurance.Name = "lblAdditionalInsurance";
-            this.lblAdditionalInsurance.Size = new System.Drawing.Size(105, 13);
-            this.lblAdditionalInsurance.TabIndex = 28;
-            this.lblAdditionalInsurance.Text = "AdditionalInsurances";
-            // 
-            // lblShowRequiredInsurance
-            // 
-            this.lblShowRequiredInsurance.AutoSize = true;
-            this.lblShowRequiredInsurance.Location = new System.Drawing.Point(281, 251);
-            this.lblShowRequiredInsurance.Name = "lblShowRequiredInsurance";
-            this.lblShowRequiredInsurance.Size = new System.Drawing.Size(102, 13);
-            this.lblShowRequiredInsurance.TabIndex = 27;
-            this.lblShowRequiredInsurance.Text = "RequiredInsurances";
-            // 
             // lblShowDueBalanceUpdate
             // 
             this.lblShowDueBalanceUpdate.AutoSize = true;
@@ -1676,7 +1697,7 @@
             // lblShowPaidAmount
             // 
             this.lblShowPaidAmount.AutoSize = true;
-            this.lblShowPaidAmount.Location = new System.Drawing.Point(322, 605);
+            this.lblShowPaidAmount.Location = new System.Drawing.Point(323, 616);
             this.lblShowPaidAmount.Name = "lblShowPaidAmount";
             this.lblShowPaidAmount.Size = new System.Drawing.Size(31, 13);
             this.lblShowPaidAmount.TabIndex = 24;
@@ -1685,7 +1706,7 @@
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(13, 605);
+            this.label107.Location = new System.Drawing.Point(14, 616);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(66, 13);
             this.label107.TabIndex = 23;
@@ -1780,15 +1801,6 @@
             this.label116.TabIndex = 14;
             this.label116.Text = "---------------------------------------------------------------------------------" +
     "---------------------------------------------------------------------";
-            // 
-            // lblOtherAdditionsShow
-            // 
-            this.lblOtherAdditionsShow.AutoSize = true;
-            this.lblOtherAdditionsShow.Location = new System.Drawing.Point(9, 353);
-            this.lblOtherAdditionsShow.Name = "lblOtherAdditionsShow";
-            this.lblOtherAdditionsShow.Size = new System.Drawing.Size(50, 13);
-            this.lblOtherAdditionsShow.TabIndex = 13;
-            this.lblOtherAdditionsShow.Text = "Additions";
             // 
             // label118
             // 
@@ -2769,6 +2781,8 @@
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.White;
+            this.groupBox8.Controls.Add(this.txtDiscount);
+            this.groupBox8.Controls.Add(this.label103);
             this.groupBox8.Controls.Add(this.label36);
             this.groupBox8.Controls.Add(this.dpPaymentDate);
             this.groupBox8.Controls.Add(this.cbPaymentMethod);
@@ -2778,7 +2792,7 @@
             this.groupBox8.Controls.Add(this.label33);
             this.groupBox8.Location = new System.Drawing.Point(827, 110);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(326, 181);
+            this.groupBox8.Size = new System.Drawing.Size(326, 254);
             this.groupBox8.TabIndex = 44;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Payment and Financial authorization";
@@ -2816,6 +2830,8 @@
             this.panel5.AutoScroll = true;
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.lblDiscount);
+            this.panel5.Controls.Add(this.label106);
             this.panel5.Controls.Add(this.lblFeePrice);
             this.panel5.Controls.Add(this.laable50);
             this.panel5.Controls.Add(this.lblKiloPrice);
@@ -2824,7 +2840,7 @@
             this.panel5.Controls.Add(this.lblRequired);
             this.panel5.Controls.Add(this.lblDueBalance);
             this.panel5.Controls.Add(this.lblDu);
-            this.panel5.Controls.Add(this.lblPaidAmount);
+            this.panel5.Controls.Add(this.lblPaidAmountA);
             this.panel5.Controls.Add(this.label52);
             this.panel5.Controls.Add(this.lblFinalPrice);
             this.panel5.Controls.Add(this.label51);
@@ -2985,6 +3001,77 @@
             this.tabAgreement.Size = new System.Drawing.Size(1924, 1061);
             this.tabAgreement.TabIndex = 1;
             // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(19, 180);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(49, 13);
+            this.label103.TabIndex = 47;
+            this.label103.Text = "Discount";
+            this.label103.Click += new System.EventHandler(this.label103_Click);
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Location = new System.Drawing.Point(112, 177);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(186, 20);
+            this.txtDiscount.TabIndex = 13;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Location = new System.Drawing.Point(322, 621);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(31, 13);
+            this.lblDiscount.TabIndex = 34;
+            this.lblDiscount.Text = "Price";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(13, 592);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(66, 13);
+            this.label106.TabIndex = 33;
+            this.label106.Text = "Paid for now";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(265, 187);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(83, 13);
+            this.label104.TabIndex = 57;
+            this.label104.Text = "Moved distence";
+            // 
+            // txtAdditionalDistance
+            // 
+            this.txtAdditionalDistance.Enabled = false;
+            this.txtAdditionalDistance.Location = new System.Drawing.Point(268, 213);
+            this.txtAdditionalDistance.Name = "txtAdditionalDistance";
+            this.txtAdditionalDistance.Size = new System.Drawing.Size(125, 20);
+            this.txtAdditionalDistance.TabIndex = 56;
+            // 
+            // lblDisountShow
+            // 
+            this.lblDisountShow.AutoSize = true;
+            this.lblDisountShow.Location = new System.Drawing.Point(322, 590);
+            this.lblDisountShow.Name = "lblDisountShow";
+            this.lblDisountShow.Size = new System.Drawing.Size(31, 13);
+            this.lblDisountShow.TabIndex = 34;
+            this.lblDisountShow.Text = "Price";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(13, 590);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(49, 13);
+            this.label111.TabIndex = 33;
+            this.label111.Text = "Discount";
+            // 
             // frmAddUpdatAgreement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3076,7 +3163,7 @@
         private System.Windows.Forms.Label lblKiloPrice;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label lblDu;
-        private System.Windows.Forms.Label lblPaidAmount;
+        private System.Windows.Forms.Label lblPaidAmountA;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label lblFinalPrice;
         private System.Windows.Forms.Label label51;
@@ -3305,5 +3392,13 @@
         private System.Windows.Forms.Button btnConfirmUpdates;
         private System.Windows.Forms.ComboBox cbCarEntryFuel;
         private System.Windows.Forms.ComboBox cbAgree;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.TextBox txtAdditionalDistance;
+        private System.Windows.Forms.Label lblDisountShow;
+        private System.Windows.Forms.Label label111;
     }
 }
