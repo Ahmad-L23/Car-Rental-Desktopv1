@@ -135,6 +135,8 @@
             this.cbAgree = new System.Windows.Forms.ComboBox();
             this.btnConfirmUpdates = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label104 = new System.Windows.Forms.Label();
+            this.txtAdditionalDistance = new System.Windows.Forms.TextBox();
             this.cbCarEntryFuel = new System.Windows.Forms.ComboBox();
             this.dpEntryDate = new System.Windows.Forms.DateTimePicker();
             this.label102 = new System.Windows.Forms.Label();
@@ -155,6 +157,8 @@
             this.txtDiffrencesDays = new System.Windows.Forms.TextBox();
             this.cbAgreement = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblDisountShow = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
             this.lblOtherAdditionsShow = new System.Windows.Forms.Label();
             this.lblAdditionalInsurance = new System.Windows.Forms.Label();
             this.lblShowRequiredInsurance = new System.Windows.Forms.Label();
@@ -188,93 +192,18 @@
             this.label128 = new System.Windows.Forms.Label();
             this.lblShowRentalDays = new System.Windows.Forms.Label();
             this.label130 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtpaymentMethod = new System.Windows.Forms.TextBox();
-            this.label94 = new System.Windows.Forms.Label();
-            this.dpPaymentDelv = new System.Windows.Forms.DateTimePicker();
-            this.label95 = new System.Windows.Forms.Label();
-            this.nuPaidAmountDelv = new System.Windows.Forms.NumericUpDown();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label69 = new System.Windows.Forms.Label();
-            this.clbRequiredInsuranceDelv = new System.Windows.Forms.CheckedListBox();
-            this.lblOtherAdditionsDelv = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.clbAddtionInsuranceDelv = new System.Windows.Forms.CheckedListBox();
-            this.lblAdditionInsuranDelv = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.clbOtherAdditionDelv = new System.Windows.Forms.CheckedListBox();
-            this.lblRequiredInsuDelv = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.lblTotalInsuranceAdditionsDelv = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblPriceinctaxDelv = new System.Windows.Forms.Label();
-            this.chTaxDelv = new System.Windows.Forms.CheckBox();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.nuTaxDelv = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.chKmdelv = new System.Windows.Forms.CheckBox();
-            this.nuAdditonalKiloPriceDelv = new System.Windows.Forms.NumericUpDown();
-            this.nuPermikilDelv = new System.Windows.Forms.NumericUpDown();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.txtDropDelv = new System.Windows.Forms.TextBox();
-            this.txtPicupDelv = new System.Windows.Forms.TextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.txtToPrice = new System.Windows.Forms.TextBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.txtPentaly = new System.Windows.Forms.TextBox();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.txtAggPrice = new System.Windows.Forms.TextBox();
-            this.label90 = new System.Windows.Forms.Label();
-            this.dpReci = new System.Windows.Forms.DateTimePicker();
-            this.label91 = new System.Windows.Forms.Label();
-            this.txtDaye = new System.Windows.Forms.TextBox();
-            this.label92 = new System.Windows.Forms.Label();
-            this.dpDelvring = new System.Windows.Forms.DateTimePicker();
-            this.label93 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txtFuel = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.txtplateNumber = new System.Windows.Forms.TextBox();
-            this.txtCurrCounter = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.txtCName = new System.Windows.Forms.TextBox();
-            this.txtCarYear = new System.Windows.Forms.TextBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.txtCaCategory = new System.Windows.Forms.TextBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.txtCustomerIdentity = new System.Windows.Forms.TextBox();
-            this.txtPhoneNubmer = new System.Windows.Forms.TextBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
             this.nuPremmitedMeters = new System.Windows.Forms.NumericUpDown();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnConfirmAgreement = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.dpPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
             this.lblBasePrice = new System.Windows.Forms.Label();
             this.lblCarName = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -287,14 +216,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabAgreement = new System.Windows.Forms.TabControl();
-            this.label103 = new System.Windows.Forms.Label();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label104 = new System.Windows.Forms.Label();
-            this.txtAdditionalDistance = new System.Windows.Forms.TextBox();
-            this.lblDisountShow = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -306,17 +227,6 @@
             this.tabPage2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPaidAmountDelv)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuTaxDelv)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuAdditonalKiloPriceDelv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPermikilDelv)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPremmitedMeters)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -551,7 +461,7 @@
             // cbDropOfbranch
             // 
             this.cbDropOfbranch.FormattingEnabled = true;
-            this.cbDropOfbranch.Location = new System.Drawing.Point(195, 95);
+            this.cbDropOfbranch.Location = new System.Drawing.Point(205, 95);
             this.cbDropOfbranch.Name = "cbDropOfbranch";
             this.cbDropOfbranch.Size = new System.Drawing.Size(178, 21);
             this.cbDropOfbranch.TabIndex = 3;
@@ -682,7 +592,7 @@
             // txtTotalPrice
             // 
             this.txtTotalPrice.Enabled = false;
-            this.txtTotalPrice.Location = new System.Drawing.Point(563, 165);
+            this.txtTotalPrice.Location = new System.Drawing.Point(607, 165);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.Size = new System.Drawing.Size(178, 20);
@@ -692,7 +602,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(560, 142);
+            this.label21.Location = new System.Drawing.Point(604, 142);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 13);
             this.label21.TabIndex = 16;
@@ -700,16 +610,17 @@
             // 
             // txtLatePenalty
             // 
-            this.txtLatePenalty.Location = new System.Drawing.Point(379, 165);
+            this.txtLatePenalty.Location = new System.Drawing.Point(401, 162);
             this.txtLatePenalty.Name = "txtLatePenalty";
             this.txtLatePenalty.Size = new System.Drawing.Size(178, 20);
             this.txtLatePenalty.TabIndex = 9;
             this.txtLatePenalty.TextChanged += new System.EventHandler(this.txtLatePenalty_TextChanged_1);
+            this.txtLatePenalty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLatePenalty_KeyPress_1);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(376, 142);
+            this.label20.Location = new System.Drawing.Point(398, 139);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(103, 13);
             this.label20.TabIndex = 14;
@@ -727,7 +638,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(198, 72);
+            this.label16.Location = new System.Drawing.Point(208, 72);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(81, 13);
             this.label16.TabIndex = 2;
@@ -735,16 +646,17 @@
             // 
             // txtAgreedPrice
             // 
-            this.txtAgreedPrice.Location = new System.Drawing.Point(194, 165);
+            this.txtAgreedPrice.Location = new System.Drawing.Point(205, 162);
             this.txtAgreedPrice.Name = "txtAgreedPrice";
             this.txtAgreedPrice.Size = new System.Drawing.Size(178, 20);
             this.txtAgreedPrice.TabIndex = 8;
             this.txtAgreedPrice.TextChanged += new System.EventHandler(this.txtAgreedPrice_TextChanged_2);
+            this.txtAgreedPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgreedPrice_KeyPress_1);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(192, 142);
+            this.label19.Location = new System.Drawing.Point(203, 139);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 13);
             this.label19.TabIndex = 12;
@@ -753,7 +665,7 @@
             // dpRecivingDate
             // 
             this.dpRecivingDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpRecivingDate.Location = new System.Drawing.Point(379, 96);
+            this.dpRecivingDate.Location = new System.Drawing.Point(401, 96);
             this.dpRecivingDate.MinDate = new System.DateTime(2025, 11, 25, 0, 0, 0, 0);
             this.dpRecivingDate.Name = "dpRecivingDate";
             this.dpRecivingDate.Size = new System.Drawing.Size(178, 20);
@@ -763,7 +675,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(376, 73);
+            this.label15.Location = new System.Drawing.Point(398, 73);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(75, 13);
             this.label15.TabIndex = 6;
@@ -772,7 +684,7 @@
             // txtRentalDays
             // 
             this.txtRentalDays.Enabled = false;
-            this.txtRentalDays.Location = new System.Drawing.Point(8, 165);
+            this.txtRentalDays.Location = new System.Drawing.Point(10, 165);
             this.txtRentalDays.Name = "txtRentalDays";
             this.txtRentalDays.Size = new System.Drawing.Size(178, 20);
             this.txtRentalDays.TabIndex = 7;
@@ -780,7 +692,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 142);
+            this.label18.Location = new System.Drawing.Point(14, 142);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(110, 13);
             this.label18.TabIndex = 10;
@@ -789,7 +701,7 @@
             // dpDelveringDate
             // 
             this.dpDelveringDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpDelveringDate.Location = new System.Drawing.Point(563, 96);
+            this.dpDelveringDate.Location = new System.Drawing.Point(606, 96);
             this.dpDelveringDate.Name = "dpDelveringDate";
             this.dpDelveringDate.Size = new System.Drawing.Size(178, 20);
             this.dpDelveringDate.TabIndex = 6;
@@ -798,7 +710,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(560, 72);
+            this.label17.Location = new System.Drawing.Point(603, 72);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(72, 13);
             this.label17.TabIndex = 8;
@@ -1326,17 +1238,10 @@
             this.tabPage2.Controls.Add(this.panel11);
             this.tabPage2.Controls.Add(this.cbAgreement);
             this.tabPage2.Controls.Add(this.panel10);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.panel8);
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.panel9);
-            this.tabPage2.Controls.Add(this.panel6);
-            this.tabPage2.Controls.Add(this.panel7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1916, 1035);
+            this.tabPage2.Size = new System.Drawing.Size(933, 810);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Edit Agreement";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1345,7 +1250,7 @@
             // cbAgree
             // 
             this.cbAgree.FormattingEnabled = true;
-            this.cbAgree.Location = new System.Drawing.Point(1276, 42);
+            this.cbAgree.Location = new System.Drawing.Point(455, 9);
             this.cbAgree.Name = "cbAgree";
             this.cbAgree.Size = new System.Drawing.Size(182, 21);
             this.cbAgree.TabIndex = 55;
@@ -1357,7 +1262,7 @@
             this.btnConfirmUpdates.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnConfirmUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmUpdates.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmUpdates.Location = new System.Drawing.Point(1418, 792);
+            this.btnConfirmUpdates.Location = new System.Drawing.Point(582, 759);
             this.btnConfirmUpdates.Name = "btnConfirmUpdates";
             this.btnConfirmUpdates.Size = new System.Drawing.Size(183, 43);
             this.btnConfirmUpdates.TabIndex = 54;
@@ -1368,6 +1273,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.label104);
             this.panel11.Controls.Add(this.txtAdditionalDistance);
             this.panel11.Controls.Add(this.cbCarEntryFuel);
@@ -1388,10 +1294,27 @@
             this.panel11.Controls.Add(this.label68);
             this.panel11.Controls.Add(this.label61);
             this.panel11.Controls.Add(this.txtDiffrencesDays);
-            this.panel11.Location = new System.Drawing.Point(838, 279);
+            this.panel11.Location = new System.Drawing.Point(6, 9);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(432, 263);
             this.panel11.TabIndex = 53;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(265, 187);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(92, 13);
+            this.label104.TabIndex = 57;
+            this.label104.Text = "Additinal Distance";
+            // 
+            // txtAdditionalDistance
+            // 
+            this.txtAdditionalDistance.Enabled = false;
+            this.txtAdditionalDistance.Location = new System.Drawing.Point(268, 213);
+            this.txtAdditionalDistance.Name = "txtAdditionalDistance";
+            this.txtAdditionalDistance.Size = new System.Drawing.Size(125, 20);
+            this.txtAdditionalDistance.TabIndex = 56;
             // 
             // cbCarEntryFuel
             // 
@@ -1532,10 +1455,10 @@
             this.label68.AutoSize = true;
             this.label68.Location = new System.Drawing.Point(3, 34);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(370, 13);
+            this.label68.Size = new System.Drawing.Size(424, 13);
             this.label68.TabIndex = 13;
             this.label68.Text = "---------------------------------------------------------------------------------" +
-    "----------------------------------------\r\n";
+    "----------------------------------------------------------\r\n";
             // 
             // label61
             // 
@@ -1558,7 +1481,7 @@
             // cbAgreement
             // 
             this.cbAgreement.FormattingEnabled = true;
-            this.cbAgreement.Location = new System.Drawing.Point(1518, 42);
+            this.cbAgreement.Location = new System.Drawing.Point(697, 4);
             this.cbAgreement.Name = "cbAgreement";
             this.cbAgreement.Size = new System.Drawing.Size(166, 21);
             this.cbAgreement.TabIndex = 52;
@@ -1567,8 +1490,6 @@
             // 
             // panel10
             // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.AutoScroll = true;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1607,10 +1528,28 @@
             this.panel10.Controls.Add(this.label128);
             this.panel10.Controls.Add(this.lblShowRentalDays);
             this.panel10.Controls.Add(this.label130);
-            this.panel10.Location = new System.Drawing.Point(1276, 81);
+            this.panel10.Location = new System.Drawing.Point(455, 43);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(467, 695);
+            this.panel10.Size = new System.Drawing.Size(470, 695);
             this.panel10.TabIndex = 51;
+            // 
+            // lblDisountShow
+            // 
+            this.lblDisountShow.AutoSize = true;
+            this.lblDisountShow.Location = new System.Drawing.Point(322, 590);
+            this.lblDisountShow.Name = "lblDisountShow";
+            this.lblDisountShow.Size = new System.Drawing.Size(31, 13);
+            this.lblDisountShow.TabIndex = 34;
+            this.lblDisountShow.Text = "Price";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(13, 590);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(49, 13);
+            this.label111.TabIndex = 33;
+            this.label111.Text = "Discount";
             // 
             // lblOtherAdditionsShow
             // 
@@ -1932,802 +1871,6 @@
             this.label130.TabIndex = 0;
             this.label130.Text = "Rental Duration:";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.txtpaymentMethod);
-            this.groupBox3.Controls.Add(this.label94);
-            this.groupBox3.Controls.Add(this.dpPaymentDelv);
-            this.groupBox3.Controls.Add(this.label95);
-            this.groupBox3.Controls.Add(this.nuPaidAmountDelv);
-            this.groupBox3.Controls.Add(this.label96);
-            this.groupBox3.Controls.Add(this.label97);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(838, 81);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 181);
-            this.groupBox3.TabIndex = 50;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Payment and Financial authorization";
-            // 
-            // txtpaymentMethod
-            // 
-            this.txtpaymentMethod.Enabled = false;
-            this.txtpaymentMethod.Location = new System.Drawing.Point(112, 104);
-            this.txtpaymentMethod.Name = "txtpaymentMethod";
-            this.txtpaymentMethod.Size = new System.Drawing.Size(186, 20);
-            this.txtpaymentMethod.TabIndex = 13;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(19, 141);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(74, 13);
-            this.label94.TabIndex = 22;
-            this.label94.Text = "Payment Date";
-            // 
-            // dpPaymentDelv
-            // 
-            this.dpPaymentDelv.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpPaymentDelv.Location = new System.Drawing.Point(112, 135);
-            this.dpPaymentDelv.Name = "dpPaymentDelv";
-            this.dpPaymentDelv.Size = new System.Drawing.Size(186, 20);
-            this.dpPaymentDelv.TabIndex = 21;
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(19, 105);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(87, 13);
-            this.label95.TabIndex = 19;
-            this.label95.Text = "Payment Method";
-            // 
-            // nuPaidAmountDelv
-            // 
-            this.nuPaidAmountDelv.Location = new System.Drawing.Point(112, 75);
-            this.nuPaidAmountDelv.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.nuPaidAmountDelv.Name = "nuPaidAmountDelv";
-            this.nuPaidAmountDelv.Size = new System.Drawing.Size(186, 20);
-            this.nuPaidAmountDelv.TabIndex = 19;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(19, 77);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(67, 13);
-            this.label96.TabIndex = 1;
-            this.label96.Text = "Paid Amount";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.Location = new System.Drawing.Point(18, 25);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(183, 16);
-            this.label97.TabIndex = 0;
-            this.label97.Text = "Insurance/ Initial payment";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label69);
-            this.panel8.Controls.Add(this.clbRequiredInsuranceDelv);
-            this.panel8.Controls.Add(this.lblOtherAdditionsDelv);
-            this.panel8.Controls.Add(this.label71);
-            this.panel8.Controls.Add(this.clbAddtionInsuranceDelv);
-            this.panel8.Controls.Add(this.lblAdditionInsuranDelv);
-            this.panel8.Controls.Add(this.label73);
-            this.panel8.Controls.Add(this.clbOtherAdditionDelv);
-            this.panel8.Controls.Add(this.lblRequiredInsuDelv);
-            this.panel8.Controls.Add(this.label75);
-            this.panel8.Controls.Add(this.label76);
-            this.panel8.Controls.Add(this.lblTotalInsuranceAdditionsDelv);
-            this.panel8.Location = new System.Drawing.Point(12, 657);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(431, 333);
-            this.panel8.TabIndex = 49;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(12, 15);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(196, 18);
-            this.label69.TabIndex = 21;
-            this.label69.Text = "Insurances and Additions";
-            // 
-            // clbRequiredInsuranceDelv
-            // 
-            this.clbRequiredInsuranceDelv.CheckOnClick = true;
-            this.clbRequiredInsuranceDelv.FormattingEnabled = true;
-            this.clbRequiredInsuranceDelv.HorizontalScrollbar = true;
-            this.clbRequiredInsuranceDelv.Location = new System.Drawing.Point(10, 70);
-            this.clbRequiredInsuranceDelv.Name = "clbRequiredInsuranceDelv";
-            this.clbRequiredInsuranceDelv.Size = new System.Drawing.Size(133, 199);
-            this.clbRequiredInsuranceDelv.TabIndex = 11;
-            // 
-            // lblOtherAdditionsDelv
-            // 
-            this.lblOtherAdditionsDelv.AutoSize = true;
-            this.lblOtherAdditionsDelv.Location = new System.Drawing.Point(331, 281);
-            this.lblOtherAdditionsDelv.Name = "lblOtherAdditionsDelv";
-            this.lblOtherAdditionsDelv.Size = new System.Drawing.Size(25, 13);
-            this.lblOtherAdditionsDelv.TabIndex = 28;
-            this.lblOtherAdditionsDelv.Text = "???";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(12, 41);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(105, 13);
-            this.label71.TabIndex = 19;
-            this.label71.Text = "Required Insurances";
-            // 
-            // clbAddtionInsuranceDelv
-            // 
-            this.clbAddtionInsuranceDelv.CheckOnClick = true;
-            this.clbAddtionInsuranceDelv.FormattingEnabled = true;
-            this.clbAddtionInsuranceDelv.HorizontalScrollbar = true;
-            this.clbAddtionInsuranceDelv.Location = new System.Drawing.Point(149, 70);
-            this.clbAddtionInsuranceDelv.Name = "clbAddtionInsuranceDelv";
-            this.clbAddtionInsuranceDelv.Size = new System.Drawing.Size(130, 199);
-            this.clbAddtionInsuranceDelv.TabIndex = 12;
-            // 
-            // lblAdditionInsuranDelv
-            // 
-            this.lblAdditionInsuranDelv.AutoSize = true;
-            this.lblAdditionInsuranDelv.Location = new System.Drawing.Point(191, 281);
-            this.lblAdditionInsuranDelv.Name = "lblAdditionInsuranDelv";
-            this.lblAdditionInsuranDelv.Size = new System.Drawing.Size(25, 13);
-            this.lblAdditionInsuranDelv.TabIndex = 27;
-            this.lblAdditionInsuranDelv.Text = "???";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(175, 41);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(93, 13);
-            this.label73.TabIndex = 21;
-            this.label73.Text = "Additon Insurance";
-            // 
-            // clbOtherAdditionDelv
-            // 
-            this.clbOtherAdditionDelv.CheckOnClick = true;
-            this.clbOtherAdditionDelv.FormattingEnabled = true;
-            this.clbOtherAdditionDelv.HorizontalScrollbar = true;
-            this.clbOtherAdditionDelv.Location = new System.Drawing.Point(286, 70);
-            this.clbOtherAdditionDelv.Name = "clbOtherAdditionDelv";
-            this.clbOtherAdditionDelv.Size = new System.Drawing.Size(129, 199);
-            this.clbOtherAdditionDelv.TabIndex = 13;
-            // 
-            // lblRequiredInsuDelv
-            // 
-            this.lblRequiredInsuDelv.AutoSize = true;
-            this.lblRequiredInsuDelv.Location = new System.Drawing.Point(54, 281);
-            this.lblRequiredInsuDelv.Name = "lblRequiredInsuDelv";
-            this.lblRequiredInsuDelv.Size = new System.Drawing.Size(25, 13);
-            this.lblRequiredInsuDelv.TabIndex = 26;
-            this.lblRequiredInsuDelv.Text = "???";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(308, 41);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(79, 13);
-            this.label75.TabIndex = 23;
-            this.label75.Text = "Other Additions";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(23, 307);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(88, 15);
-            this.label76.TabIndex = 24;
-            this.label76.Text = "Total Amount";
-            // 
-            // lblTotalInsuranceAdditionsDelv
-            // 
-            this.lblTotalInsuranceAdditionsDelv.AutoSize = true;
-            this.lblTotalInsuranceAdditionsDelv.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalInsuranceAdditionsDelv.Location = new System.Drawing.Point(125, 307);
-            this.lblTotalInsuranceAdditionsDelv.Name = "lblTotalInsuranceAdditionsDelv";
-            this.lblTotalInsuranceAdditionsDelv.Size = new System.Drawing.Size(37, 15);
-            this.lblTotalInsuranceAdditionsDelv.TabIndex = 25;
-            this.lblTotalInsuranceAdditionsDelv.Text = "???";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.lblPriceinctaxDelv);
-            this.groupBox1.Controls.Add(this.chTaxDelv);
-            this.groupBox1.Controls.Add(this.label79);
-            this.groupBox1.Controls.Add(this.label80);
-            this.groupBox1.Controls.Add(this.label81);
-            this.groupBox1.Controls.Add(this.nuTaxDelv);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(449, 779);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 196);
-            this.groupBox1.TabIndex = 48;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Include Addition Tax(VAT)";
-            // 
-            // lblPriceinctaxDelv
-            // 
-            this.lblPriceinctaxDelv.AutoSize = true;
-            this.lblPriceinctaxDelv.Location = new System.Drawing.Point(220, 169);
-            this.lblPriceinctaxDelv.Name = "lblPriceinctaxDelv";
-            this.lblPriceinctaxDelv.Size = new System.Drawing.Size(25, 13);
-            this.lblPriceinctaxDelv.TabIndex = 5;
-            this.lblPriceinctaxDelv.Text = "???";
-            // 
-            // chTaxDelv
-            // 
-            this.chTaxDelv.AutoSize = true;
-            this.chTaxDelv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chTaxDelv.Location = new System.Drawing.Point(272, 27);
-            this.chTaxDelv.Name = "chTaxDelv";
-            this.chTaxDelv.Size = new System.Drawing.Size(82, 17);
-            this.chTaxDelv.TabIndex = 17;
-            this.chTaxDelv.Text = "Include Tax";
-            this.chTaxDelv.UseVisualStyleBackColor = true;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(14, 167);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(187, 16);
-            this.label79.TabIndex = 4;
-            this.label79.Text = "Total amount including tax";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(13, 106);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(349, 21);
-            this.label80.TabIndex = 3;
-            this.label80.Text = "Total Amount is (Basic Price + Additions + Appling Tax)";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(14, 57);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(65, 13);
-            this.label81.TabIndex = 2;
-            this.label81.Text = "Tax Rate(%)";
-            // 
-            // nuTaxDelv
-            // 
-            this.nuTaxDelv.Location = new System.Drawing.Point(82, 55);
-            this.nuTaxDelv.Name = "nuTaxDelv";
-            this.nuTaxDelv.Size = new System.Drawing.Size(141, 20);
-            this.nuTaxDelv.TabIndex = 18;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.chKmdelv);
-            this.groupBox2.Controls.Add(this.nuAdditonalKiloPriceDelv);
-            this.groupBox2.Controls.Add(this.nuPermikilDelv);
-            this.groupBox2.Controls.Add(this.label82);
-            this.groupBox2.Controls.Add(this.label83);
-            this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(449, 657);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(373, 114);
-            this.groupBox2.TabIndex = 47;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Kilometer Detalis";
-            // 
-            // chKmdelv
-            // 
-            this.chKmdelv.AutoSize = true;
-            this.chKmdelv.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chKmdelv.Location = new System.Drawing.Point(163, 17);
-            this.chKmdelv.Name = "chKmdelv";
-            this.chKmdelv.Size = new System.Drawing.Size(135, 17);
-            this.chKmdelv.TabIndex = 14;
-            this.chKmdelv.Text = "Include Permitted KM";
-            this.chKmdelv.UseVisualStyleBackColor = true;
-            // 
-            // nuAdditonalKiloPriceDelv
-            // 
-            this.nuAdditonalKiloPriceDelv.Location = new System.Drawing.Point(155, 89);
-            this.nuAdditonalKiloPriceDelv.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nuAdditonalKiloPriceDelv.Name = "nuAdditonalKiloPriceDelv";
-            this.nuAdditonalKiloPriceDelv.Size = new System.Drawing.Size(142, 20);
-            this.nuAdditonalKiloPriceDelv.TabIndex = 16;
-            // 
-            // nuPermikilDelv
-            // 
-            this.nuPermikilDelv.Location = new System.Drawing.Point(155, 54);
-            this.nuPermikilDelv.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nuPermikilDelv.Name = "nuPermikilDelv";
-            this.nuPermikilDelv.Size = new System.Drawing.Size(142, 20);
-            this.nuPermikilDelv.TabIndex = 15;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(7, 91);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(142, 13);
-            this.label82.TabIndex = 14;
-            this.label82.Text = "Price per additional kilometer";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(8, 56);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(112, 13);
-            this.label83.TabIndex = 12;
-            this.label83.Text = "Premmited killo Meters";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.txtDropDelv);
-            this.panel9.Controls.Add(this.txtPicupDelv);
-            this.panel9.Controls.Add(this.label84);
-            this.panel9.Controls.Add(this.label85);
-            this.panel9.Controls.Add(this.txtToPrice);
-            this.panel9.Controls.Add(this.label86);
-            this.panel9.Controls.Add(this.txtPentaly);
-            this.panel9.Controls.Add(this.label87);
-            this.panel9.Controls.Add(this.label88);
-            this.panel9.Controls.Add(this.label89);
-            this.panel9.Controls.Add(this.txtAggPrice);
-            this.panel9.Controls.Add(this.label90);
-            this.panel9.Controls.Add(this.dpReci);
-            this.panel9.Controls.Add(this.label91);
-            this.panel9.Controls.Add(this.txtDaye);
-            this.panel9.Controls.Add(this.label92);
-            this.panel9.Controls.Add(this.dpDelvring);
-            this.panel9.Controls.Add(this.label93);
-            this.panel9.Enabled = false;
-            this.panel9.Location = new System.Drawing.Point(8, 438);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(810, 213);
-            this.panel9.TabIndex = 46;
-            // 
-            // txtDropDelv
-            // 
-            this.txtDropDelv.Enabled = false;
-            this.txtDropDelv.Location = new System.Drawing.Point(190, 96);
-            this.txtDropDelv.Name = "txtDropDelv";
-            this.txtDropDelv.Size = new System.Drawing.Size(178, 20);
-            this.txtDropDelv.TabIndex = 22;
-            // 
-            // txtPicupDelv
-            // 
-            this.txtPicupDelv.Enabled = false;
-            this.txtPicupDelv.Location = new System.Drawing.Point(6, 96);
-            this.txtPicupDelv.Name = "txtPicupDelv";
-            this.txtPicupDelv.Size = new System.Drawing.Size(178, 20);
-            this.txtPicupDelv.TabIndex = 13;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(0, 34);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(805, 13);
-            this.label84.TabIndex = 21;
-            this.label84.Text = resources.GetString("label84.Text");
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(8, 16);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(246, 18);
-            this.label85.TabIndex = 20;
-            this.label85.Text = "Agreement Duration and Pricing";
-            // 
-            // txtToPrice
-            // 
-            this.txtToPrice.Enabled = false;
-            this.txtToPrice.Location = new System.Drawing.Point(563, 165);
-            this.txtToPrice.Name = "txtToPrice";
-            this.txtToPrice.ReadOnly = true;
-            this.txtToPrice.Size = new System.Drawing.Size(178, 20);
-            this.txtToPrice.TabIndex = 10;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(560, 142);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(58, 13);
-            this.label86.TabIndex = 16;
-            this.label86.Text = "Total Price";
-            // 
-            // txtPentaly
-            // 
-            this.txtPentaly.Location = new System.Drawing.Point(379, 165);
-            this.txtPentaly.Name = "txtPentaly";
-            this.txtPentaly.Size = new System.Drawing.Size(178, 20);
-            this.txtPentaly.TabIndex = 9;
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(376, 142);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(103, 13);
-            this.label87.TabIndex = 14;
-            this.label87.Text = "Late penalty per day";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(12, 72);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(77, 13);
-            this.label88.TabIndex = 0;
-            this.label88.Text = "Pickup Branch";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(198, 72);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(81, 13);
-            this.label89.TabIndex = 2;
-            this.label89.Text = "Drop Of Branch";
-            // 
-            // txtAggPrice
-            // 
-            this.txtAggPrice.Location = new System.Drawing.Point(194, 165);
-            this.txtAggPrice.Name = "txtAggPrice";
-            this.txtAggPrice.Size = new System.Drawing.Size(178, 20);
-            this.txtAggPrice.TabIndex = 8;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(192, 142);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(67, 13);
-            this.label90.TabIndex = 12;
-            this.label90.Text = "Agreed price";
-            // 
-            // dpReci
-            // 
-            this.dpReci.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpReci.Location = new System.Drawing.Point(379, 96);
-            this.dpReci.MinDate = new System.DateTime(2025, 11, 25, 0, 0, 0, 0);
-            this.dpReci.Name = "dpReci";
-            this.dpReci.Size = new System.Drawing.Size(178, 20);
-            this.dpReci.TabIndex = 5;
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(376, 73);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(75, 13);
-            this.label91.TabIndex = 6;
-            this.label91.Text = "Reciving Date";
-            // 
-            // txtDaye
-            // 
-            this.txtDaye.Enabled = false;
-            this.txtDaye.Location = new System.Drawing.Point(8, 165);
-            this.txtDaye.Name = "txtDaye";
-            this.txtDaye.Size = new System.Drawing.Size(178, 20);
-            this.txtDaye.TabIndex = 7;
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(12, 142);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(110, 13);
-            this.label92.TabIndex = 10;
-            this.label92.Text = "Number of rental days";
-            // 
-            // dpDelvring
-            // 
-            this.dpDelvring.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpDelvring.Location = new System.Drawing.Point(563, 96);
-            this.dpDelvring.Name = "dpDelvring";
-            this.dpDelvring.Size = new System.Drawing.Size(178, 20);
-            this.dpDelvring.TabIndex = 6;
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(560, 72);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(72, 13);
-            this.label93.TabIndex = 8;
-            this.label93.Text = "Delvring Date";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label53);
-            this.panel6.Controls.Add(this.label54);
-            this.panel6.Controls.Add(this.txtFuel);
-            this.panel6.Controls.Add(this.label55);
-            this.panel6.Controls.Add(this.txtplateNumber);
-            this.panel6.Controls.Add(this.txtCurrCounter);
-            this.panel6.Controls.Add(this.label56);
-            this.panel6.Controls.Add(this.label57);
-            this.panel6.Controls.Add(this.txtCName);
-            this.panel6.Controls.Add(this.txtCarYear);
-            this.panel6.Controls.Add(this.label58);
-            this.panel6.Controls.Add(this.label59);
-            this.panel6.Controls.Add(this.txtCaCategory);
-            this.panel6.Controls.Add(this.label60);
-            this.panel6.Enabled = false;
-            this.panel6.Location = new System.Drawing.Point(8, 236);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(810, 196);
-            this.panel6.TabIndex = 45;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(0, 42);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(805, 13);
-            this.label53.TabIndex = 12;
-            this.label53.Text = resources.GetString("label53.Text");
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(190, 124);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(47, 13);
-            this.label54.TabIndex = 10;
-            this.label54.Text = "Exit Fuel";
-            // 
-            // txtFuel
-            // 
-            this.txtFuel.Enabled = false;
-            this.txtFuel.Location = new System.Drawing.Point(190, 145);
-            this.txtFuel.Name = "txtFuel";
-            this.txtFuel.Size = new System.Drawing.Size(178, 20);
-            this.txtFuel.TabIndex = 11;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(5, 24);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(125, 18);
-            this.label55.TabIndex = 8;
-            this.label55.Text = "Car Inforamtion";
-            // 
-            // txtplateNumber
-            // 
-            this.txtplateNumber.Enabled = false;
-            this.txtplateNumber.Location = new System.Drawing.Point(6, 78);
-            this.txtplateNumber.Name = "txtplateNumber";
-            this.txtplateNumber.Size = new System.Drawing.Size(178, 20);
-            this.txtplateNumber.TabIndex = 1;
-            // 
-            // txtCurrCounter
-            // 
-            this.txtCurrCounter.Enabled = false;
-            this.txtCurrCounter.Location = new System.Drawing.Point(6, 145);
-            this.txtCurrCounter.Name = "txtCurrCounter";
-            this.txtCurrCounter.Size = new System.Drawing.Size(178, 20);
-            this.txtCurrCounter.TabIndex = 9;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(7, 124);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(81, 13);
-            this.label56.TabIndex = 8;
-            this.label56.Text = "Current Counter";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(7, 57);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(90, 13);
-            this.label57.TabIndex = 0;
-            this.label57.Text = "Car Plate Number";
-            // 
-            // txtCName
-            // 
-            this.txtCName.Enabled = false;
-            this.txtCName.Location = new System.Drawing.Point(194, 78);
-            this.txtCName.Name = "txtCName";
-            this.txtCName.Size = new System.Drawing.Size(178, 20);
-            this.txtCName.TabIndex = 3;
-            // 
-            // txtCarYear
-            // 
-            this.txtCarYear.Enabled = false;
-            this.txtCarYear.Location = new System.Drawing.Point(563, 78);
-            this.txtCarYear.Name = "txtCarYear";
-            this.txtCarYear.Size = new System.Drawing.Size(178, 20);
-            this.txtCarYear.TabIndex = 7;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(560, 57);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(48, 13);
-            this.label58.TabIndex = 6;
-            this.label58.Text = "Car Year";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(191, 57);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(54, 13);
-            this.label59.TabIndex = 2;
-            this.label59.Text = "Car Name";
-            // 
-            // txtCaCategory
-            // 
-            this.txtCaCategory.Enabled = false;
-            this.txtCaCategory.Location = new System.Drawing.Point(379, 78);
-            this.txtCaCategory.Name = "txtCaCategory";
-            this.txtCaCategory.Size = new System.Drawing.Size(178, 20);
-            this.txtCaCategory.TabIndex = 5;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(376, 57);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(68, 13);
-            this.label60.TabIndex = 4;
-            this.label60.Text = "Car Category";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label62);
-            this.panel7.Controls.Add(this.txtAddress);
-            this.panel7.Controls.Add(this.label63);
-            this.panel7.Controls.Add(this.label64);
-            this.panel7.Controls.Add(this.txtCustomerIdentity);
-            this.panel7.Controls.Add(this.txtPhoneNubmer);
-            this.panel7.Controls.Add(this.label65);
-            this.panel7.Controls.Add(this.label66);
-            this.panel7.Controls.Add(this.txtCustomerName);
-            this.panel7.Controls.Add(this.label67);
-            this.panel7.Enabled = false;
-            this.panel7.Location = new System.Drawing.Point(8, 81);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(810, 124);
-            this.panel7.TabIndex = 43;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(-4, 31);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(805, 13);
-            this.label62.TabIndex = 8;
-            this.label62.Text = resources.GetString("label62.Text");
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(563, 75);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(178, 20);
-            this.txtAddress.TabIndex = 7;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(560, 53);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(45, 13);
-            this.label63.TabIndex = 6;
-            this.label63.Text = "Address";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(3, 13);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(172, 18);
-            this.label64.TabIndex = 0;
-            this.label64.Text = "Customer Inforamtion";
-            // 
-            // txtCustomerIdentity
-            // 
-            this.txtCustomerIdentity.Enabled = false;
-            this.txtCustomerIdentity.Location = new System.Drawing.Point(6, 75);
-            this.txtCustomerIdentity.Name = "txtCustomerIdentity";
-            this.txtCustomerIdentity.Size = new System.Drawing.Size(178, 20);
-            this.txtCustomerIdentity.TabIndex = 1;
-            // 
-            // txtPhoneNubmer
-            // 
-            this.txtPhoneNubmer.Enabled = false;
-            this.txtPhoneNubmer.Location = new System.Drawing.Point(379, 75);
-            this.txtPhoneNubmer.Name = "txtPhoneNubmer";
-            this.txtPhoneNubmer.Size = new System.Drawing.Size(178, 20);
-            this.txtPhoneNubmer.TabIndex = 5;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(376, 53);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(78, 13);
-            this.label65.TabIndex = 4;
-            this.label65.Text = "Phone Nubmer";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(7, 53);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(93, 15);
-            this.label66.TabIndex = 0;
-            this.label66.Text = "Identity Number";
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Enabled = false;
-            this.txtCustomerName.Location = new System.Drawing.Point(194, 75);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(178, 20);
-            this.txtCustomerName.TabIndex = 3;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(191, 53);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(82, 13);
-            this.label67.TabIndex = 2;
-            this.label67.Text = "Customer Name";
-            // 
             // nuPremmitedMeters
             // 
             this.nuPremmitedMeters.Location = new System.Drawing.Point(155, 54);
@@ -2759,7 +1902,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1916, 1035);
+            this.tabPage1.Size = new System.Drawing.Size(1737, 938);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "New Agreement";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2797,6 +1940,25 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Payment and Financial authorization";
             // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Location = new System.Drawing.Point(112, 177);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(186, 20);
+            this.txtDiscount.TabIndex = 13;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
+            this.txtDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiscount_KeyPress);
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(19, 180);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(49, 13);
+            this.label103.TabIndex = 47;
+            this.label103.Text = "Discount";
+            this.label103.Click += new System.EventHandler(this.label103_Click);
+            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -2827,7 +1989,8 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.AutoScroll = true;
+            this.panel5.AutoSize = true;
+            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.lblDiscount);
@@ -2867,8 +2030,26 @@
             this.panel5.Controls.Add(this.label37);
             this.panel5.Location = new System.Drawing.Point(1189, 110);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(467, 695);
+            this.panel5.Size = new System.Drawing.Size(467, 664);
             this.panel5.TabIndex = 46;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Location = new System.Drawing.Point(322, 621);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(31, 13);
+            this.lblDiscount.TabIndex = 34;
+            this.lblDiscount.Text = "Price";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(13, 592);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(66, 13);
+            this.label106.TabIndex = 33;
+            this.label106.Text = "Paid for now";
             // 
             // lblBasePrice
             // 
@@ -2998,79 +2179,8 @@
             this.tabAgreement.Location = new System.Drawing.Point(0, 0);
             this.tabAgreement.Name = "tabAgreement";
             this.tabAgreement.SelectedIndex = 0;
-            this.tabAgreement.Size = new System.Drawing.Size(1924, 1061);
+            this.tabAgreement.Size = new System.Drawing.Size(1745, 964);
             this.tabAgreement.TabIndex = 1;
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(19, 180);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(49, 13);
-            this.label103.TabIndex = 47;
-            this.label103.Text = "Discount";
-            this.label103.Click += new System.EventHandler(this.label103_Click);
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Location = new System.Drawing.Point(112, 177);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(186, 20);
-            this.txtDiscount.TabIndex = 13;
-            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(322, 621);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(31, 13);
-            this.lblDiscount.TabIndex = 34;
-            this.lblDiscount.Text = "Price";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(13, 592);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(66, 13);
-            this.label106.TabIndex = 33;
-            this.label106.Text = "Paid for now";
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(265, 187);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(83, 13);
-            this.label104.TabIndex = 57;
-            this.label104.Text = "Moved distence";
-            // 
-            // txtAdditionalDistance
-            // 
-            this.txtAdditionalDistance.Enabled = false;
-            this.txtAdditionalDistance.Location = new System.Drawing.Point(268, 213);
-            this.txtAdditionalDistance.Name = "txtAdditionalDistance";
-            this.txtAdditionalDistance.Size = new System.Drawing.Size(125, 20);
-            this.txtAdditionalDistance.TabIndex = 56;
-            // 
-            // lblDisountShow
-            // 
-            this.lblDisountShow.AutoSize = true;
-            this.lblDisountShow.Location = new System.Drawing.Point(322, 590);
-            this.lblDisountShow.Name = "lblDisountShow";
-            this.lblDisountShow.Size = new System.Drawing.Size(31, 13);
-            this.lblDisountShow.TabIndex = 34;
-            this.lblDisountShow.Text = "Price";
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(13, 590);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(49, 13);
-            this.label111.TabIndex = 33;
-            this.label111.Text = "Discount";
             // 
             // frmAddUpdatAgreement
             // 
@@ -3078,10 +2188,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1745, 964);
             this.Controls.Add(this.tabAgreement);
             this.Name = "frmAddUpdatAgreement";
             this.Text = "frmAddUpdatAgreement";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -3100,24 +2211,6 @@
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPaidAmountDelv)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuTaxDelv)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuAdditonalKiloPriceDelv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPermikilDelv)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPremmitedMeters)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -3257,74 +2350,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.CheckedListBox clbRequiredInsuranceDelv;
-        private System.Windows.Forms.Label lblOtherAdditionsDelv;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.CheckedListBox clbAddtionInsuranceDelv;
-        private System.Windows.Forms.Label lblAdditionInsuranDelv;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.CheckedListBox clbOtherAdditionDelv;
-        private System.Windows.Forms.Label lblRequiredInsuDelv;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label lblTotalInsuranceAdditionsDelv;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblPriceinctaxDelv;
-        private System.Windows.Forms.CheckBox chTaxDelv;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.NumericUpDown nuTaxDelv;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox chKmdelv;
-        private System.Windows.Forms.NumericUpDown nuAdditonalKiloPriceDelv;
-        private System.Windows.Forms.NumericUpDown nuPermikilDelv;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.TextBox txtToPrice;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.TextBox txtPentaly;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.TextBox txtAggPrice;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.DateTimePicker dpReci;
-        private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.TextBox txtDaye;
-        private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.DateTimePicker dpDelvring;
-        private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox txtFuel;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox txtplateNumber;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox txtCName;
-        private System.Windows.Forms.TextBox txtCarYear;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox txtCaCategory;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox txtCustomerIdentity;
-        private System.Windows.Forms.TextBox txtPhoneNubmer;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.Label label67;
         private System.Windows.Forms.ComboBox cbAgreement;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblShowLateFee;
@@ -3360,17 +2385,6 @@
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Label lblShowRentalDays;
         private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.DateTimePicker dpPaymentDelv;
-        private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.NumericUpDown nuPaidAmountDelv;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.TextBox txtCurrCounter;
-        private System.Windows.Forms.TextBox txtDropDelv;
-        private System.Windows.Forms.TextBox txtPicupDelv;
-        private System.Windows.Forms.TextBox txtpaymentMethod;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label61;

@@ -127,3 +127,4 @@ C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.f
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.ListRentalInsuranceCtrl.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.RentalInsurance.frmListRentalInsurance.resources
 C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.exe.config
+C:\Car_Rental_System\CarRentalSystem\obj\Debug\CarRentalSystem.CashReceipt.frmAddUpdateCashReceipt.resources

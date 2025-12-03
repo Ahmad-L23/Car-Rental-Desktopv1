@@ -48,6 +48,7 @@
     <Compile Include="ClsBranch.cs" />
     <Compile Include="ClsCar.cs" />
     <Compile Include="ClsCarTransfer.cs" />
+    <Compile Include="clsCashReceipt.cs" />
     <Compile Include="ClsCategory.cs" />
     <Compile Include="ClsColor.cs" />
     <Compile Include="ClsCompany.cs" />

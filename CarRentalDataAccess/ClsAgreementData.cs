@@ -319,7 +319,7 @@ namespace CarRentalDataAccess
                         requiredInsurancePrice = reader["RequiredInsurancePrice"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["RequiredInsurancePrice"]);
                         rentalDaysCost = reader["rentalDaysCost"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["rentalDaysCost"]);
                         totalAmountIncludeTax = reader["TotalAmountIncludeTax"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
-                        totalAmountIncludeTax = reader["Discount"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["Discount"]);
+                        Discount = reader["Discount"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["Discount"]);
 
                         return true;
                     }

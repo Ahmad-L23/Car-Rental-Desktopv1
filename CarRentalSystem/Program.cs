@@ -5,6 +5,7 @@ using CarRentalSystem.Box;
 using CarRentalSystem.Branch;
 using CarRentalSystem.Car;
 using CarRentalSystem.CarTransfer;
+using CarRentalSystem.CashReceipt;
 using CarRentalSystem.Category;
 using CarRentalSystem.Company;
 using CarRentalSystem.CompanyInsurance;
