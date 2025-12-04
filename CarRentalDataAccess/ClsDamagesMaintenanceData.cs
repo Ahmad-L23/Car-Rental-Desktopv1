@@ -32,27 +32,56 @@ namespace CarRentalDataAccess
                 (@CarId, @DamageDate, @TotalAmount, @Status, @GasolineIn, @GasolineOut, @GarageName, @EmployeeId, @RepairStartDate, @CompletionDate, @Description);
                 SELECT CAST(scope_identity() AS int);";
 
-            using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+            try
             {
-                cmd.Parameters.AddWithValue("@CarId", CarId);
-                cmd.Parameters.AddWithValue("@DamageDate", DamageDate);
-                cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
-                cmd.Parameters.AddWithValue("@Status", Status);
-                cmd.Parameters.AddWithValue("@GasolineIn", GasolineIn);
-                cmd.Parameters.AddWithValue("@GasolineOut", GasolineOut);
-                cmd.Parameters.AddWithValue("@GarageName", GarageName);
-                cmd.Parameters.AddWithValue("@EmployeeId", (object)EmployeeId ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@RepairStartDate", (object)RepairStartDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@CompletionDate", (object)CompletionDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Description", (object)Description ?? DBNull.Value);  // <- هنا
+                using (SqlConnection connection = new SqlConnection(conn))
+                {
+                    connection.Open();
 
-                connection.Open();
-                object result = cmd.ExecuteScalar();
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@CarId", CarId);
+                            cmd.Parameters.AddWithValue("@DamageDate", DamageDate);
+                            cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
+                            cmd.Parameters.AddWithValue("@Status", Status);
+                            cmd.Parameters.AddWithValue("@GasolineIn", GasolineIn);
+                            cmd.Parameters.AddWithValue("@GasolineOut", GasolineOut);
+                            cmd.Parameters.AddWithValue("@GarageName", GarageName);
+                            cmd.Parameters.AddWithValue("@EmployeeId", (object)EmployeeId ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@RepairStartDate", (object)RepairStartDate ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@CompletionDate", (object)CompletionDate ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@Description", (object)Description ?? DBNull.Value);  // <- هنا
 
-                if (result != null && int.TryParse(result.ToString(), out int newId))
-                    return newId;
+                            connection.Open();
+                            object result = cmd.ExecuteScalar();
+                            int newId = 0;
+                            if (result == null && !int.TryParse(result.ToString(), out newId))
+                                return -1;
 
+
+                            string updateQuery = "UPDATE vehicles SET CurrentCounter = @CurrentCounter, IsAvailable = @avialable, FuelExit= @FuelExit, Status = @Stat  WHERE CarID = @CarID";
+
+                            using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection, transaction))
+                            {
+                                //updateCmd.Parameters.AddWithValue("@CurrentCounter", entryCountre);
+                                updateCmd.Parameters.AddWithValue("@CarID", CarId);
+                                updateCmd.Parameters.AddWithValue("@avialable", 0);
+                                updateCmd.Parameters.AddWithValue("@FuelExit", GasolineIn);
+                                //updateCmd.Parameters.AddWithValue("@Stat", 2);
+                                updateCmd.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+                            return newId;
+                        }
+                    }
+                }
+            }
+
+            catch
+            {
                 return -1;
             }
         }

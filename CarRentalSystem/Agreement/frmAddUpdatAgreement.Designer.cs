@@ -274,7 +274,6 @@
             // 
             // txtExitFuel
             // 
-            this.txtExitFuel.Enabled = false;
             this.txtExitFuel.Location = new System.Drawing.Point(190, 145);
             this.txtExitFuel.Name = "txtExitFuel";
             this.txtExitFuel.Size = new System.Drawing.Size(178, 20);
@@ -1058,6 +1057,7 @@
             // 
             // nuPaidAmount
             // 
+            this.nuPaidAmount.DecimalPlaces = 1;
             this.nuPaidAmount.Location = new System.Drawing.Point(112, 75);
             this.nuPaidAmount.Maximum = new decimal(new int[] {
             1000000000,
@@ -1234,14 +1234,13 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.cbAgree);
-            this.tabPage2.Controls.Add(this.btnConfirmUpdates);
             this.tabPage2.Controls.Add(this.panel11);
             this.tabPage2.Controls.Add(this.cbAgreement);
             this.tabPage2.Controls.Add(this.panel10);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(933, 810);
+            this.tabPage2.Size = new System.Drawing.Size(1737, 938);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Edit Agreement";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1249,8 +1248,10 @@
             // 
             // cbAgree
             // 
+            this.cbAgree.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbAgree.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbAgree.FormattingEnabled = true;
-            this.cbAgree.Location = new System.Drawing.Point(455, 9);
+            this.cbAgree.Location = new System.Drawing.Point(440, 10);
             this.cbAgree.Name = "cbAgree";
             this.cbAgree.Size = new System.Drawing.Size(182, 21);
             this.cbAgree.TabIndex = 55;
@@ -1262,9 +1263,9 @@
             this.btnConfirmUpdates.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnConfirmUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmUpdates.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmUpdates.Location = new System.Drawing.Point(582, 759);
+            this.btnConfirmUpdates.Location = new System.Drawing.Point(276, 429);
             this.btnConfirmUpdates.Name = "btnConfirmUpdates";
-            this.btnConfirmUpdates.Size = new System.Drawing.Size(183, 43);
+            this.btnConfirmUpdates.Size = new System.Drawing.Size(129, 43);
             this.btnConfirmUpdates.TabIndex = 54;
             this.btnConfirmUpdates.Text = "Confirm the Updates";
             this.btnConfirmUpdates.UseVisualStyleBackColor = false;
@@ -1275,34 +1276,35 @@
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.label104);
-            this.panel11.Controls.Add(this.txtAdditionalDistance);
+            this.panel11.Controls.Add(this.btnConfirmUpdates);
             this.panel11.Controls.Add(this.cbCarEntryFuel);
             this.panel11.Controls.Add(this.dpEntryDate);
-            this.panel11.Controls.Add(this.label102);
-            this.panel11.Controls.Add(this.txtMovedDistance);
-            this.panel11.Controls.Add(this.label100);
-            this.panel11.Controls.Add(this.txtLateFee);
-            this.panel11.Controls.Add(this.label98);
-            this.panel11.Controls.Add(this.txtEntryCounter);
-            this.panel11.Controls.Add(this.label78);
-            this.panel11.Controls.Add(this.txtPaidAmount);
-            this.panel11.Controls.Add(this.label77);
-            this.panel11.Controls.Add(this.txtEntryPrice);
+            this.panel11.Controls.Add(this.txtAdditionalDistance);
             this.panel11.Controls.Add(this.label74);
             this.panel11.Controls.Add(this.label72);
             this.panel11.Controls.Add(this.label70);
             this.panel11.Controls.Add(this.label68);
+            this.panel11.Controls.Add(this.label102);
             this.panel11.Controls.Add(this.label61);
             this.panel11.Controls.Add(this.txtDiffrencesDays);
+            this.panel11.Controls.Add(this.txtMovedDistance);
+            this.panel11.Controls.Add(this.txtEntryPrice);
+            this.panel11.Controls.Add(this.label100);
+            this.panel11.Controls.Add(this.txtEntryCounter);
+            this.panel11.Controls.Add(this.txtLateFee);
+            this.panel11.Controls.Add(this.label77);
+            this.panel11.Controls.Add(this.txtPaidAmount);
+            this.panel11.Controls.Add(this.label98);
+            this.panel11.Controls.Add(this.label78);
             this.panel11.Location = new System.Drawing.Point(6, 9);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(432, 263);
+            this.panel11.Size = new System.Drawing.Size(425, 487);
             this.panel11.TabIndex = 53;
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(265, 187);
+            this.label104.Location = new System.Drawing.Point(206, 267);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(92, 13);
             this.label104.TabIndex = 57;
@@ -1311,9 +1313,9 @@
             // txtAdditionalDistance
             // 
             this.txtAdditionalDistance.Enabled = false;
-            this.txtAdditionalDistance.Location = new System.Drawing.Point(268, 213);
+            this.txtAdditionalDistance.Location = new System.Drawing.Point(209, 293);
             this.txtAdditionalDistance.Name = "txtAdditionalDistance";
-            this.txtAdditionalDistance.Size = new System.Drawing.Size(125, 20);
+            this.txtAdditionalDistance.Size = new System.Drawing.Size(180, 20);
             this.txtAdditionalDistance.TabIndex = 56;
             // 
             // cbCarEntryFuel
@@ -1325,24 +1327,24 @@
             "3/4",
             "Full",
             "Empty"});
-            this.cbCarEntryFuel.Location = new System.Drawing.Point(137, 82);
+            this.cbCarEntryFuel.Location = new System.Drawing.Point(209, 82);
             this.cbCarEntryFuel.Name = "cbCarEntryFuel";
-            this.cbCarEntryFuel.Size = new System.Drawing.Size(121, 21);
+            this.cbCarEntryFuel.Size = new System.Drawing.Size(180, 21);
             this.cbCarEntryFuel.TabIndex = 55;
             // 
             // dpEntryDate
             // 
             this.dpEntryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpEntryDate.Location = new System.Drawing.Point(268, 82);
+            this.dpEntryDate.Location = new System.Drawing.Point(3, 149);
             this.dpEntryDate.Name = "dpEntryDate";
-            this.dpEntryDate.Size = new System.Drawing.Size(125, 20);
+            this.dpEntryDate.Size = new System.Drawing.Size(183, 20);
             this.dpEntryDate.TabIndex = 29;
             this.dpEntryDate.ValueChanged += new System.EventHandler(this.dpEntryDate_ValueChanged);
             // 
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(134, 187);
+            this.label102.Location = new System.Drawing.Point(3, 267);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(83, 13);
             this.label102.TabIndex = 28;
@@ -1351,15 +1353,15 @@
             // txtMovedDistance
             // 
             this.txtMovedDistance.Enabled = false;
-            this.txtMovedDistance.Location = new System.Drawing.Point(137, 213);
+            this.txtMovedDistance.Location = new System.Drawing.Point(6, 293);
             this.txtMovedDistance.Name = "txtMovedDistance";
-            this.txtMovedDistance.Size = new System.Drawing.Size(125, 20);
+            this.txtMovedDistance.Size = new System.Drawing.Size(180, 20);
             this.txtMovedDistance.TabIndex = 27;
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(3, 187);
+            this.label100.Location = new System.Drawing.Point(3, 332);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(49, 13);
             this.label100.TabIndex = 26;
@@ -1368,15 +1370,16 @@
             // txtLateFee
             // 
             this.txtLateFee.Enabled = false;
-            this.txtLateFee.Location = new System.Drawing.Point(6, 213);
+            this.txtLateFee.Location = new System.Drawing.Point(6, 358);
+            this.txtLateFee.Multiline = true;
             this.txtLateFee.Name = "txtLateFee";
-            this.txtLateFee.Size = new System.Drawing.Size(125, 20);
+            this.txtLateFee.Size = new System.Drawing.Size(383, 31);
             this.txtLateFee.TabIndex = 25;
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(265, 124);
+            this.label98.Location = new System.Drawing.Point(206, 198);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(71, 13);
             this.label98.TabIndex = 24;
@@ -1384,16 +1387,16 @@
             // 
             // txtEntryCounter
             // 
-            this.txtEntryCounter.Location = new System.Drawing.Point(268, 150);
+            this.txtEntryCounter.Location = new System.Drawing.Point(209, 224);
             this.txtEntryCounter.Name = "txtEntryCounter";
-            this.txtEntryCounter.Size = new System.Drawing.Size(125, 20);
+            this.txtEntryCounter.Size = new System.Drawing.Size(180, 20);
             this.txtEntryCounter.TabIndex = 23;
             this.txtEntryCounter.TextChanged += new System.EventHandler(this.txtEntryCounter_TextChanged);
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(134, 124);
+            this.label78.Location = new System.Drawing.Point(3, 198);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(67, 13);
             this.label78.TabIndex = 22;
@@ -1402,15 +1405,15 @@
             // txtPaidAmount
             // 
             this.txtPaidAmount.Enabled = false;
-            this.txtPaidAmount.Location = new System.Drawing.Point(137, 150);
+            this.txtPaidAmount.Location = new System.Drawing.Point(6, 224);
             this.txtPaidAmount.Name = "txtPaidAmount";
-            this.txtPaidAmount.Size = new System.Drawing.Size(125, 20);
+            this.txtPaidAmount.Size = new System.Drawing.Size(180, 20);
             this.txtPaidAmount.TabIndex = 21;
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(3, 124);
+            this.label77.Location = new System.Drawing.Point(206, 123);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(58, 13);
             this.label77.TabIndex = 20;
@@ -1418,15 +1421,15 @@
             // 
             // txtEntryPrice
             // 
-            this.txtEntryPrice.Location = new System.Drawing.Point(6, 150);
+            this.txtEntryPrice.Location = new System.Drawing.Point(209, 149);
             this.txtEntryPrice.Name = "txtEntryPrice";
-            this.txtEntryPrice.Size = new System.Drawing.Size(125, 20);
+            this.txtEntryPrice.Size = new System.Drawing.Size(180, 20);
             this.txtEntryPrice.TabIndex = 19;
             // 
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(265, 55);
+            this.label74.Location = new System.Drawing.Point(0, 122);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(57, 13);
             this.label74.TabIndex = 18;
@@ -1435,7 +1438,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(134, 56);
+            this.label72.Location = new System.Drawing.Point(206, 56);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(54, 13);
             this.label72.TabIndex = 16;
@@ -1473,15 +1476,15 @@
             // txtDiffrencesDays
             // 
             this.txtDiffrencesDays.Enabled = false;
-            this.txtDiffrencesDays.Location = new System.Drawing.Point(6, 82);
+            this.txtDiffrencesDays.Location = new System.Drawing.Point(3, 82);
             this.txtDiffrencesDays.Name = "txtDiffrencesDays";
-            this.txtDiffrencesDays.Size = new System.Drawing.Size(125, 20);
+            this.txtDiffrencesDays.Size = new System.Drawing.Size(180, 20);
             this.txtDiffrencesDays.TabIndex = 0;
             // 
             // cbAgreement
             // 
             this.cbAgreement.FormattingEnabled = true;
-            this.cbAgreement.Location = new System.Drawing.Point(697, 4);
+            this.cbAgreement.Location = new System.Drawing.Point(1419, 57);
             this.cbAgreement.Name = "cbAgreement";
             this.cbAgreement.Size = new System.Drawing.Size(166, 21);
             this.cbAgreement.TabIndex = 52;
@@ -1528,7 +1531,7 @@
             this.panel10.Controls.Add(this.label128);
             this.panel10.Controls.Add(this.lblShowRentalDays);
             this.panel10.Controls.Add(this.label130);
-            this.panel10.Location = new System.Drawing.Point(455, 43);
+            this.panel10.Location = new System.Drawing.Point(440, 44);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(470, 695);
             this.panel10.TabIndex = 51;
@@ -2141,6 +2144,7 @@
             // 
             // nuPricePerAddKilo
             // 
+            this.nuPricePerAddKilo.DecimalPlaces = 2;
             this.nuPricePerAddKilo.Location = new System.Drawing.Point(155, 89);
             this.nuPricePerAddKilo.Maximum = new decimal(new int[] {
             10000000,

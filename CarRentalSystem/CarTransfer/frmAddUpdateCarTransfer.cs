@@ -85,6 +85,9 @@ namespace CarRentalSystem.CarTransfer
             txtExitCounter.Text = _transfer.ExitCounter.ToString();
             txtFuelExit.Text = _transfer.ExitFuel;
 
+            txtEntertyFuel.Text = _transfer.EntryFuel;
+            txtEnteryCounter.Text = _transfer.EntryCounter.ToString();
+
             dtExitDate.Value = _transfer.ExitDate ?? DateTime.Now;
 
             cmbStatus.SelectedIndex = _transfer.Status;
@@ -129,6 +132,9 @@ namespace CarRentalSystem.CarTransfer
             _transfer.ExitDate = dtExitDate.Value;
             _transfer.Status = cmbStatus.SelectedIndex;
             _transfer.BranchTransferTo = (int)cmbToBranch.SelectedValue;
+
+            _transfer.EntryFuel = txtEntertyFuel.Text;
+            _transfer.EntryCounter = Convert.ToDouble(txtEnteryCounter.Text);
 
             bool success = _transfer.Save();
 

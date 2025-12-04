@@ -79,6 +79,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtFuelExit = new System.Windows.Forms.TextBox();
+            this.txtEntertyFuel = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEnteryCounter = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -87,7 +91,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(550, 45);
+            this.lblTitle.Size = new System.Drawing.Size(597, 45);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Add New Car Transfer";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,15 +180,15 @@
             // 
             // lblFuel
             // 
-            this.lblFuel.Location = new System.Drawing.Point(20, 300);
+            this.lblFuel.Location = new System.Drawing.Point(20, 329);
             this.lblFuel.Name = "lblFuel";
             this.lblFuel.Size = new System.Drawing.Size(100, 23);
             this.lblFuel.TabIndex = 11;
-            this.lblFuel.Text = "Fuel:";
+            this.lblFuel.Text = "Exist Fuel:";
             // 
             // lblExitDate
             // 
-            this.lblExitDate.Location = new System.Drawing.Point(20, 340);
+            this.lblExitDate.Location = new System.Drawing.Point(20, 395);
             this.lblExitDate.Name = "lblExitDate";
             this.lblExitDate.Size = new System.Drawing.Size(100, 23);
             this.lblExitDate.TabIndex = 13;
@@ -193,14 +197,14 @@
             // dtExitDate
             // 
             this.dtExitDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtExitDate.Location = new System.Drawing.Point(150, 340);
+            this.dtExitDate.Location = new System.Drawing.Point(150, 395);
             this.dtExitDate.Name = "dtExitDate";
             this.dtExitDate.Size = new System.Drawing.Size(200, 20);
             this.dtExitDate.TabIndex = 14;
             // 
             // lblToBranch
             // 
-            this.lblToBranch.Location = new System.Drawing.Point(20, 380);
+            this.lblToBranch.Location = new System.Drawing.Point(20, 435);
             this.lblToBranch.Name = "lblToBranch";
             this.lblToBranch.Size = new System.Drawing.Size(100, 23);
             this.lblToBranch.TabIndex = 15;
@@ -210,14 +214,14 @@
             // 
             this.cmbToBranch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbToBranch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbToBranch.Location = new System.Drawing.Point(150, 380);
+            this.cmbToBranch.Location = new System.Drawing.Point(150, 435);
             this.cmbToBranch.Name = "cmbToBranch";
             this.cmbToBranch.Size = new System.Drawing.Size(250, 21);
             this.cmbToBranch.TabIndex = 16;
             // 
             // lblStatus
             // 
-            this.lblStatus.Location = new System.Drawing.Point(20, 420);
+            this.lblStatus.Location = new System.Drawing.Point(20, 475);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(100, 23);
             this.lblStatus.TabIndex = 17;
@@ -225,14 +229,14 @@
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Location = new System.Drawing.Point(150, 420);
+            this.cmbStatus.Location = new System.Drawing.Point(150, 475);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(150, 21);
             this.cmbStatus.TabIndex = 18;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(150, 470);
+            this.btnSave.Location = new System.Drawing.Point(150, 525);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 23);
             this.btnSave.TabIndex = 19;
@@ -241,7 +245,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(270, 470);
+            this.btnCancel.Location = new System.Drawing.Point(270, 525);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 23);
             this.btnCancel.TabIndex = 20;
@@ -250,14 +254,48 @@
             // 
             // txtFuelExit
             // 
-            this.txtFuelExit.Location = new System.Drawing.Point(150, 297);
+            this.txtFuelExit.Location = new System.Drawing.Point(150, 326);
             this.txtFuelExit.Name = "txtFuelExit";
             this.txtFuelExit.Size = new System.Drawing.Size(150, 20);
             this.txtFuelExit.TabIndex = 21;
             // 
+            // txtEntertyFuel
+            // 
+            this.txtEntertyFuel.Location = new System.Drawing.Point(150, 359);
+            this.txtEntertyFuel.Name = "txtEntertyFuel";
+            this.txtEntertyFuel.Size = new System.Drawing.Size(150, 20);
+            this.txtEntertyFuel.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(20, 362);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Entery Fuel:";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(20, 292);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Entrey Counter:";
+            // 
+            // txtEnteryCounter
+            // 
+            this.txtEnteryCounter.Location = new System.Drawing.Point(150, 292);
+            this.txtEnteryCounter.Name = "txtEnteryCounter";
+            this.txtEnteryCounter.Size = new System.Drawing.Size(150, 20);
+            this.txtEnteryCounter.TabIndex = 25;
+            // 
             // frmAddUpdateCarTransfer
             // 
-            this.ClientSize = new System.Drawing.Size(550, 520);
+            this.ClientSize = new System.Drawing.Size(597, 571);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtEnteryCounter);
+            this.Controls.Add(this.txtEntertyFuel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFuelExit);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblCar);
@@ -291,5 +329,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtFuelExit;
+        private System.Windows.Forms.TextBox txtEntertyFuel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEnteryCounter;
     }
 }

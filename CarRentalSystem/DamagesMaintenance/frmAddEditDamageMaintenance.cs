@@ -65,6 +65,7 @@ namespace CarRentalSystem.DamageMaintenance
             cmbEmployee.SelectedIndex = -1;
         }
 
+
         private void LoadStatusCombo()
         {
             cmbStatus.Items.Clear();

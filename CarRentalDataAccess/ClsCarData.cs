@@ -375,7 +375,7 @@ namespace CarRentalDataAccess
                 licenseType = reader["LicenseType"].ToString();
                 isAvailable = Convert.ToBoolean(reader["IsAvailable"]);
                 usedFor = reader["UsedFor"].ToString();
-                usedFor = reader["FuelExit"].ToString();
+                FuelExit = reader["FuelExit"].ToString();
                 damagesNumber = reader["DamagesNumber"] == System.DBNull.Value ? (int?)null : Convert.ToInt32(reader["DamagesNumber"]);
                 description = reader["Description"] == System.DBNull.Value ? null : reader["Description"].ToString();
 
@@ -464,10 +464,10 @@ namespace CarRentalDataAccess
         SELECT 
             CASE 
                 WHEN IsAvailable = 1 AND Status = 0 THEN 'Car is available.'
-                WHEN IsAvailable = 0 THEN 'Car is marked as not available.'
                 WHEN Status = 1 THEN 'Car is currently rented.'
                 WHEN Status = 2 THEN 'Car is in employee usage.'
                 WHEN Status = 3 THEN 'Car is under maintenance.'
+                WHEN Status = 4 THEN 'Car is under Transfer.'
                 ELSE 'Car status unknown or not available.'
             END AS AvailabilityReason
         FROM vehicles

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,4 +12,7 @@ namespace CarRentalBusiness
         public static string ConnectionString = "Server = DESKTOP-LQF3K9Q; Database=CarRentalDB;Trusted_Connection=True";
 
     }
+        
 }
+
+

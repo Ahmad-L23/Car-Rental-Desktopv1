@@ -21,6 +21,9 @@ namespace CarRentalBusiness
         public int Status { get; set; }
         public int BranchTransferTo { get; set; }
 
+        public string EntryFuel {  get; set; }
+        public double? EntryCounter {  get; set; }
+
         // Composition
         public ClsCar Car { get; private set; }
         public ClsUser Employee { get; private set; }
@@ -39,6 +42,8 @@ namespace CarRentalBusiness
             ExitDate = null;
             Status = 0;
             BranchTransferTo = 0;
+            EntryFuel = null;
+            EntryCounter = null;
 
             mode = enMode.AddNew;
         }
@@ -53,7 +58,9 @@ namespace CarRentalBusiness
             string exitFuel,
             DateTime? exitDate,
             int status,
-            int branchTransferTo)
+            int branchTransferTo,
+            string EntryFuel,
+            double? EntryCounter)
         {
             TransferId = transferId;
             CarId = carId;
@@ -65,6 +72,8 @@ namespace CarRentalBusiness
             ExitDate = exitDate;
             Status = status;
             BranchTransferTo = branchTransferTo;
+            this.EntryFuel = EntryFuel;
+            this.EntryCounter = EntryCounter;
 
             mode = enMode.Update;
 
@@ -94,7 +103,10 @@ namespace CarRentalBusiness
                 ExitFuel,
                 ExitDate,
                 Status,
-                BranchTransferTo
+                BranchTransferTo,
+                EntryFuel,
+                EntryCounter
+
             );
 
             if (newId == -1)
@@ -120,7 +132,9 @@ namespace CarRentalBusiness
                 ExitFuel,
                 ExitDate,
                 Status,
-                BranchTransferTo
+                BranchTransferTo,
+                EntryFuel,
+                EntryCounter
             );
         }
 
@@ -140,7 +154,8 @@ namespace CarRentalBusiness
             DateTime? exitDate = null;
             int status = 0;
             int toBranch = 0;
-
+            string entryFuel = null;
+            double? entryCounter = null;
             bool found = ClsCarTransferData.GetCarTransferById(
                 id,
                 ref carId,
@@ -151,7 +166,9 @@ namespace CarRentalBusiness
                 ref exitFuel,
                 ref exitDate,
                 ref status,
-                ref toBranch
+                ref toBranch,
+                ref entryFuel,
+                ref entryCounter
             );
 
             if (!found)
@@ -167,7 +184,10 @@ namespace CarRentalBusiness
                 exitFuel,
                 exitDate,
                 status,
-                toBranch
+                toBranch,
+                entryFuel,
+                entryCounter
+
             );
         }
 

@@ -94,7 +94,7 @@ namespace CarRentalSystem.Agreement
 
 
 
-            txtLateFee.Text = _Agreement.RentalPenaltyPerDay.ToString();
+            txtLateFee.Text = _Agreement.RentalPenaltyPerDay.ToString() + "$";
 
 
 
@@ -203,7 +203,7 @@ namespace CarRentalSystem.Agreement
         {
             if (cbCustomers.SelectedValue == null) return;
 
-            if (int.TryParse(cbCustomers.SelectedValue.ToString(), out int selectedCustId))
+            if (int.TryParse(cbCustomers.SelectedValue.ToString(), out int selectedCustId))// this made by Ahmad Bakeer => software Engineer
             {
                 ClsCustomer customer = ClsCustomer.FindById(selectedCustId);
                 if (customer != null)
@@ -351,11 +351,13 @@ namespace CarRentalSystem.Agreement
         private void GetNameAndPriceOfCheckedItem(Label text ,CheckedListBox clb)
         {
             text.Text = "";
+            StringBuilder sb = new StringBuilder();
             foreach (var item in clb.CheckedItems)
             {
-                text.Text += item.ToString() + ", ";
+                sb.Append( item.ToString() + ", ");
                 
             }
+            text.Text = sb.ToString();
         }
 
 
@@ -920,6 +922,8 @@ namespace CarRentalSystem.Agreement
             lblDays.Text = txtRentalDays.Text + " Days";
             lblPrice.Text = txtTotalPrice.Text;
 
+            lblCarName.Text = txtCarName.Text;
+
             lblRequired.Text = "";
             lblAdditionsInsurances.Text = "";
             lblAdditions.Text = "";
@@ -1226,7 +1230,7 @@ namespace CarRentalSystem.Agreement
             _Agreement.ConsumedMileage = Convert.ToInt32(txtMovedDistance.Text);
             _Agreement.ActualDeliveryDate = dpEntryDate.Value;
             
-
+            _Agreement.entryFuel = (string)cbCarEntryFuel.SelectedItem;
 
 
             if(_Agreement.Save())

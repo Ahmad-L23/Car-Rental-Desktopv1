@@ -49,6 +49,8 @@ namespace CarRentalBusiness
         public decimal? TotalIncludetax { get; set; }
         public decimal? Discount {  get; set; }
 
+        public string entryFuel {  get; set; }
+
         public List<(int Id, decimal Price, string Name)> AdditionContracts { get; set; } = new List<(int, decimal, string)>();
         public List<(int Id, decimal Price, string Name)> RentalAdditions { get; set; } = new List<(int, decimal,string)>();
         public List<(int Id, decimal Price, string Name)> RequiredInsurances { get; set; } = new List<(int, decimal,string)>();
@@ -92,6 +94,7 @@ namespace CarRentalBusiness
             RentalAdditions = new List<(int, decimal,string)>();
             RequiredInsurances = new List<(int, decimal,string)>();
             Discount = null;
+            entryFuel = null;
 
             mode = enMode.AddNew;
         }
@@ -123,7 +126,8 @@ namespace CarRentalBusiness
             decimal? requiredInsurancePrice,
             decimal? rentalDaysCost,
             decimal? totalIncludetax,
-            decimal? Discount)
+            decimal? Discount,
+            string entryFuel)
         {
             AgreementID = agreementID;
             CustomerID = customerID;
@@ -154,6 +158,7 @@ namespace CarRentalBusiness
             RentalDaysCost = rentalDaysCost;
             TotalIncludetax = totalIncludetax;
             this.Discount = Discount;
+            this.entryFuel = entryFuel;
 
             mode = enMode.Update;
         }
@@ -265,7 +270,8 @@ namespace CarRentalBusiness
                 RequiredInsurancePrice,
                 RentalDaysCost,
                 TotalIncludetax,
-                Discount
+                Discount,
+                entryFuel
             );
 
             if (!updated)
@@ -304,7 +310,7 @@ namespace CarRentalBusiness
                 requiredInsurancePrice = null, rentalDaysCost = null,
                 totalIncludetax = null, additionalKilometerPrice = null, totalAmountBeforeTax = null, Discount = null;
             int? permittedDailyKilometers = null, receivingOdometer = null, consumedMileage = null, mileage = null;
-            string paymentMethod = null, exitFuel = null;
+            string paymentMethod = null, exitFuel = null, entryFuel = null;
 
             bool found = ClsAgreementData.GetAgreementById(
                 agreementId,
@@ -334,7 +340,8 @@ namespace CarRentalBusiness
                 ref requiredInsurancePrice,
                 ref rentalDaysCost,
                 ref totalIncludetax,
-                ref Discount
+                ref Discount,
+                ref entryFuel
             );
 
             if (!found)
@@ -367,7 +374,8 @@ namespace CarRentalBusiness
                 requiredInsurancePrice,
                 rentalDaysCost,
                 totalIncludetax,
-                Discount
+                Discount,
+                entryFuel
             );
 
 

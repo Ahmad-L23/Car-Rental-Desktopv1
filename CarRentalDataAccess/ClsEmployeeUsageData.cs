@@ -68,12 +68,15 @@ namespace CarRentalDataAccess
                                 throw new Exception("Failed to insert EmployeeUsage record.");
 
                             // 2. Update vehicles.CurrentCounter with entryCounter value
-                            string updateQuery = "UPDATE vehicles SET CurrentCounter = @CurrentCounter WHERE CarID = @CarID";
+                            string updateQuery = "UPDATE vehicles SET CurrentCounter = @CurrentCounter, IsAvailable = @avialable, FuelExit= @FuelExit, Status = @Stat  WHERE CarID = @CarID";
 
                             using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection, transaction))
                             {
                                 updateCmd.Parameters.AddWithValue("@CurrentCounter", entryCountre);
                                 updateCmd.Parameters.AddWithValue("@CarID", carId);
+                                updateCmd.Parameters.AddWithValue("@avialable", 0);
+                                updateCmd.Parameters.AddWithValue("@FuelExit", entryFuel);
+                                updateCmd.Parameters.AddWithValue("@Stat", 2);
                                 updateCmd.ExecuteNonQuery();
                             }
 

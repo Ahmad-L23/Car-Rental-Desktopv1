@@ -39,6 +39,8 @@ namespace CarRentalDataAccess
             decimal? Discount
         )
         {
+
+            int newId = 0;
             string query = @"
                 INSERT INTO Agreement
                 (
@@ -59,44 +61,86 @@ namespace CarRentalDataAccess
                 SELECT CAST(scope_identity() AS int);
             ";
 
+
+
             using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
             {
-                cmd.Parameters.AddWithValue("@CustomerID", customerId);
-                cmd.Parameters.AddWithValue("@CarID", carId);
-                cmd.Parameters.AddWithValue("@PickupBranchID", pickupBranchId);
-                cmd.Parameters.AddWithValue("@DropOffBranchID", dropOffBranchId);
-                cmd.Parameters.AddWithValue("@StartDate", startDate);
-                cmd.Parameters.AddWithValue("@EndDate", endDate);
-                cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
-                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
-                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TaxRate", taxRate);
-                cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
-                cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ReceivingOdometer", (object)receivingOdometer ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
-                cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
+
 
                 connection.Open();
-                object result = cmd.ExecuteScalar();
-                if (result != null && int.TryParse(result.ToString(), out int newId))
-                    return newId;
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
 
-                return -1;
-            }
+                    try
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, connection, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                            cmd.Parameters.AddWithValue("@CarID", carId);
+                            cmd.Parameters.AddWithValue("@PickupBranchID", pickupBranchId);
+                            cmd.Parameters.AddWithValue("@DropOffBranchID", dropOffBranchId);
+                            cmd.Parameters.AddWithValue("@StartDate", startDate);
+                            cmd.Parameters.AddWithValue("@EndDate", endDate);
+                            cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
+                            cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
+                            cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TaxRate", taxRate);
+                            cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
+                            cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@ReceivingOdometer", (object)receivingOdometer ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
+                            cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
+
+                            object result = cmd.ExecuteScalar();
+
+                            if (result == null)
+                            {
+                                return -1;
+                            }
+                             int.TryParse(result.ToString(), out newId);
+
+
+
+
+                        }
+                        string updateQuery = "UPDATE vehicles SET IsAvailable = @avialable, FuelExit= @FuelExit, Status = @Stat  WHERE CarID = @CarID";
+
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection, transaction))
+                        {
+                            updateCmd.Parameters.AddWithValue("@CarID", carId);
+                            updateCmd.Parameters.AddWithValue("@avialable", 0);
+                           
+                            updateCmd.Parameters.AddWithValue("@FuelExit", exitFuel);
+                            updateCmd.Parameters.AddWithValue("@Stat", 1);
+                            updateCmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        return newId;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return -1;
+                    }
+
+
+                }
+            }   
+
+            
         }
 
         public static bool EditAgreement(
@@ -127,9 +171,12 @@ namespace CarRentalDataAccess
             decimal? requiredInsurancePrice,
             decimal? rentalDaysCost,
             decimal? totalAmountIncludeTax,
-            decimal? Discount
+            decimal? Discount,
+            string entryFuel
         )
         {
+
+            int rows = 0;
             string query = @"
                 UPDATE Agreement SET
                     CustomerID = @CustomerID,
@@ -158,45 +205,81 @@ namespace CarRentalDataAccess
                     RequiredInsurancePrice = @RequiredInsurancePrice,
                     rentalDaysCost = @rentalDaysCost,
                     TotalAmountIncludeTax = @TotalAmountIncludeTax,
-                    Discount = @Discount  
+                    Discount = @Discount,entryFuel = @entryFuel  
                 WHERE AgreementID = @AgreementID";
 
-            using (SqlConnection connection = new SqlConnection(conn))
-            using (SqlCommand cmd = new SqlCommand(query, connection))
-            {
-                cmd.Parameters.AddWithValue("@AgreementID", agreementId);
-                cmd.Parameters.AddWithValue("@CustomerID", customerId);
-                cmd.Parameters.AddWithValue("@CarID", carId);
-                cmd.Parameters.AddWithValue("@PickupBranchID", pickupBranchId);
-                cmd.Parameters.AddWithValue("@DropOffBranchID", dropOffBranchId);
-                cmd.Parameters.AddWithValue("@StartDate", startDate);
-                cmd.Parameters.AddWithValue("@EndDate", endDate);
-                cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
-                cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
-                cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TaxRate", taxRate);
-                cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
-                cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ReceivingOdometer", (object)receivingOdometer ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
-                cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
+           
+                using (SqlConnection connection = new SqlConnection(conn))
+                {
+                    connection.Open();
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                    try
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, connection, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@AgreementID", agreementId);
+                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                            cmd.Parameters.AddWithValue("@CarID", carId);
+                            cmd.Parameters.AddWithValue("@PickupBranchID", pickupBranchId);
+                            cmd.Parameters.AddWithValue("@DropOffBranchID", dropOffBranchId);
+                            cmd.Parameters.AddWithValue("@StartDate", startDate);
+                            cmd.Parameters.AddWithValue("@EndDate", endDate);
+                            cmd.Parameters.AddWithValue("@AgreedPrice", agreedPrice);
+                            cmd.Parameters.AddWithValue("@RentalPenaltyPerDay", (object)rentalPenaltyPerDay ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TotalAmountBeforeTax", totalAmountBeforeTax);
+                            cmd.Parameters.AddWithValue("@PermittedDailyKilometers", (object)permittedDailyKilometers ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@AdditionalKilometerPrice", (object)additionalKilometerPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TaxRate", taxRate);
+                            cmd.Parameters.AddWithValue("@InitialPaidAmount", (object)initialPaidAmount ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@PaymentMethod", (object)paymentMethod ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
+                            cmd.Parameters.AddWithValue("@ActualDeliveryDate", (object)actualDeliveryDate ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@ReceivingOdometer", receivingOdometer );
+                            cmd.Parameters.AddWithValue("@ConsumedMileage", (object)consumedMileage ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@Mileage", (object)mileage ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@ExitFuel", (object)exitFuel ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@SerialNumber", serialNumber);
+                            cmd.Parameters.AddWithValue("@AdditionContractPrice", (object)additionContractPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@RentalAdditionsPrice", (object)rentalAdditionsPrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@RequiredInsurancePrice", (object)requiredInsurancePrice ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@rentalDaysCost", (object)rentalDaysCost ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@TotalAmountIncludeTax", (object)totalAmountIncludeTax ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@Discount", (object)Discount ?? DBNull.Value);
+                            cmd.Parameters.AddWithValue("@entryFuel", (object)entryFuel ?? DBNull.Value);
 
-                connection.Open();
-                int rows = cmd.ExecuteNonQuery();
-                return rows > 0;
-            }
+                         
+                            rows = cmd.ExecuteNonQuery();
+
+                        }
+
+
+                        string updateQuery = "UPDATE vehicles SET CurrentCounter = @CurrentCounter, IsAvailable = @avialable, FuelExit= @EntryFuel, Status = @Stat  WHERE CarID = @CarID";
+
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection, transaction))
+                        {
+                            if (receivingOdometer.HasValue)
+                                updateCmd.Parameters.AddWithValue("@CurrentCounter", receivingOdometer);
+                            updateCmd.Parameters.AddWithValue("@CarID", carId);
+                            updateCmd.Parameters.AddWithValue("@avialable", 1);
+                            updateCmd.Parameters.AddWithValue("@EntryFuel", entryFuel);
+                            updateCmd.Parameters.AddWithValue("@Stat", 1);
+                            updateCmd.ExecuteNonQuery();
+
+                        }
+                        transaction.Commit();
+
+                        return true;
+
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        return false;
+                    }
+                    }
+                }
+            
         }
 
         public static bool DeleteAgreement(int agreementId)
@@ -272,7 +355,8 @@ namespace CarRentalDataAccess
             ref decimal? requiredInsurancePrice,
             ref decimal? rentalDaysCost,
             ref decimal? totalAmountIncludeTax,
-            ref decimal? Discount
+            ref decimal? Discount,
+            ref string FuelEntry
         )
         {
             string query = "SELECT * FROM Agreement WHERE AgreementID = @AgreementID";
@@ -320,6 +404,7 @@ namespace CarRentalDataAccess
                         rentalDaysCost = reader["rentalDaysCost"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["rentalDaysCost"]);
                         totalAmountIncludeTax = reader["TotalAmountIncludeTax"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["TotalAmountIncludeTax"]);
                         Discount = reader["Discount"] == DBNull.Value ? (decimal?)null : Convert.ToDecimal(reader["Discount"]);
+                        FuelEntry = reader["EntryFuel"] == DBNull.Value ? null : reader["EntryFuel"].ToString();
 
                         return true;
                     }

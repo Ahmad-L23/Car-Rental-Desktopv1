@@ -31,6 +31,8 @@ namespace CarRentalSystem.CashReceipt
             LoadBox();
             LoadCurrencies();
 
+            this.Text = "Update Cash Receipt";
+
         }
 
 
