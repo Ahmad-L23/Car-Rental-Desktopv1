@@ -1,3 +1,36 @@
+# Car Rental Management System
+
+A **C# WinForms desktop application** designed to manage all aspects of a car rental business efficiently. The system handles vehicles, customers, rental agreements, insurance, maintenance, payments, and branch operations in one centralized platform. It tracks the **status of each vehicle**—available, rented, under maintenance, or transferred—ensuring optimal fleet management and preventing conflicts.
+
+## About the System
+
+The **Car Rental Management System** is organized using a **Three-Tier Architecture**:  
+- **Presentation Layer (PL):** WinForms UI for interacting with the system.  
+- **Business Logic Layer (BLL):** Handles business rules, validations, and vehicle status management.  
+- **Data Access Layer (DAL):** Uses **ADO.NET** with **SQL Server** for CRUD operations, stored procedures, and data management.  
+
+The system includes multiple modules:  
+- **Vehicles:** Cars, categories, colors, fuel types, and branch transfers.  
+- **Customers & Employees:** Personal information, documents, and roles.  
+- **Rental Agreements:** Create, update, and manage contracts, including optional additions and insurance coverage.  
+- **Insurance & Maintenance:** Required and optional insurance, damage tracking, and maintenance scheduling.  
+- **Payments & Cash Handling:** Multiple payment methods, receipts, and currency management.  
+- **Branch & Location Management:** Manage vehicle distribution across branches.  
+
+The system also provides **input validation, error handling, and role-based user access** to ensure secure and reliable operations.  
+
+## Features
+
+- Track vehicle availability and status in real-time  
+- Manage rentals, returns, and maintenance efficiently  
+- Input validation and business rule enforcement  
+- Role-based user management  
+
+## Technologies Used
+
+**C#, WinForms, SQL Server, ADO.NET, T-SQL, Three-Tier Architecture**
+
+
 # Project Image Gallery
 
 <table>
